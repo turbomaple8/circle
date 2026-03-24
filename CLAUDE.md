@@ -26,8 +26,10 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 ├── property-york.html      # Property detail — York & Bremner
 ├── privacy.html            # Privacy policy
 ├── terms.html              # Terms of service
-├── styles.css              # Single stylesheet — all styles
-├── script.js               # Single JS file — nav, modals, forms, animations
+├── styles.css              # Single stylesheet - all styles
+├── script.js               # Single JS file - nav, modals, forms, animations
+├── sitemap.xml             # XML sitemap for search engines
+├── robots.txt              # Crawler directives
 ├── building-*.jpg/webp     # Property hero images (local)
 ├── room-coliving.jpg       # Room type image
 └── .vercel/                # Vercel project config (gitignored)
@@ -52,10 +54,12 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 
 ## Properties (Current Listings)
 
-1. **Distillery District** — 25 Mill St
-2. **Queen West** — 920 Queen St W
-3. **Yonge & Eglinton** — 2300 Yonge St
-4. **York & Bremner** — 23 York St
+1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
+2. **The Queen** - 215 Queen Street West (Queen West / Entertainment District)
+3. **The Distillery** - 70 Mill Street (Distillery District / Corktown)
+4. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
+5. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown) - listed but no property page yet
+6. **The Wellesley** - 100 Wellesley Street East (Church-Wellesley) - listed but no property page yet
 
 ## Deployment
 
@@ -63,10 +67,40 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 - Production URL: https://circle-nu-orcin.vercel.app (custom domain to be added)
 - No build command needed — Vercel serves static files directly
 
+## SEO System
+
+All SEO is implemented inline in each HTML file. No build step or JS generation needed.
+
+### Files
+- `sitemap.xml` - Lists all 9 pages with lastmod, priority, changefreq
+- `robots.txt` - Allows all crawlers, blocks `.vercel/` and `CLAUDE.md`, references sitemap
+
+### Per-Page SEO (all 9 HTML files)
+- **Canonical tags** - `<link rel="canonical">` on every page pointing to Vercel production URL
+- **OpenGraph tags** - og:type, og:url, og:title, og:description, og:image, og:site_name
+- **Twitter Cards** - summary_large_image for main pages, summary for legal pages
+- **JSON-LD structured data** using `@graph` pattern with `@id` entity linking:
+  - `Organization` (shared across pages via @id reference)
+  - `WebSite` (homepage only)
+  - `LocalBusiness` (each property page, with address + geo coordinates)
+  - `BreadcrumbList` (every page: Home > Section > Page)
+- **Font preconnect** - `preconnect` to fonts.googleapis.com and fonts.gstatic.com
+- **Lazy loading** - `loading="lazy" decoding="async"` on below-fold images (hero/above-fold images excluded)
+
+### When Adding New Properties
+1. Copy an existing `property-*.html` as template
+2. Update all meta tags (title, description, canonical, OG, Twitter)
+3. Update JSON-LD: LocalBusiness name/description/address/geo/priceRange, BreadcrumbList
+4. Add the new page to `sitemap.xml`
+5. Ensure `loading="lazy" decoding="async"` on below-fold images
+
+### Base URL
+All canonical/OG URLs use `https://circle-nu-orcin.vercel.app`. When a custom domain is added, find-and-replace this across all HTML files and sitemap.xml.
+
 ## Working on This Project
 
-- Edit HTML/CSS/JS files directly — no compilation needed
+- Edit HTML/CSS/JS files directly - no compilation needed
 - Test locally by opening `index.html` in a browser (or use a local server)
-- The CSS comment at the top still says "LIEVE" (original brand name before rebranding to Circle) — this is cosmetic only
-- When adding new properties, follow the `property-*.html` template pattern
+- The CSS comment at the top still says "LIEVE" (original brand name before rebranding to Circle) - this is cosmetic only
+- When adding new properties, follow the `property-*.html` template pattern and the SEO checklist above
 - When modifying forms, update both the modal HTML and the handler in `script.js`

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /.vercel/
+Disallow: /CLAUDE.md
+
+Sitemap: https://circle-nu-orcin.vercel.app/sitemap.xml
