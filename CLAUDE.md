@@ -64,7 +64,7 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 ## Deployment
 
 - Push to `main` → Vercel auto-deploys to production
-- Production URL: https://circle-nu-orcin.vercel.app (custom domain to be added)
+- Production URL: https://circlestay.ca
 - No build command needed — Vercel serves static files directly
 
 ## SEO System
@@ -95,7 +95,7 @@ All SEO is implemented inline in each HTML file. No build step or JS generation 
 5. Ensure `loading="lazy" decoding="async"` on below-fold images
 
 ### Base URL
-All canonical/OG URLs use `https://circle-nu-orcin.vercel.app`. When a custom domain is added, find-and-replace this across all HTML files and sitemap.xml.
+All canonical/OG URLs use `https://circlestay.ca`.
 
 ## Working on This Project
 
