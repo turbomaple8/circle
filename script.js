@@ -130,6 +130,21 @@ function closeAllModals() {
   document.body.style.overflow = '';
 }
 
+/* ---- Backend Forwarding (fire-and-forget) ---- */
+const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
+const BACKEND_PROJECT_ID = 'circle';
+
+function forwardToBackend(endpoint, payload) {
+  fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Project-Id': BACKEND_PROJECT_ID
+    },
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+}
+
 /* ---- Form Handling ---- */
 function handleTourForm(e) {
   e.preventDefault();
@@ -145,6 +160,7 @@ function handleTourForm(e) {
     message: data.get('message')
   };
 
+  // FormSubmit.co email
   const formSubmitData = new FormData();
   Object.entries(formData).forEach(([key, value]) => {
     if (value) formSubmitData.append(key, value);
@@ -156,6 +172,21 @@ function handleTourForm(e) {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
+
+  // Backend forwarding (fire-and-forget)
+  const nameParts = (formData.name || '').trim().split(/\s+/);
+  forwardToBackend('tour-requests', {
+    firstName: nameParts[0] || '',
+    lastName: nameParts.slice(1).join(' ') || '',
+    email: formData.email,
+    phone: formData.phone || null,
+    property: formData.property || null,
+    date: formData.date || null,
+    time: 'morning',
+    notes: formData.message || null,
+    sourceWebsite: 'circlestay.ca',
+    city: 'Toronto'
+  });
 
   form.innerHTML = `
     <div class="success-message">
@@ -183,6 +214,7 @@ function handleApplyForm(e) {
     message: data.get('message')
   };
 
+  // FormSubmit.co email
   const formSubmitData = new FormData();
   Object.entries(formData).forEach(([key, value]) => {
     if (value) formSubmitData.append(key, value);
@@ -194,6 +226,20 @@ function handleApplyForm(e) {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
+
+  // Backend forwarding (fire-and-forget)
+  forwardToBackend('applications', {
+    fullName: `${formData.firstName || ''} ${formData.lastName || ''}`.trim(),
+    email: formData.email,
+    phone: formData.phone || null,
+    property: formData.property || null,
+    roomType: formData.roomType || null,
+    moveInDate: formData.moveIn || null,
+    leaseDuration: formData.duration || null,
+    aboutYou: formData.message || null,
+    sourceWebsite: 'circlestay.ca',
+    city: 'Toronto'
+  });
 
   form.innerHTML = `
     <div class="success-message">
