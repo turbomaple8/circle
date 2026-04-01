@@ -1,3 +1,5 @@
+const dns = require("dns");
+dns.setDefaultResultOrder("ipv4first");
 const nodemailer = require("nodemailer");
 
 const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://coliville-api-626057356331.us-east1.run.app";
@@ -10,7 +12,15 @@ function createTransporter() {
     secure: process.env.SMTP_SECURE === "true",
     auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASSWORD },
     tls: { servername: "mail.privateemail.com", rejectUnauthorized: true },
+    connectionTimeout: 10000, greetingTimeout: 10000, socketTimeout: 15000,
   });
+}
+
+async function sendWithRetry(transporter, mailOptions, retries = 2) {
+  for (let i = 0; i <= retries; i++) {
+    try { return await sendWithRetry(transporter, mailOptions); }
+    catch (err) { if (i === retries) throw err; await new Promise(r => setTimeout(r, 500 * (i + 1))); }
+  }
 }
 
 module.exports = async (req, res) => {
@@ -31,7 +41,7 @@ module.exports = async (req, res) => {
     const transporter = createTransporter();
 
     // Email to admin
-    await transporter.sendMail({
+    await sendWithRetry(transporter, {
       from: process.env.EMAIL_FROM,
       to: process.env.EMAIL_TO || "info@circlestay.ca",
       replyTo: email,
@@ -65,7 +75,7 @@ module.exports = async (req, res) => {
     });
 
     // Confirmation to applicant
-    await transporter.sendMail({
+    await sendWithRetry(transporter, {
       from: process.env.EMAIL_FROM,
       to: email,
       subject: `Application Received — Circle Stay`,

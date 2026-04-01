@@ -1,4 +1,8 @@
 const nodemailer = require("nodemailer");
+const dns = require("dns");
+
+// Force Node to resolve DNS fresh (workaround for Vercel EBUSY)
+dns.setDefaultResultOrder("ipv4first");
 
 const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://coliville-api-626057356331.us-east1.run.app";
 const BACKEND_PROJECT_ID = process.env.BACKEND_PROJECT_ID || "circle";
@@ -13,7 +17,21 @@ function createTransporter() {
       pass: process.env.SMTP_PASSWORD,
     },
     tls: { servername: "mail.privateemail.com", rejectUnauthorized: true },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
   });
+}
+
+async function sendWithRetry(transporter, mailOptions, retries = 2) {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      return await sendWithRetry(transporter, mailOptions);
+    } catch (err) {
+      if (i === retries) throw err;
+      await new Promise(r => setTimeout(r, 500 * (i + 1)));
+    }
+  }
 }
 
 module.exports = async (req, res) => {
@@ -40,7 +58,7 @@ module.exports = async (req, res) => {
     // 1. Send email to admin (info@circlestay.ca)
     const transporter = createTransporter();
 
-    await transporter.sendMail({
+    await sendWithRetry(transporter, {
       from: process.env.EMAIL_FROM,
       to: process.env.EMAIL_TO || "info@circlestay.ca",
       replyTo: email,
@@ -82,7 +100,7 @@ module.exports = async (req, res) => {
     });
 
     // 2. Send confirmation email to customer
-    await transporter.sendMail({
+    await sendWithRetry(transporter, {
       from: process.env.EMAIL_FROM,
       to: email,
       subject: `Your Room is Reserved - ${property || "Circle Stay"} (24-Hour Hold)`,
