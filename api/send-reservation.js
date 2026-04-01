@@ -138,6 +138,6 @@ module.exports = async (req, res) => {
     return res.status(200).json({ success: true, message: "Reservation confirmed" });
   } catch (error) {
     console.error("[Circle] Reservation error:", error);
-    return res.status(500).json({ success: false, message: "Failed to process reservation" });
+    return res.status(500).json({ success: false, message: "Failed to process reservation", debug: error.message });
   }
 };
