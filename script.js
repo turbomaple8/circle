@@ -159,63 +159,25 @@ function closeAllModals() {
   document.body.style.overflow = '';
 }
 
-/* ---- Backend Forwarding (fire-and-forget) ---- */
-const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
-const BACKEND_PROJECT_ID = 'circle';
+/* ---- Form Handling (via Vercel serverless → SMTP + backend) ---- */
 
-function forwardToBackend(endpoint, payload) {
-  fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Project-Id': BACKEND_PROJECT_ID
-    },
-    body: JSON.stringify(payload)
-  }).catch(() => {});
-}
-
-/* ---- Form Handling ---- */
 function handleTourForm(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
 
-  const formData = {
-    name: data.get('name'),
-    email: data.get('email'),
-    phone: data.get('phone'),
-    property: data.get('property'),
-    date: data.get('date'),
-    message: data.get('message')
-  };
-
-  // FormSubmit.co email
-  const formSubmitData = new FormData();
-  Object.entries(formData).forEach(([key, value]) => {
-    if (value) formSubmitData.append(key, value);
-  });
-  formSubmitData.append('_subject', 'New Viewing Request — Circle Coliving');
-  formSubmitData.append('_template', 'table');
-
-  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
+  fetch('/api/send-tour', {
     method: 'POST',
-    body: formSubmitData
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: data.get('name'),
+      email: data.get('email'),
+      phone: data.get('phone'),
+      property: data.get('property'),
+      date: data.get('date'),
+      message: data.get('message')
+    })
   }).catch(() => {});
-
-  // Backend forwarding (fire-and-forget)
-  const nameParts = (formData.name || '').trim().split(/\s+/);
-  forwardToBackend('tour-requests', {
-    firstName: nameParts[0] || '',
-    lastName: nameParts.slice(1).join(' ') || '',
-    email: formData.email,
-    phone: formData.phone || null,
-    property: formData.property || null,
-    date: formData.date || null,
-    time: 'morning',
-    notes: formData.message || null,
-    sourceWebsite: 'circlestay.ca',
-    city: 'Toronto'
-  });
 
   form.innerHTML = `
     <div class="success-message">
@@ -231,44 +193,21 @@ function handleApplyForm(e) {
   const form = e.target;
   const data = new FormData(form);
 
-  const formData = {
-    firstName: data.get('firstName'),
-    lastName: data.get('lastName'),
-    email: data.get('email'),
-    phone: data.get('phone'),
-    property: data.get('property'),
-    roomType: data.get('roomType'),
-    moveIn: data.get('moveIn'),
-    duration: data.get('duration'),
-    message: data.get('message')
-  };
-
-  // FormSubmit.co email
-  const formSubmitData = new FormData();
-  Object.entries(formData).forEach(([key, value]) => {
-    if (value) formSubmitData.append(key, value);
-  });
-  formSubmitData.append('_subject', 'New Application — Circle Coliving');
-  formSubmitData.append('_template', 'table');
-
-  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
+  fetch('/api/send-application', {
     method: 'POST',
-    body: formSubmitData
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
+      email: data.get('email'),
+      phone: data.get('phone'),
+      property: data.get('property'),
+      roomType: data.get('roomType'),
+      moveIn: data.get('moveIn'),
+      duration: data.get('duration'),
+      message: data.get('message')
+    })
   }).catch(() => {});
-
-  // Backend forwarding (fire-and-forget)
-  forwardToBackend('applications', {
-    fullName: `${formData.firstName || ''} ${formData.lastName || ''}`.trim(),
-    email: formData.email,
-    phone: formData.phone || null,
-    property: formData.property || null,
-    roomType: formData.roomType || null,
-    moveInDate: formData.moveIn || null,
-    leaseDuration: formData.duration || null,
-    aboutYou: formData.message || null,
-    sourceWebsite: 'circlestay.ca',
-    city: 'Toronto'
-  });
 
   form.innerHTML = `
     <div class="success-message">
@@ -291,37 +230,16 @@ function handleReserveForm(e) {
   const property = data.get('reserveProperty') || '';
   const room = data.get('reserveRoom') || '';
 
-  // 1. FormSubmit.co email (same pattern as apply/tour)
-  const formSubmitData = new FormData();
-  formSubmitData.append('_subject', 'Circle — Instant Reservation from ' + fullName + ' (Toronto)');
-  formSubmitData.append('_template', 'table');
-  formSubmitData.append('Reservation Type', 'Instant Reservation (24h Hold)');
-  formSubmitData.append('City', 'Toronto');
-  formSubmitData.append('Full Name', fullName);
-  if (email) formSubmitData.append('Email', email);
-  if (phone) formSubmitData.append('Phone', phone);
-  formSubmitData.append('Property', property || 'Not specified');
-  formSubmitData.append('Room', room || 'Not specified');
-  formSubmitData.append('Move-in Date', moveIn || 'Not specified');
-
-  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
+  fetch('/api/send-reservation', {
     method: 'POST',
-    body: formSubmitData
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      fullName, email, phone, moveInDate: moveIn || null,
+      property: property || null,
+      propertySlug: property ? property.toLowerCase().replace('the ', '').replace(/\s+/g, '-') : null,
+      roomName: room || null
+    })
   }).catch(() => {});
-
-  // 2. Backend forwarding — POST /v1/public/reservations (same as Passage)
-  forwardToBackend('reservations', {
-    fullName: fullName,
-    email: email,
-    phone: phone || null,
-    moveInDate: moveIn || null,
-    property: property || null,
-    propertySlug: property ? property.toLowerCase().replace('the ', '').replace(/\s+/g, '-') : null,
-    roomName: room || null,
-    roomId: null,
-    sourceWebsite: 'circlestay.ca',
-    city: 'Toronto'
-  });
 
   // Show success with context
   const ctx = document.getElementById('reserveContext');

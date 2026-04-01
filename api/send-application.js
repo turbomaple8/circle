@@ -1,0 +1,109 @@
+const nodemailer = require("nodemailer");
+
+const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://coliville-api-626057356331.us-east1.run.app";
+const BACKEND_PROJECT_ID = process.env.BACKEND_PROJECT_ID || "circle";
+
+function createTransporter() {
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || "587"),
+    secure: process.env.SMTP_SECURE === "true",
+    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASSWORD },
+  });
+}
+
+module.exports = async (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+
+  try {
+    const { firstName, lastName, email, phone, property, roomType, moveIn, duration, message } = req.body;
+    const fullName = `${firstName || ""} ${lastName || ""}`.trim();
+
+    if (!fullName || !email) {
+      return res.status(400).json({ success: false, message: "Missing required fields" });
+    }
+
+    const transporter = createTransporter();
+
+    // Email to admin
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM,
+      to: process.env.EMAIL_TO || "info@circlestay.ca",
+      replyTo: email,
+      subject: `Circle — New Application - ${property || "General"} - ${fullName}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto;">
+          <h2 style="color: #8b7355; border-bottom: 3px solid #8b7355; padding-bottom: 10px;">New Application</h2>
+          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #1a1a2e;">Contact</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 8px 0; color: #666; width: 35%;"><strong>Name:</strong></td><td>${fullName}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
+              ${phone ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Phone:</strong></td><td>${phone}</td></tr>` : ""}
+            </table>
+          </div>
+          <div style="background-color: #f5f0eb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #1a1a2e;">Details</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              ${property ? `<tr><td style="padding: 8px 0; color: #666; width: 35%;"><strong>Property:</strong></td><td>${property}</td></tr>` : ""}
+              ${roomType ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Room Type:</strong></td><td>${roomType}</td></tr>` : ""}
+              ${moveIn ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Move-in:</strong></td><td>${moveIn}</td></tr>` : ""}
+              ${duration ? `<tr><td style="padding: 8px 0; color: #666;"><strong>Duration:</strong></td><td>${duration}</td></tr>` : ""}
+            </table>
+            ${message ? `<div style="margin-top: 12px; padding: 12px; background: #fff; border-radius: 6px;"><strong>About:</strong><br/>${message}</div>` : ""}
+          </div>
+          <div style="color: #999; font-size: 12px; border-top: 2px solid #ddd; padding-top: 15px;">
+            <p>Submitted via circlestay.ca</p>
+          </div>
+        </div>
+      `,
+    });
+
+    // Confirmation to applicant
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM,
+      to: email,
+      subject: `Application Received — Circle Stay`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background: linear-gradient(135deg, #8b7355, #6b5740); padding: 32px; border-radius: 12px 12px 0 0; text-align: center;">
+            <h1 style="color: white; margin: 0; font-size: 24px;">Application Received!</h1>
+          </div>
+          <div style="padding: 32px; background: #fff; border: 1px solid #e5e7eb; border-top: none;">
+            <p style="color: #374151; font-size: 15px;">Hi ${(firstName || fullName.split(" ")[0])},</p>
+            <p style="color: #374151; font-size: 15px;">Thank you for applying to Circle Stay${property ? ` at <strong>${property}</strong>` : ""}. Our team will review your application and get back to you within 48 hours.</p>
+            <p style="color: #6b7280; font-size: 13px;">Questions? Reply to this email.</p>
+          </div>
+          <div style="padding: 20px; background: #f9fafb; border-radius: 0 0 12px 12px; border: 1px solid #e5e7eb; border-top: none; text-align: center;">
+            <p style="margin: 0; color: #9ca3af; font-size: 12px;">Circle Stay — Co-Living in Toronto</p>
+          </div>
+        </div>
+      `,
+    });
+
+    // Backend forwarding
+    try {
+      await fetch(`${BACKEND_API_URL}/v1/public/applications`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Project-Id": BACKEND_PROJECT_ID },
+        body: JSON.stringify({
+          fullName, email, phone: phone || null, property: property || null,
+          roomType: roomType || null, moveInDate: moveIn || null,
+          leaseDuration: duration || null, aboutYou: message || null,
+          sourceWebsite: "circlestay.ca", city: "Toronto",
+        }),
+      });
+    } catch (err) {
+      console.error("[Circle] Backend forwarding failed:", err);
+    }
+
+    return res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("[Circle] Application error:", error);
+    return res.status(500).json({ success: false, message: "Failed to process application" });
+  }
+};
