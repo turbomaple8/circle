@@ -159,25 +159,33 @@ function closeAllModals() {
   document.body.style.overflow = '';
 }
 
-/* ---- Form Handling (via Vercel serverless → SMTP + backend) ---- */
+/* ---- Backend API (handles email + dashboard) ---- */
+const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
+const BACKEND_PROJECT_ID = 'circle';
+
+function sendToBackend(endpoint, payload) {
+  fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Project-Id': BACKEND_PROJECT_ID },
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+}
+
+/* ---- Form Handling ---- */
 
 function handleTourForm(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
+  const nameParts = (data.get('name') || '').trim().split(/\s+/);
 
-  fetch('/api/send-tour', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: data.get('name'),
-      email: data.get('email'),
-      phone: data.get('phone'),
-      property: data.get('property'),
-      date: data.get('date'),
-      message: data.get('message')
-    })
-  }).catch(() => {});
+  sendToBackend('tour-requests', {
+    firstName: nameParts[0] || '', lastName: nameParts.slice(1).join(' ') || '',
+    email: data.get('email'), phone: data.get('phone') || null,
+    property: data.get('property') || null, date: data.get('date') || '',
+    time: 'morning', notes: data.get('message') || null,
+    sourceWebsite: 'circlestay.ca', city: 'Toronto'
+  });
 
   form.innerHTML = `
     <div class="success-message">
@@ -193,21 +201,14 @@ function handleApplyForm(e) {
   const form = e.target;
   const data = new FormData(form);
 
-  fetch('/api/send-application', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      firstName: data.get('firstName'),
-      lastName: data.get('lastName'),
-      email: data.get('email'),
-      phone: data.get('phone'),
-      property: data.get('property'),
-      roomType: data.get('roomType'),
-      moveIn: data.get('moveIn'),
-      duration: data.get('duration'),
-      message: data.get('message')
-    })
-  }).catch(() => {});
+  sendToBackend('applications', {
+    fullName: `${data.get('firstName') || ''} ${data.get('lastName') || ''}`.trim(),
+    email: data.get('email'), phone: data.get('phone') || null,
+    property: data.get('property') || null, roomType: data.get('roomType') || null,
+    moveInDate: data.get('moveIn') || null, leaseDuration: data.get('duration') || null,
+    aboutYou: data.get('message') || null,
+    sourceWebsite: 'circlestay.ca', city: 'Toronto'
+  });
 
   form.innerHTML = `
     <div class="success-message">
@@ -230,16 +231,12 @@ function handleReserveForm(e) {
   const property = data.get('reserveProperty') || '';
   const room = data.get('reserveRoom') || '';
 
-  fetch('/api/send-reservation', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      fullName, email, phone, moveInDate: moveIn || null,
-      property: property || null,
-      propertySlug: property ? property.toLowerCase().replace('the ', '').replace(/\s+/g, '-') : null,
-      roomName: room || null
-    })
-  }).catch(() => {});
+  sendToBackend('reservations', {
+    fullName, email, phone: phone || null, moveInDate: moveIn || null,
+    property: property || null,
+    propertySlug: property ? property.toLowerCase().replace('the ', '').replace(/\s+/g, '-') : null,
+    roomName: room || null, sourceWebsite: 'circlestay.ca', city: 'Toronto'
+  });
 
   // Show success with context
   const ctx = document.getElementById('reserveContext');
