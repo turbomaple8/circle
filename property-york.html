@@ -167,6 +167,7 @@
             <div class="room-card__actions">
               <a href="#" class="btn btn--primary btn--sm" data-modal="apply">Apply Now</a>
               <a href="#" class="btn btn--outline btn--sm" data-modal="tour">Tour</a>
+              <a href="#" class="btn btn--reserve btn--sm" data-modal="reserve">Reserve – No Payment</a>
             </div>
           </div>
         </div>
@@ -200,6 +201,7 @@
             <div class="room-card__actions">
               <a href="#" class="btn btn--primary btn--sm" data-modal="apply">Apply Now</a>
               <a href="#" class="btn btn--outline btn--sm" data-modal="tour">Tour</a>
+              <a href="#" class="btn btn--reserve btn--sm" data-modal="reserve">Reserve – No Payment</a>
             </div>
           </div>
         </div>
@@ -233,6 +235,7 @@
             <div class="room-card__actions">
               <a href="#" class="btn btn--primary btn--sm" data-modal="apply">Apply Now</a>
               <a href="#" class="btn btn--outline btn--sm" data-modal="tour">Tour</a>
+              <a href="#" class="btn btn--reserve btn--sm" data-modal="reserve">Reserve – No Payment</a>
             </div>
           </div>
         </div>
@@ -266,6 +269,7 @@
             <div class="room-card__actions">
               <a href="#" class="btn btn--primary btn--sm" data-modal="apply">Apply Now</a>
               <a href="#" class="btn btn--outline btn--sm" data-modal="tour">Tour</a>
+              <a href="#" class="btn btn--reserve btn--sm" data-modal="reserve">Reserve – No Payment</a>
             </div>
           </div>
         </div>
@@ -554,6 +558,72 @@
             <textarea name="message" rows="3" placeholder="A brief introduction — your occupation, why Toronto, etc."></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--full btn--lg">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reserve Modal -->
+  <div class="modal-overlay" id="reserveModal">
+    <div class="modal" style="position: relative;">
+      <button class="modal__close" data-close-modal>&times;</button>
+      <div class="modal__header">
+        <h3 class="modal__title">Reserve a Room – No Payment</h3>
+        <p class="modal__subtitle">Secure your spot with zero commitment. No payment required — we'll hold the room while you finalize your plans.</p>
+      </div>
+      <div class="modal__body">
+        <form onsubmit="handleReserveForm(event)">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="firstName" required placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="lastName" required placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="+1 (___) ___-____">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Location</label>
+              <select name="property">
+                <option value="The York — Waterfront" selected>The York — Waterfront</option>
+                <option value="The Maddox — Sherbourne">The Maddox — Sherbourne</option>
+                <option value="The Queen — Queen West">The Queen — Queen West</option>
+                <option value="The Yonge — 197 Yonge">The Yonge — 197 Yonge</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Room Type</label>
+              <select name="roomType">
+                <option value="">Select type</option>
+                <option value="Private Basic">Private Basic</option>
+                <option value="Flex Premium">Flex Premium</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Master Room & Ensuite Bath">Master Room & Ensuite Bath</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Desired Move-in Date</label>
+            <input type="date" name="moveIn">
+          </div>
+          <div class="form-group">
+            <label>Notes (optional)</label>
+            <textarea name="message" rows="2" placeholder="Any preferences or questions?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--reserve btn--full btn--lg" style="border-style: solid;">Reserve – No Payment Required</button>
         </form>
       </div>
     </div>

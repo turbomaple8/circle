@@ -101,6 +101,14 @@ function initModals() {
     });
   });
 
+  // Reserve modal
+  document.querySelectorAll('[data-modal="reserve"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('reserveModal');
+    });
+  });
+
   // Close modals
   document.querySelectorAll('.modal-overlay').forEach(overlay => {
     overlay.addEventListener('click', (e) => {
@@ -246,6 +254,57 @@ function handleApplyForm(e) {
       <div class="success-message__icon">&#10003;</div>
       <h3>Application Received</h3>
       <p style="color: var(--text-light); margin-top: 0.5rem;">Our team will review your details and respond within 48 hours.</p>
+    </div>
+  `;
+}
+
+function handleReserveForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  const formData = {
+    firstName: data.get('firstName'),
+    lastName: data.get('lastName'),
+    email: data.get('email'),
+    phone: data.get('phone'),
+    property: data.get('property'),
+    roomType: data.get('roomType'),
+    moveIn: data.get('moveIn'),
+    message: data.get('message')
+  };
+
+  // FormSubmit.co email
+  const formSubmitData = new FormData();
+  Object.entries(formData).forEach(([key, value]) => {
+    if (value) formSubmitData.append(key, value);
+  });
+  formSubmitData.append('_subject', 'New Reservation (No Payment) — Circle Coliving');
+  formSubmitData.append('_template', 'table');
+
+  fetch('https://formsubmit.co/ajax/info@circle.co', {
+    method: 'POST',
+    body: formSubmitData
+  }).catch(() => {});
+
+  // Backend forwarding (fire-and-forget)
+  forwardToBackend('reservations', {
+    fullName: `${formData.firstName || ''} ${formData.lastName || ''}`.trim(),
+    email: formData.email,
+    phone: formData.phone || null,
+    property: formData.property || null,
+    roomType: formData.roomType || null,
+    moveInDate: formData.moveIn || null,
+    notes: formData.message || null,
+    sourceWebsite: 'circlestay.ca',
+    city: 'Toronto'
+  });
+
+  form.innerHTML = `
+    <div class="success-message">
+      <div class="success-message__icon">&#10003;</div>
+      <h3>Room Reserved!</h3>
+      <p style="color: var(--text-light); margin-top: 0.5rem;">Your room is being held — no payment required. We'll reach out shortly to confirm details.</p>
     </div>
   `;
 }

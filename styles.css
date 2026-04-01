@@ -188,6 +188,19 @@ h5 { font-size: 1.05rem; }
   transform: translateY(-1px);
 }
 
+.btn--reserve {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px dashed var(--accent);
+}
+
+.btn--reserve:hover {
+  background: var(--accent);
+  color: var(--white);
+  border-style: solid;
+  transform: translateY(-1px);
+}
+
 .btn--outline-dark {
   background: transparent;
   color: var(--text);
@@ -1307,6 +1320,10 @@ h5 { font-size: 1.05rem; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
+}
+
+.room-card__actions .btn--reserve {
+  grid-column: 1 / -1;
 }
 
 /* ---- Amenities Grid ---- */
