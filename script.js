@@ -197,7 +197,7 @@ function handleTourForm(e) {
   formSubmitData.append('_subject', 'New Viewing Request — Circle Coliving');
   formSubmitData.append('_template', 'table');
 
-  fetch('https://formsubmit.co/ajax/info@circle.co', {
+  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
@@ -251,7 +251,7 @@ function handleApplyForm(e) {
   formSubmitData.append('_subject', 'New Application — Circle Coliving');
   formSubmitData.append('_template', 'table');
 
-  fetch('https://formsubmit.co/ajax/info@circle.co', {
+  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
@@ -304,7 +304,7 @@ function handleReserveForm(e) {
   formSubmitData.append('Room', room || 'Not specified');
   formSubmitData.append('Move-in Date', moveIn || 'Not specified');
 
-  fetch('https://formsubmit.co/ajax/info@circle.co', {
+  fetch('https://formsubmit.co/ajax/info@circlestay.ca', {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
