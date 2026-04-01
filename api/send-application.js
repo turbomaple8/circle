@@ -5,14 +5,20 @@ const nodemailer = require("nodemailer");
 const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://coliville-api-626057356331.us-east1.run.app";
 const BACKEND_PROJECT_ID = process.env.BACKEND_PROJECT_ID || "circle";
 
-function createTransporter() {
+async function createTransporter() {
+  let host = process.env.SMTP_HOST || "mail.privateemail.com";
+  try {
+    const { resolve4 } = require("dns").promises;
+    const ips = await resolve4(host);
+    if (ips.length > 0) host = ips[0];
+  } catch {}
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || "587"),
-    secure: process.env.SMTP_SECURE === "true",
+    host,
+    port: parseInt(process.env.SMTP_PORT || "465"),
+    secure: true,
     auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASSWORD },
     tls: { servername: "mail.privateemail.com", rejectUnauthorized: true },
-    connectionTimeout: 10000, greetingTimeout: 10000, socketTimeout: 15000,
+    connectionTimeout: 15000, greetingTimeout: 15000, socketTimeout: 20000,
   });
 }
 
@@ -38,7 +44,7 @@ module.exports = async (req, res) => {
       return res.status(400).json({ success: false, message: "Missing required fields" });
     }
 
-    const transporter = createTransporter();
+    const transporter = await createTransporter();
 
     // Email to admin
     await sendWithRetry(transporter, {
