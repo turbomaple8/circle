@@ -101,10 +101,31 @@ function initModals() {
     });
   });
 
-  // Reserve modal
+  // Reserve modal — pass property/room context from data attributes
   document.querySelectorAll('[data-modal="reserve"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const property = btn.getAttribute('data-reserve-property') || '';
+      const room = btn.getAttribute('data-reserve-room') || '';
+
+      // Set hidden inputs
+      const propInput = document.getElementById('reservePropertyInput');
+      const roomInput = document.getElementById('reserveRoomInput');
+      if (propInput) propInput.value = property;
+      if (roomInput) roomInput.value = room;
+
+      // Show context block
+      const ctx = document.getElementById('reserveContext');
+      const propLabel = document.getElementById('reservePropertyLabel');
+      const roomLabel = document.getElementById('reserveRoomLabel');
+      if (ctx && (property || room)) {
+        ctx.style.display = 'block';
+        if (propLabel) propLabel.textContent = property;
+        if (roomLabel) roomLabel.textContent = room;
+      } else if (ctx) {
+        ctx.style.display = 'none';
+      }
+
       openModal('reserveModal');
     });
   });
@@ -263,48 +284,61 @@ function handleReserveForm(e) {
   const form = e.target;
   const data = new FormData(form);
 
-  const formData = {
-    firstName: data.get('firstName'),
-    lastName: data.get('lastName'),
-    email: data.get('email'),
-    phone: data.get('phone'),
-    property: data.get('property'),
-    roomType: data.get('roomType'),
-    moveIn: data.get('moveIn'),
-    message: data.get('message')
-  };
+  const fullName = `${data.get('firstName') || ''} ${data.get('lastName') || ''}`.trim();
+  const email = data.get('email');
+  const phone = data.get('phone');
+  const moveIn = data.get('moveIn');
+  const property = data.get('reserveProperty') || '';
+  const room = data.get('reserveRoom') || '';
 
-  // FormSubmit.co email
+  // 1. FormSubmit.co email (same pattern as apply/tour)
   const formSubmitData = new FormData();
-  Object.entries(formData).forEach(([key, value]) => {
-    if (value) formSubmitData.append(key, value);
-  });
-  formSubmitData.append('_subject', 'New Reservation (No Payment) — Circle Coliving');
+  formSubmitData.append('_subject', 'Circle — Instant Reservation from ' + fullName + ' (Toronto)');
   formSubmitData.append('_template', 'table');
+  formSubmitData.append('Reservation Type', 'Instant Reservation (24h Hold)');
+  formSubmitData.append('City', 'Toronto');
+  formSubmitData.append('Full Name', fullName);
+  if (email) formSubmitData.append('Email', email);
+  if (phone) formSubmitData.append('Phone', phone);
+  formSubmitData.append('Property', property || 'Not specified');
+  formSubmitData.append('Room', room || 'Not specified');
+  formSubmitData.append('Move-in Date', moveIn || 'Not specified');
 
   fetch('https://formsubmit.co/ajax/info@circle.co', {
     method: 'POST',
     body: formSubmitData
   }).catch(() => {});
 
-  // Backend forwarding (fire-and-forget)
+  // 2. Backend forwarding — POST /v1/public/reservations (same as Passage)
   forwardToBackend('reservations', {
-    fullName: `${formData.firstName || ''} ${formData.lastName || ''}`.trim(),
-    email: formData.email,
-    phone: formData.phone || null,
-    property: formData.property || null,
-    roomType: formData.roomType || null,
-    moveInDate: formData.moveIn || null,
-    notes: formData.message || null,
+    fullName: fullName,
+    email: email,
+    phone: phone || null,
+    moveInDate: moveIn || null,
+    property: property || null,
+    propertySlug: property ? property.toLowerCase().replace('the ', '').replace(/\s+/g, '-') : null,
+    roomName: room || null,
+    roomId: null,
     sourceWebsite: 'circlestay.ca',
     city: 'Toronto'
   });
 
-  form.innerHTML = `
-    <div class="success-message">
-      <div class="success-message__icon">&#10003;</div>
-      <h3>Room Reserved!</h3>
-      <p style="color: var(--text-light); margin-top: 0.5rem;">Your room is being held — no payment required. We'll reach out shortly to confirm details.</p>
+  // Show success with context
+  const ctx = document.getElementById('reserveContext');
+  if (ctx) ctx.style.display = 'none';
+
+  form.parentElement.innerHTML = `
+    <div style="text-align: center; padding: 1.5rem 0;">
+      <div style="width: 56px; height: 56px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h3 style="margin: 0 0 0.25rem;">You're all set!</h3>
+      <p style="color: var(--accent, #b08968); font-weight: 500; margin: 0 0 1rem;">Your room is reserved for 24 hours.</p>
+      ${property ? '<div style="background: var(--cream, #f5f0eb); border-radius: 8px; padding: 0.6rem 1rem; margin-bottom: 1rem;"><strong>' + property + '</strong>' + (room ? '<br><span style="font-size: 0.85rem; color: var(--text-light, #888);">' + room + '</span>' : '') + '</div>' : ''}
+      <p style="color: var(--text-light, #888); font-size: 0.9rem;">No payment was charged. A member of our team will reach out shortly to help you complete your booking.</p>
+      <div style="background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; padding: 0.5rem 1rem; margin-top: 0.75rem;">
+        <p style="font-size: 0.75rem; color: #92400e; margin: 0;">This hold expires in 24 hours. If not confirmed, the room is automatically released.</p>
+      </div>
     </div>
   `;
 }
