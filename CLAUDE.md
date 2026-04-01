@@ -20,7 +20,6 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 ├── index.html              # Homepage — hero, featured rooms, community, FAQ
 ├── about.html              # About page — mission, values, team
 ├── locations.html          # All properties overview
-├── property-distillery.html # Property detail — Distillery District
 ├── property-queen.html     # Property detail — Queen West
 ├── property-yonge.html     # Property detail — Yonge & Eglinton
 ├── property-york.html      # Property detail — York & Bremner
@@ -56,10 +55,8 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 
 1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
 2. **The Queen** - 215 Queen Street West (Queen West / Entertainment District)
-3. **The Distillery** - 70 Mill Street (Distillery District / Corktown)
-4. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
-5. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown) - listed but no property page yet
-6. **The Wellesley** - 100 Wellesley Street East (Church-Wellesley) - listed but no property page yet
+3. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
+4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown) - listed but no property page yet
 
 ## Deployment
 
