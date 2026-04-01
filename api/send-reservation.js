@@ -12,6 +12,7 @@ function createTransporter() {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
     },
+    tls: { servername: "mail.privateemail.com", rejectUnauthorized: true },
   });
 }
 
