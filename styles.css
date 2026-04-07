@@ -2062,21 +2062,22 @@ h5 { font-size: 1.05rem; }
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.5rem;
+  color: #FFFFFF;
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .blog-featured__excerpt {
   font-size: 1rem;
   line-height: 1.5;
-  opacity: 0.95;
   max-width: 640px;
+  color: rgba(255,255,255,0.92);
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .blog-featured__meta {
   margin-top: 0.75rem;
   font-size: 0.82rem;
-  opacity: 0.7;
+  color: rgba(255,255,255,0.7);
 }
 
 /* Blog Article Layout — 2 Column */
