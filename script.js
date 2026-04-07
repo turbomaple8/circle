@@ -285,12 +285,12 @@ function initBlogTOC() {
     if (!post.querySelector('.blog-post-cta') && !post.innerHTML.includes('Ready to Join')) {
       const cta = document.createElement('section');
       cta.className = 'blog-post-cta';
-      cta.style.cssText = 'background: var(--cream); border-radius: 14px; padding: 2.5rem; text-align: center; margin: 3rem 0 1rem;';
-      cta.innerHTML = '<h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.75rem; color: var(--text);">Ready to Find Your Room?</h3>' +
-        '<p style="color: var(--text-light); margin-bottom: 1.5rem;">Fully furnished co-living in Toronto from C$240/week. All-inclusive, no hidden fees.</p>' +
+      cta.style.cssText = 'background: #2D2420; border-radius: 14px; padding: 2.5rem; text-align: center; margin: 3rem 0 1rem;';
+      cta.innerHTML = '<h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.75rem; color: #FFFFFF;">Ready to Find Your Room?</h3>' +
+        '<p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">Fully furnished co-living in Toronto from C$240/week. All-inclusive, no hidden fees.</p>' +
         '<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">' +
-        '<a href="/locations" class="btn btn--primary" style="padding: 0.8rem 2rem;">Browse Rooms</a>' +
-        '<a href="#" class="btn btn--outline" data-modal="apply" style="padding: 0.8rem 2rem;">Apply Now</a>' +
+        '<a href="/locations" class="btn" style="padding: 0.8rem 2rem; background: #C4876B; color: #FFFFFF; border-radius: 8px; text-decoration: none; font-weight: 500;">Browse Rooms</a>' +
+        '<a href="#" class="btn" data-modal="apply" style="padding: 0.8rem 2rem; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; text-decoration: none; font-weight: 500;">Apply Now</a>' +
         '</div>';
       post.appendChild(cta);
     }
