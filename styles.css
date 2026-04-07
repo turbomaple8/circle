@@ -1962,6 +1962,45 @@ h5 { font-size: 1.05rem; }
   transform: scale(1.05);
 }
 
+.blog-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  flex-direction: row;
+}
+
+.blog-card--featured .blog-card__image {
+  height: 100%;
+  min-height: 320px;
+}
+
+.blog-card--featured .blog-card__body {
+  padding: 2rem 2.5rem;
+  justify-content: center;
+}
+
+.blog-card--featured .blog-card__title {
+  font-size: 1.8rem;
+}
+
+.blog-card--featured .blog-card__excerpt {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .blog-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card--featured .blog-card__image {
+    min-height: 220px;
+  }
+
+  .blog-card--featured .blog-card__title {
+    font-size: 1.4rem;
+  }
+}
+
 .blog-card__tag {
   position: absolute;
   top: 1rem;
