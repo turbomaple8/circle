@@ -268,7 +268,7 @@ function initBlogTOC() {
   if (post && !manualToc) {
     // Auto-inject hero image from og:image meta tag
     const ogImage = document.querySelector('meta[property="og:image"]');
-    const postHeader = post.querySelector('.post-header, header');
+    const postHeader = post.querySelector('.post-header, header') || post.querySelector('h1');
     if (ogImage && postHeader && !post.querySelector('.post-hero-image')) {
       const hero = document.createElement('img');
       hero.src = ogImage.content;
@@ -276,7 +276,23 @@ function initBlogTOC() {
       hero.className = 'post-hero-image';
       hero.loading = 'eager';
       hero.decoding = 'async';
-      postHeader.after(hero);
+      // Insert after header block or after first h1 + its following meta/intro
+      const nextSection = postHeader.tagName === 'H1' ? (postHeader.nextElementSibling && postHeader.nextElementSibling.tagName === 'P' ? postHeader.nextElementSibling : postHeader) : postHeader;
+      nextSection.after(hero);
+    }
+
+    // Auto-inject CTA section if none exists
+    if (!post.querySelector('.blog-post-cta') && !post.innerHTML.includes('Ready to Join')) {
+      const cta = document.createElement('section');
+      cta.className = 'blog-post-cta';
+      cta.style.cssText = 'background: var(--cream); border-radius: 14px; padding: 2.5rem; text-align: center; margin: 3rem 0 1rem;';
+      cta.innerHTML = '<h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.75rem; color: var(--text);">Ready to Find Your Room?</h3>' +
+        '<p style="color: var(--text-light); margin-bottom: 1.5rem;">Fully furnished co-living in Toronto from C$240/week. All-inclusive, no hidden fees.</p>' +
+        '<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">' +
+        '<a href="/locations" class="btn btn--primary" style="padding: 0.8rem 2rem;">Browse Rooms</a>' +
+        '<a href="#" class="btn btn--outline" data-modal="apply" style="padding: 0.8rem 2rem;">Apply Now</a>' +
+        '</div>';
+      post.appendChild(cta);
     }
 
     // Auto-inject: wrap post in 2-column layout with sidebar

@@ -1792,27 +1792,357 @@ ${roomTypeComparisonHTML(rt.searchTerm)}
 }
 
 // ══════════════════════════════════════════════════════════════════════════════════
+// GENERIC THEME-BASED GENERATORS (for all 16 themes)
+// ══════════════════════════════════════════════════════════════════════════════════
+
+/** Internal linking section */
+function internalLinksHTML(currentSlug, hood, themeSlug) {
+  const links = [];
+  // Link to property page
+  const prop = getProp(hood.property_slug);
+  if (prop) {
+    links.push(`<a href="/property-${prop.slug.replace('the-', '')}" class="btn btn--outline" style="text-align: center;">${prop.name} — From ${formatPrice(prop.price_from_weekly)}/wk</a>`);
+  }
+  // Link to 2-3 related theme pages in same neighborhood
+  const otherThemes = themes.filter(t => t.slug !== themeSlug).slice(0, 3);
+  otherThemes.forEach(t => {
+    const url = t.url_pattern_neighborhood.replace('{neighborhood}', hood.slug);
+    const name = t.display_name + ' in ' + hood.name.split(' /')[0];
+    links.push(`<a href="${url}" class="btn btn--outline" style="text-align: center;">${name}</a>`);
+  });
+  // Link to a blog post
+  const blogLinks = [
+    { url: '/blog/co-living-toronto-complete-guide', name: 'Co-Living Guide' },
+    { url: '/blog/student-housing-toronto-guide', name: 'Student Housing Guide' },
+    { url: '/blog/co-living-vs-apartment-toronto', name: 'Co-Living vs Apartment' }
+  ];
+  const blogPick = blogLinks[Math.abs(pickVariantIdx(currentSlug)) % blogLinks.length];
+  links.push(`<a href="${blogPick.url}" class="btn btn--outline" style="text-align: center;">${blogPick.name}</a>`);
+
+  return `
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem;">Explore More</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto;">
+        ${links.join('\n        ')}
+      </div>
+    </div>
+  </section>`;
+}
+
+/** Generate neighborhood pages for a given theme */
+function generateThemeNeighborhoodPages(themeSlug) {
+  const theme = getTheme(themeSlug);
+  if (!theme || !theme.url_pattern_neighborhood) return [];
+  const generated = [];
+
+  neighborhoods.forEach(hood => {
+    const prop = getProp(hood.property_slug);
+    const vars = buildVars(prop, hood);
+    const pageSlug = theme.url_pattern_neighborhood.replace('{neighborhood}', hood.slug).replace(/^\//, '');
+    const filename = `${pageSlug}.html`;
+    const canonical = `https://circlestay.ca/${pageSlug}`;
+
+    // Skip if file already exists (from original templates)
+    if (fs.existsSync(path.join(ROOT, filename))) return;
+
+    const h1 = fillTemplate(pickVariant(pageSlug, theme.h1_variants), vars);
+    const metaTitle = fillTemplate(theme.meta_title_template, vars);
+    const metaDesc = fillTemplate(theme.meta_description_template, vars);
+    const intro = fillTemplate(pickVariant(pageSlug, theme.intro_variants), vars);
+
+    const bodyContent = `
+  <section class="section">
+    <div class="container">
+      <div class="fade-in" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 3rem;">
+        <img src="${propImage(prop.slug)}" alt="${propImageAlt(prop)}" loading="lazy" decoding="async" style="width: 100%; max-width: 500px; border-radius: 12px; object-fit: cover;">
+        <div style="flex: 1; min-width: 280px;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">${prop.name}</h2>
+          <p style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">${prop.address} &mdash; ${hood.name}</p>
+          <p style="margin-bottom: 1rem;">${hood.description}</p>
+          <p style="margin-bottom: 1rem;"><strong>Best for:</strong> ${hood.best_for.join(', ')}</p>
+          <p style="font-size: 1.1rem;"><strong>Safety:</strong> ${hood.safety_description}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; text-align: center; margin-bottom: 2rem;">Room Types at ${prop.name}</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+${roomCardsHTML(prop)}
+      </div>
+      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">All rooms fully furnished. WiFi, utilities, and amenities included. Flexible leases from 1 month.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; text-align: center; margin-bottom: 1rem;">Nearby Campuses</h2>
+      ${uniDistanceTable(prop)}
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; text-align: center; margin-bottom: 0.5rem;">Living in ${hood.name}</h2>
+      <p class="fade-in" style="text-align: center; max-width: 600px; margin: 0 auto 1rem; color: #666;">${hood.vibe}</p>
+      ${neighborhoodInfoHTML(hood, 'en')}
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
+        ${prop.amenities.map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+      </div>
+    </div>
+  </section>
+${internalLinksHTML(pageSlug, hood, themeSlug)}`;
+
+    const faq = faqSectionHTML(theme.faq_pool, vars, pageSlug);
+    const faqLd = faqJsonLd(theme.faq_pool, vars, pageSlug);
+
+    generated.push(generatePage({
+      filename, title: metaTitle, metaDesc, canonical, h1,
+      subtitle: `${hood.vibe} Starting from ${formatPrice(prop.price_from_weekly)}/week at ${prop.name}.`,
+      priceBadge: `From ${formatPrice(prop.price_from_weekly)}/week`,
+      introText: intro, bodyContent, faqHTML: faq, ctaHTML: ctaSectionHTML('en'),
+      breadcrumbJsonLd: breadcrumb([
+        { name: 'Home', url: 'https://circlestay.ca/' },
+        { name: theme.display_name + ' Toronto' },
+        { name: hood.name }
+      ]),
+      extraJsonLd: `,
+      {
+        "@type": "LodgingBusiness",
+        "name": "${prop.name} — Circle Co-Living",
+        "description": "${theme.display_name} in ${hood.name}, Toronto. Furnished rooms from ${formatPrice(prop.price_from_weekly)}/week.",
+        "address": { "@type": "PostalAddress", "streetAddress": "${prop.address}", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+        "priceRange": "${formatPrice(prop.price_from_weekly)} - ${formatPrice(prop.price_to_weekly)} per week",
+        "url": "${canonical}"
+      }` + faqLd,
+      lang: 'en', ogImage: `https://circlestay.ca${propImage(prop.slug)}`
+    }));
+  });
+  return generated;
+}
+
+/** Generate city-level page for a given theme */
+function generateThemeCityPage(themeSlug) {
+  const theme = getTheme(themeSlug);
+  if (!theme || !theme.url_pattern_city) return [];
+
+  const pageSlug = theme.url_pattern_city.replace(/^\//, '');
+  const filename = `${pageSlug}.html`;
+
+  // Skip if already exists (audience segment pages, etc.)
+  if (fs.existsSync(path.join(ROOT, filename))) return [];
+
+  const canonical = `https://circlestay.ca/${pageSlug}`;
+  const lowestProp = properties.reduce((a, b) => a.price_from_weekly < b.price_from_weekly ? a : b);
+  const vars = {
+    location: 'Toronto',
+    property: 'Circle Co-Living',
+    price: formatPrice(lowestProp.price_from_weekly),
+    monthly: formatMonthly(lowestProp.price_from_weekly),
+    room_count: String(properties.reduce((sum, p) => sum + p.rooms.length, 0)),
+    transit_highlight: 'multiple subway stations and streetcar lines',
+    amenities_list: 'WiFi, Furnished Rooms, Concierge, Fitness Centre',
+    top_amenities: 'WiFi, Furnished Rooms, Concierge, Fitness Centre',
+    safety_description: 'All properties feature secure access and professional management',
+    location_preposition: 'in'
+  };
+
+  const h1 = fillTemplate(pickVariant(pageSlug, theme.h1_variants), vars);
+  const metaTitle = fillTemplate(theme.meta_title_template, vars);
+  const metaDesc = fillTemplate(theme.meta_description_template, vars);
+  const intro = fillTemplate(pickVariant(pageSlug, theme.intro_variants), vars);
+
+  // All properties overview
+  let propsHTML = '';
+  properties.forEach(prop => {
+    const hood = getNeighborhood(prop.neighborhood_slug);
+    propsHTML += `
+          <div class="fade-in" style="background: var(--cream); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+              <img src="${propImage(prop.slug)}" alt="${propImageAlt(prop)}" loading="lazy" decoding="async" style="width: 180px; height: 120px; object-fit: cover; border-radius: 8px;">
+              <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.25rem;"><a href="/property-${prop.slug.replace('the-', '')}" style="color: var(--primary); text-decoration: none;">${prop.name}</a></h3>
+                <p style="color: var(--accent); margin-bottom: 0.25rem;">${hood ? hood.name : prop.neighborhood_name}</p>
+                <p style="margin-bottom: 0.5rem;">${prop.address}</p>
+                <p style="font-size: 1.4rem; font-weight: 700; color: var(--accent);">From ${formatPrice(prop.price_from_weekly)}<span style="font-size: 0.85rem; font-weight: 400; color: var(--text);">/week</span></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">${prop.rooms.length} room types | ${prop.amenities.slice(0, 3).join(', ')}</p>
+              </div>
+            </div>
+          </div>`;
+  });
+
+  // Neighborhood links
+  let hoodLinks = '';
+  neighborhoods.forEach(hood => {
+    const url = theme.url_pattern_neighborhood.replace('{neighborhood}', hood.slug);
+    hoodLinks += `<a href="${url}" class="btn btn--outline" style="text-align: center;">${theme.display_name} in ${hood.name.split(' /')[0]}</a>\n        `;
+  });
+
+  const bodyContent = `
+  <section class="section">
+    <div class="container">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; text-align: center; margin-bottom: 2rem;">Our Locations</h2>
+      ${propsHTML}
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="container" style="text-align: center;">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem;">Browse by Neighbourhood</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto;">
+        ${hoodLinks}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'Flexible Leases', 'No Credit Check', '24/7 Support'].map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+      </div>
+    </div>
+  </section>`;
+
+  const faq = faqSectionHTML(theme.faq_pool, vars, pageSlug);
+  const faqLd = faqJsonLd(theme.faq_pool, vars, pageSlug);
+
+  return [generatePage({
+    filename, title: metaTitle, metaDesc, canonical, h1,
+    subtitle: `${properties.length} locations across Toronto. All-inclusive from ${formatPrice(lowestProp.price_from_weekly)}/week.`,
+    priceBadge: `From ${formatPrice(lowestProp.price_from_weekly)}/week`,
+    introText: intro, bodyContent, faqHTML: faq, ctaHTML: ctaSectionHTML('en'),
+    breadcrumbJsonLd: breadcrumb([
+      { name: 'Home', url: 'https://circlestay.ca/' },
+      { name: theme.display_name + ' Toronto' }
+    ]),
+    extraJsonLd: faqLd,
+    lang: 'en', ogImage: 'https://circlestay.ca/building-york.jpg'
+  })];
+}
+
+/** Generate university pages for a given theme */
+function generateThemeUniversityPages(themeSlug) {
+  const theme = getTheme(themeSlug);
+  if (!theme || !theme.generate_university_pages || !theme.url_pattern_university) return [];
+  const generated = [];
+
+  universities.forEach(uni => {
+    const nearestProp = getProp(uni.nearest_property);
+    const nearestHood = nearestProp ? getNeighborhood(nearestProp.neighborhood_slug) : neighborhoods[0];
+    const vars = buildVars(nearestProp, nearestHood);
+    vars.location = `near ${uni.name}`;
+    vars.nearest_campus = uni.name;
+    const dist = uni.all_properties_distance[nearestProp.slug];
+    if (dist) {
+      vars.campus_distance = `${dist.minutes} minutes`;
+      vars.transit_detail = `Take ${dist.route} — about ${dist.minutes} minutes door to door`;
+    }
+
+    const pageSlug = theme.url_pattern_university.replace('{university}', uni.slug).replace(/^\//, '');
+    const filename = `${pageSlug}.html`;
+    const canonical = `https://circlestay.ca/${pageSlug}`;
+
+    if (fs.existsSync(path.join(ROOT, filename))) return;
+
+    const h1 = fillTemplate(pickVariant(pageSlug, theme.h1_variants), vars);
+    const metaTitle = fillTemplate(theme.meta_title_template, vars);
+    const metaDesc = fillTemplate(theme.meta_description_template, vars);
+    const intro = fillTemplate(pickVariant(pageSlug, theme.intro_variants), vars);
+
+    const bodyContent = `
+  <section class="section">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 2rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.8rem;">${uni.name} (${uni.short_name})</h2>
+        <p style="color: var(--text-light);">${uni.campus} &mdash; ${uni.address}</p>
+        <p style="margin-top: 0.5rem;"><strong>${uni.student_population}</strong> students | <strong>${uni.international_student_pct}</strong> international</p>
+      </div>
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem;">All Circle Locations Near ${uni.short_name}</h2>
+      ${allPropsForUniHTML(uni)}
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="container" style="text-align: center;">
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'No Credit Check', 'Flexible Leases', '24/7 Support'].map(a => `<span class="fade-in" style="background: white; padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+      </div>
+    </div>
+  </section>`;
+
+    const faq = faqSectionHTML(theme.faq_pool, vars, pageSlug);
+    const faqLd = faqJsonLd(theme.faq_pool, vars, pageSlug);
+
+    generated.push(generatePage({
+      filename, title: metaTitle, metaDesc, canonical, h1,
+      subtitle: `${theme.display_name} near ${uni.name}. From ${formatPrice(nearestProp.price_from_weekly)}/week.`,
+      priceBadge: `From ${formatPrice(nearestProp.price_from_weekly)}/week`,
+      introText: intro, bodyContent, faqHTML: faq, ctaHTML: ctaSectionHTML('en'),
+      breadcrumbJsonLd: breadcrumb([
+        { name: 'Home', url: 'https://circlestay.ca/' },
+        { name: theme.display_name + ' Toronto' },
+        { name: `Near ${uni.short_name}` }
+      ]),
+      extraJsonLd: faqLd,
+      lang: 'en', ogImage: `https://circlestay.ca${propImage(nearestProp.slug)}`
+    }));
+  });
+  return generated;
+}
+
+// ══════════════════════════════════════════════════════════════════════════════════
 // MAIN — Run all generators
 // ══════════════════════════════════════════════════════════════════════════════════
-console.log('CircleStay pSEO Generator');
-console.log('='.repeat(50));
+console.log('CircleStay pSEO Generator — Full Expansion');
+console.log('='.repeat(60));
 
 const all = [];
-all.push(...generateNeighborhoodPages());
-console.log(`  Template 1 — Neighborhood Co-Living: ${4} pages`);
-all.push(...generateUniversityPages());
-console.log(`  Template 2 — University Proximity:    ${6} pages`);
-all.push(...generateAudiencePages());
-console.log(`  Template 3 — Audience Segments:       ${4} pages`);
-all.push(...generateFurnishedPages());
-console.log(`  Template 4 — Furnished Rooms:         ${4} pages`);
-all.push(...generateFrenchPages());
-console.log(`  Template 5 — French Pages:            ${5} pages`);
-all.push(...generateRoomTypePages());
-console.log(`  Template 6 — Room Type:               ${4} pages`);
 
-console.log('='.repeat(50));
-console.log(`Total pages generated: ${all.length}`);
+// Original 6 templates (27 pages — already deployed)
+all.push(...generateNeighborhoodPages());
+console.log(`  Original Template 1 — Neighborhood Co-Living: 4 pages`);
+all.push(...generateUniversityPages());
+console.log(`  Original Template 2 — University Proximity:    6 pages`);
+all.push(...generateAudiencePages());
+console.log(`  Original Template 3 — Audience Segments:       4 pages`);
+all.push(...generateFurnishedPages());
+console.log(`  Original Template 4 — Furnished Rooms:         4 pages`);
+all.push(...generateFrenchPages());
+console.log(`  Original Template 5 — French Pages:            5 pages`);
+all.push(...generateRoomTypePages());
+console.log(`  Original Template 6 — Room Type:               4 pages`);
+
+console.log('');
+console.log('  Expanding with all themes from themes.json...');
+console.log('');
+
+// Theme-based expansion (all 16 themes × city + neighborhood + university)
+let themeTotal = 0;
+themes.forEach(theme => {
+  const cityPages = generateThemeCityPage(theme.slug);
+  const hoodPages = generateThemeNeighborhoodPages(theme.slug);
+  const uniPages = generateThemeUniversityPages(theme.slug);
+  const count = cityPages.length + hoodPages.length + uniPages.length;
+  all.push(...cityPages, ...hoodPages, ...uniPages);
+  if (count > 0) {
+    const parts = [];
+    if (cityPages.length) parts.push(`${cityPages.length} city`);
+    if (hoodPages.length) parts.push(`${hoodPages.length} neighborhood`);
+    if (uniPages.length) parts.push(`${uniPages.length} university`);
+    console.log(`  Theme: ${theme.display_name.padEnd(28)} ${String(count).padStart(3)} pages (${parts.join(', ')})`);
+    themeTotal += count;
+  }
+});
+
+console.log('');
+console.log('='.repeat(60));
+console.log(`Original templates: 27 pages`);
+console.log(`Theme expansion:    ${themeTotal} pages`);
+console.log(`Total generated:    ${all.length} pages`);
 console.log('');
 console.log('Generated files:');
 all.forEach(f => console.log(`  ${f}`));
