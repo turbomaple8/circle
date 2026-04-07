@@ -2038,7 +2038,7 @@ h5 { font-size: 1.05rem; }
   left: 0;
   right: 0;
   padding: 3rem 2.5rem 2.5rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.15) 80%, transparent 100%);
   color: white;
 }
 
@@ -2061,13 +2061,15 @@ h5 { font-size: 1.05rem; }
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .blog-featured__excerpt {
   font-size: 1rem;
   line-height: 1.5;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 640px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .blog-featured__meta {
