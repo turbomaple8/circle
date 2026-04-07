@@ -299,6 +299,7 @@ function initBlogTOC() {
       wrapper.appendChild(sidebar);
 
       buildTOC(toc, post);
+      injectRelatedPosts(wrapper);
     }
   } else if (manualToc) {
     const content = document.querySelector('.blog-article__content') || document.querySelector('.blog-post');
@@ -340,4 +341,51 @@ function buildTOC(toc, content) {
   }, { rootMargin: '-80px 0px -75% 0px', threshold: 0 });
 
   headings.forEach(h => observer.observe(h));
+}
+
+/* ---- Related Posts ---- */
+function injectRelatedPosts(wrapper) {
+  const currentPath = window.location.pathname;
+  const allPosts = [
+    { url: '/blog/co-living-toronto-complete-guide', title: 'Co-Living in Toronto: The Complete 2026 Guide', excerpt: 'Costs, locations, what to expect, and how to find the right fit.', img: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop', read: '15 min', tags: ['co-living', 'guide'] },
+    { url: '/blog/student-housing-toronto-guide', title: 'Student Housing in Toronto: Everything You Need to Know', excerpt: 'From dorms and apartments to co-living options near every campus.', img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop', read: '12 min', tags: ['student', 'guide'] },
+    { url: '/blog/young-professional-housing-toronto-guide', title: "Moving to Toronto for Work: Young Professional's Housing Guide", excerpt: 'Neighbourhoods, costs, and co-living options for young professionals.', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop', read: '10 min', tags: ['guide'] },
+    { url: '/blog/co-living-vs-apartment-toronto', title: 'Co-Living vs Apartment in Toronto: 2026 Cost Comparison', excerpt: 'Real costs — rent, utilities, furniture, and more. Save 38-60% with co-living.', img: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop', read: '10 min', tags: ['co-living'] },
+    { url: '/blog/international-student-housing-toronto', title: 'International Student Housing in Toronto: A Step-by-Step Guide', excerpt: 'How to find safe, affordable housing without Canadian credit history.', img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop', read: '10 min', tags: ['student'] },
+    { url: '/blog/toronto-housing-scam-prevention', title: "How to Avoid Toronto Housing Scams: A Renter's Safety Guide", excerpt: 'Red flags, verification steps, and trusted platforms for finding housing.', img: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop', read: '7 min', tags: ['guide', 'student'] },
+    { url: '/blog/waterfront-financial-district-guide', title: "Living in Toronto's Waterfront & Financial District", excerpt: 'Transit, restaurants, nightlife, and co-living in a dynamic neighbourhood.', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&h=400&fit=crop', read: '8 min', tags: ['neighbourhood'] },
+    { url: '/blog/queen-west-neighbourhood-guide', title: 'Living in Queen West, Toronto: Your Complete Guide', excerpt: "TIFF, Graffiti Alley, Trinity Bellwoods, and co-living in Toronto's creative hub.", img: 'https://images.unsplash.com/photo-1541336032412-2048a678540d?w=600&h=400&fit=crop', read: '8 min', tags: ['neighbourhood'] },
+    { url: '/blog/downtown-yonge-neighbourhood-guide', title: 'Living in Downtown Yonge & Dundas: Your Complete Guide', excerpt: 'Eaton Centre, Dundas Station, TMU, and co-living at the heartbeat of Toronto.', img: 'https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=600&h=400&fit=crop', read: '8 min', tags: ['neighbourhood'] },
+    { url: '/blog/cost-of-living-toronto-students', title: 'Cost of Living in Toronto for Students: 2026 Budget Breakdown', excerpt: 'Housing, food, transit, and three sample monthly budgets.', img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop', read: '10 min', tags: ['student', 'guide'] }
+  ];
+
+  // Find current post and get its tags
+  const current = allPosts.find(p => currentPath.endsWith(p.url) || currentPath.endsWith(p.url + '/'));
+  const currentTags = current ? current.tags : [];
+
+  // Score and sort by tag overlap, exclude current
+  const related = allPosts
+    .filter(p => !currentPath.endsWith(p.url) && !currentPath.endsWith(p.url + '/'))
+    .map(p => ({ ...p, score: p.tags.filter(t => currentTags.includes(t)).length }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  if (!related.length) return;
+
+  const section = document.createElement('section');
+  section.className = 'blog-related';
+  section.innerHTML = '<h3 class="blog-related__title">Related Articles</h3><div class="blog-related__grid">' +
+    related.map(p =>
+      '<a href="' + p.url + '" class="blog-card blog-card--sm">' +
+        '<div class="blog-card__image"><img src="' + p.img + '" alt="' + p.title.replace(/"/g, '&quot;') + '" loading="lazy" decoding="async"></div>' +
+        '<div class="blog-card__body">' +
+          '<h4 class="blog-card__title">' + p.title + '</h4>' +
+          '<p class="blog-card__excerpt">' + p.excerpt + '</p>' +
+          '<div class="blog-card__meta"><span>' + p.read + ' read</span></div>' +
+        '</div>' +
+      '</a>'
+    ).join('') +
+    '</div>';
+
+  wrapper.appendChild(section);
 }
