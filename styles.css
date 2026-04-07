@@ -2465,23 +2465,32 @@ h5 { font-size: 1.05rem; }
   color: var(--text-light);
 }
 
-.blog-article__cta {
-  background: var(--cream);
+.blog-article__cta,
+.blog-cta {
+  background: #2D2420;
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   text-align: center;
   margin: 3rem 0;
+  color: #FFFFFF;
 }
 
-.blog-article__cta h3 {
+.blog-article__cta h3,
+.blog-cta h3 {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
+  color: #FFFFFF;
 }
 
-.blog-article__cta p {
-  color: var(--text-light);
+.blog-article__cta p,
+.blog-cta p {
+  color: rgba(255,255,255,0.75);
   margin-bottom: 1.5rem;
+}
+
+.blog-cta .btn {
+  color: #FFFFFF;
 }
 
 /* Blog Sidebar — Sticky TOC */
