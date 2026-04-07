@@ -387,5 +387,5 @@ function injectRelatedPosts(wrapper) {
     ).join('') +
     '</div>';
 
-  wrapper.appendChild(section);
+  wrapper.parentNode.insertBefore(section, wrapper.nextSibling);
 }
