@@ -249,7 +249,7 @@ function footerHTML(lang) {
           <div class="footer__links">
             <a href="/about">&Agrave; propos</a>
             <a href="/#community">Communaut&eacute;</a>
-            <a href="mailto:hello@circle.co">Contact</a>
+            <a href="mailto:info@circlestay.ca">Contact</a>
           </div>
         </div>
         <div>
@@ -266,7 +266,7 @@ function footerHTML(lang) {
         <div class="footer__legal">
           <a href="/about">&Agrave; propos</a>
           <a href="/terms">En savoir plus</a>
-          <a href="mailto:hello@circle.co">Contact</a>
+          <a href="mailto:info@circlestay.ca">Contact</a>
         </div>
       </div>
     </div>
@@ -302,7 +302,7 @@ function footerHTML(lang) {
           <div class="footer__links">
             <a href="/about">About Circle</a>
             <a href="/#community">Community</a>
-            <a href="mailto:hello@circle.co">Contact</a>
+            <a href="mailto:info@circlestay.ca">Contact</a>
           </div>
         </div>
         <div>
@@ -319,7 +319,7 @@ function footerHTML(lang) {
         <div class="footer__legal">
           <a href="/about">About Circle</a>
           <a href="/terms">Learn More</a>
-          <a href="mailto:hello@circle.co">Contact</a>
+          <a href="mailto:info@circlestay.ca">Contact</a>
         </div>
       </div>
     </div>
@@ -732,7 +732,7 @@ ${HEAD_TRACKING}
         "description": "Curated co-living homes for students and young professionals in Toronto.",
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "hello@circle.co",
+          "email": "info@circlestay.ca",
           "contactType": "customer service"
         },
         "sameAs": [
