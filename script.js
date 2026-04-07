@@ -261,15 +261,47 @@ function handleReserveForm(e) {
 
 /* ---- Blog Table of Contents ---- */
 function initBlogTOC() {
-  const toc = document.querySelector('.blog-toc');
-  const content = document.querySelector('.blog-article__content');
-  if (!toc || !content) return;
+  // Support both manual TOC (.blog-toc) and auto-inject for blog-post pages
+  const post = document.querySelector('.blog-post');
+  const manualToc = document.querySelector('.blog-toc');
 
+  if (post && !manualToc) {
+    // Auto-inject: wrap post in 2-column layout with sidebar
+    const container = post.closest('.container');
+    if (container) {
+      container.style.maxWidth = '1100px';
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'blog-post-wrapper';
+
+      const sidebar = document.createElement('aside');
+      sidebar.className = 'blog-sidebar';
+      const toc = document.createElement('nav');
+      toc.className = 'blog-toc';
+      toc.innerHTML = '<h3 class="blog-toc__title">Content</h3>';
+      sidebar.appendChild(toc);
+
+      post.parentNode.insertBefore(wrapper, post);
+      wrapper.appendChild(post);
+      wrapper.appendChild(sidebar);
+
+      buildTOC(toc, post);
+    }
+  } else if (manualToc) {
+    const content = document.querySelector('.blog-article__content') || document.querySelector('.blog-post');
+    if (content) buildTOC(manualToc, content);
+  }
+}
+
+function buildTOC(toc, content) {
   const headings = content.querySelectorAll('h2');
   if (!headings.length) return;
 
   headings.forEach((h, i) => {
-    if (!h.id) h.id = 'section-' + i;
+    if (!h.id) {
+      const sectionParent = h.closest('section[id]');
+      h.id = sectionParent ? sectionParent.id : 'section-' + i;
+    }
     const link = document.createElement('a');
     link.href = '#' + h.id;
     link.textContent = h.textContent;
@@ -287,11 +319,9 @@ function initBlogTOC() {
     entries.forEach(entry => {
       const id = entry.target.id;
       const link = toc.querySelector('a[href="#' + id + '"]');
-      if (link) {
-        if (entry.isIntersecting) {
-          links.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
+      if (link && entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
       }
     });
   }, { rootMargin: '-80px 0px -75% 0px', threshold: 0 });
