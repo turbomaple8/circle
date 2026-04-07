@@ -3,5 +3,6 @@ Allow: /
 
 Disallow: /.vercel/
 Disallow: /CLAUDE.md
+Disallow: /tools/
 
 Sitemap: https://circlestay.ca/sitemap.xml

@@ -60,6 +60,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- pSEO: Neighborhood Co-Living -->
+  <url><loc>https://circlestay.ca/co-living-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- pSEO: University Proximity -->
+  <url><loc>https://circlestay.ca/co-living-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/co-living-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- pSEO: Audience Segments -->
+  <url><loc>https://circlestay.ca/student-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/young-professional-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/exchange-student-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/intern-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- pSEO: Furnished Rooms -->
+  <url><loc>https://circlestay.ca/furnished-rooms-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/furnished-rooms-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/furnished-rooms-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/furnished-rooms-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- pSEO: French Pages -->
+  <url><loc>https://circlestay.ca/fr/colocation-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://circlestay.ca/fr/colocation-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://circlestay.ca/fr/colocation-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://circlestay.ca/fr/colocation-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://circlestay.ca/fr/logement-etudiant-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- pSEO: Room Types -->
+  <url><loc>https://circlestay.ca/basic-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/private-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/deluxe-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://circlestay.ca/master-suite-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://circlestay.ca/privacy</loc>
     <lastmod>2026-04-03</lastmod>

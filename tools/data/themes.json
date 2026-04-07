@@ -1,0 +1,457 @@
+{
+  "themes": [
+    {
+      "slug": "coliving",
+      "name": "Coliving",
+      "display_name": "Coliving & Co-Living",
+      "cluster": "neighborhoods",
+      "generate_university_pages": false,
+      "url_pattern_city": "/coliving-toronto",
+      "url_pattern_neighborhood": "/coliving-in-{neighborhood}",
+      "target_keywords": ["coliving Toronto", "co-living Toronto", "coliving spaces Toronto", "co-living homes Toronto"],
+      "h1_variants": [
+        "Coliving in {location}: Furnished Rooms from {price}/Week",
+        "Find Your Coliving Home in {location}, Toronto",
+        "{location} Coliving — Intentional Community Living from {price}/wk"
+      ],
+      "meta_title_template": "Coliving in {location}, Toronto | Rooms from {price}/wk | Circle",
+      "meta_description_template": "Explore coliving spaces in {location}, Toronto. Fully furnished, all-inclusive from {price}/week. Flexible leases from 1 month. Join a community of students and professionals.",
+      "intro_variants": [
+        "Looking for coliving in {location}? {property} offers curated co-living rooms designed for how you actually live — not loud, not chaotic, but intentional. Starting from {price}/week, everything is included: furniture, WiFi, utilities, and a built-in community of students and young professionals.",
+        "{location} is one of Toronto's most sought-after neighborhoods for coliving. At {property} ({address}), you'll find {room_count} room types, shared common areas, and a community that values focus, connection, and calm. All-inclusive from {price}/week with flexible leases starting at 1 month.",
+        "Coliving in {location} means more than just a room — it's a lifestyle designed around community, convenience, and affordability. {property} puts you in the heart of {neighborhood_vibe}, with {transit_highlight} nearby. From {price}/week, fully furnished and all-inclusive."
+      ],
+      "content_angle": "Community and intentional living. Position co-living as a lifestyle choice, not a budget compromise.",
+      "faq_pool": [
+        {"q": "What is coliving in {location}?", "a": "Coliving is a modern housing concept where you rent a private, furnished room in a professionally managed shared home. At {property} in {location}, this means your own room plus shared kitchen, common areas, and amenities — all included in one weekly price from {price}."},
+        {"q": "How much does coliving cost in {location}?", "a": "Rooms at {property} in {location} start from {price}/week ({monthly}/month). All utilities, WiFi, and furnishings are included — no hidden fees. That's 38-60% less than a solo apartment in the same area."},
+        {"q": "Who lives in coliving spaces in {location}?", "a": "Our community at {property} includes international students, young professionals, and newcomers to Toronto. It's a diverse mix of people who value intentional community over chaotic roommate situations."},
+        {"q": "What's the minimum lease for coliving in {location}?", "a": "Just 1 month. We offer flexible terms from 1 month to 12+ months. No long-term commitment required — perfect for students, interns, and professionals in transition."},
+        {"q": "Do I need a credit check for coliving?", "a": "No. Circle Co-Living does not require Canadian credit history. Apply online, get approved within 48 hours, and move in as soon as this week."},
+        {"q": "What amenities are included at {property}?", "a": "{amenities_list}. All common areas and building amenities are shared with your fellow community members."},
+        {"q": "Is coliving better than renting an apartment in {location}?", "a": "For many people, yes. Coliving saves you 38-60% compared to a solo apartment, includes all utilities and furniture, offers flexible leases, and provides a built-in community. No furniture shopping, no separate utility bills, no isolation."},
+        {"q": "How do I apply for coliving in {location}?", "a": "Apply online in 3 simple steps: submit your application (2 minutes), get approved (within 48 hours), and move in. No lengthy paperwork or guarantor required."}
+      ]
+    },
+    {
+      "slug": "student-housing",
+      "name": "Student Housing",
+      "display_name": "Student Housing",
+      "cluster": "student",
+      "generate_university_pages": true,
+      "url_pattern_city": "/student-housing-toronto",
+      "url_pattern_neighborhood": "/student-housing-in-{neighborhood}",
+      "url_pattern_university": "/student-housing-near-{university}",
+      "target_keywords": ["student housing Toronto", "student housing downtown Toronto", "student housing near {university}"],
+      "h1_variants": [
+        "Student Housing in {location}: All-Inclusive Rooms from {price}/Week",
+        "Affordable Student Housing in {location}, Toronto — No Credit Check",
+        "{location} Student Housing | Furnished Rooms, Flexible Leases, from {price}/wk"
+      ],
+      "meta_title_template": "Student Housing in {location}, Toronto | From {price}/wk All-Inclusive | Circle",
+      "meta_description_template": "Student housing in {location}, Toronto from {price}/week. Fully furnished, no credit check, flexible leases from 1 month. Near {nearest_campus}. Apply now.",
+      "intro_variants": [
+        "Finding safe, affordable student housing in {location} shouldn't be stressful. Circle Co-Living offers fully furnished rooms from {price}/week with everything included — furniture, WiFi, utilities. No credit check required, and leases start at just 1 month. Perfect for international students, exchange students, and anyone studying in Toronto.",
+        "Forget the dorm waitlists and sketchy Kijiji listings. Student housing at {property} in {location} is designed for how students actually live: quiet study spaces, fast WiFi, furnished rooms, and a community of fellow students and young professionals. From {price}/week, all-inclusive, no credit check.",
+        "Whether you're arriving from abroad or transferring to a Toronto campus, {property} has student housing ready for you in {location}. {transit_highlight} gets you to campus fast. Rooms start at {price}/week — fully furnished, all utilities included, with flexible leases from 1 month."
+      ],
+      "content_angle": "Safety, affordability, and campus proximity. Address international student pain points: no credit history, scam fears, loneliness.",
+      "faq_pool": [
+        {"q": "How much is student housing in {location}?", "a": "Student rooms at {property} start from {price}/week ({monthly}/month), all-inclusive. That includes furniture, WiFi, all utilities, and access to building amenities. Compare that to the average Toronto studio at $1,800-2,500/month before utilities."},
+        {"q": "Do I need Canadian credit history for student housing?", "a": "No. Circle Co-Living does not require credit checks. We know international students and newcomers may not have Canadian credit. Just apply online — approval within 48 hours."},
+        {"q": "How close is {property} to {nearest_campus}?", "a": "{property} is {campus_distance} from {nearest_campus}. {transit_detail}."},
+        {"q": "Can I rent student housing for just one semester?", "a": "Yes. Our minimum stay is 1 month. Whether you need housing for a summer term, one semester, or a full academic year, we have flexible options."},
+        {"q": "Is there a study space at {property}?", "a": "{study_space_answer}. Our co-living homes are designed with students in mind — quiet hours policy, study-friendly layouts, and fast WiFi throughout."},
+        {"q": "What's included in student housing at {property}?", "a": "Everything: fully furnished private room, high-speed WiFi, all utilities (electricity, water, heating), access to shared kitchen, common areas, and building amenities including {top_amenities}."},
+        {"q": "Is student housing safe in {location}?", "a": "Yes. {property} features secure building access, professional management, and 24/7 support. {safety_description}."},
+        {"q": "How do I apply for student housing?", "a": "Apply online — it takes 2 minutes. Submit your name, email, preferred location, and move-in date. Our team responds within 48 hours. No guarantor needed."}
+      ]
+    },
+    {
+      "slug": "rooms-on-rent",
+      "name": "Rooms on Rent",
+      "display_name": "Rooms on Rent",
+      "cluster": "rooms",
+      "generate_university_pages": true,
+      "url_pattern_city": "/rooms-on-rent-toronto",
+      "url_pattern_neighborhood": "/rooms-on-rent-in-{neighborhood}",
+      "url_pattern_university": "/rooms-on-rent-near-{university}",
+      "target_keywords": ["rooms on rent Toronto", "rooms for rent Toronto", "rooms on rent downtown Toronto", "rooms on rent near {university}"],
+      "h1_variants": [
+        "Rooms on Rent in {location}, Toronto — Furnished from {price}/Week",
+        "Find Rooms on Rent in {location}: All-Inclusive, Move In This Week",
+        "Rent a Room in {location}, Toronto | {room_count} Options from {price}/wk"
+      ],
+      "meta_title_template": "Rooms on Rent in {location}, Toronto | Furnished from {price}/wk | Circle",
+      "meta_description_template": "Rooms on rent in {location}, Toronto starting at {price}/week. Fully furnished, all utilities included, flexible leases. {room_count} room types. No credit check. Apply now.",
+      "intro_variants": [
+        "Looking for rooms on rent in {location}? Skip the endless Kijiji scrolling and risky roommate situations. {property} offers {room_count} furnished room types from {price}/week — all utilities, WiFi, and amenities included. Secure building, professional management, and a community of like-minded residents.",
+        "Rooms on rent in {location} don't have to mean compromising on quality or safety. At {property} ({address}), every room comes fully furnished with {key_inclusions}. Flexible leases from 1 month, no credit check, and you could move in as soon as this week. From {price}/week, all-inclusive.",
+        "Finding good rooms on rent in Toronto is hard. Finding them in {location} for {price}/week with everything included? That's Circle Co-Living. {property} offers professionally managed rooms with {transit_highlight} nearby, a built-in community, and zero hidden costs."
+      ],
+      "content_angle": "Convenience, safety, and value. Position against Kijiji/Facebook scams and random roommate risk.",
+      "faq_pool": [
+        {"q": "How much are rooms on rent in {location}?", "a": "Rooms at {property} range from {price} to {price_to}/week. All-inclusive — furniture, WiFi, all utilities. No deposits beyond first and last month."},
+        {"q": "Are the rooms on rent furnished?", "a": "Yes, every room comes fully furnished with bed, desk, chair, wardrobe, and linens. Shared spaces include a fully equipped kitchen and common areas."},
+        {"q": "Do I need a credit check to rent a room?", "a": "No. Circle does not require Canadian credit history. This is ideal for international students, newcomers, and anyone new to the city."},
+        {"q": "What's the shortest lease for rooms on rent?", "a": "1 month minimum. You can rent a room for as short as 1 month or as long as 12+ months. Month-to-month renewals available after your initial term."},
+        {"q": "How quickly can I move into a room?", "a": "In many cases, within a week. Apply online (2 minutes), get approved (48 hours), pick your move-in date. The room is ready when you arrive."},
+        {"q": "Are the rooms on rent in {location} safe?", "a": "Yes. Secure building access, 24/7 support, and professional management. {safety_description}."},
+        {"q": "What's included in the rent?", "a": "Everything: fully furnished room, high-speed WiFi, all utilities (electricity, water, heating/cooling), access to common areas, kitchen, and building amenities."},
+        {"q": "Can couples rent a room?", "a": "Rooms are designed for single occupancy. Our Master Suite with ensuite bathroom offers the most privacy and space. Contact us at hello@circle.co for specific needs."}
+      ]
+    },
+    {
+      "slug": "rent-a-room",
+      "name": "Rent a Room",
+      "display_name": "Rent a Room",
+      "cluster": "rooms",
+      "generate_university_pages": false,
+      "url_pattern_city": "/rent-a-room-toronto",
+      "url_pattern_neighborhood": "/rent-a-room-in-{neighborhood}",
+      "target_keywords": ["rent a room Toronto", "rent a room downtown Toronto", "rent a room in {neighborhood}"],
+      "h1_variants": [
+        "Rent a Room in {location}, Toronto — All-Inclusive from {price}/Week",
+        "Rooms to Rent in {location}: Furnished, Flexible, from {price}/wk",
+        "Rent a Furnished Room in {location} — Move In This Week"
+      ],
+      "meta_title_template": "Rent a Room in {location}, Toronto | All-Inclusive from {price}/wk | Circle",
+      "meta_description_template": "Rent a room in {location}, Toronto from {price}/week. Furnished, all utilities included, no credit check. Flexible leases from 1 month. Apply today.",
+      "intro_variants": [
+        "Ready to rent a room in {location}? {property} makes it simple: choose your room, apply online, and move in within days. No furniture shopping, no utility setup, no credit check. Just one weekly price from {price} that covers everything.",
+        "Renting a room in {location} through Circle is different from anything on Kijiji or Facebook. At {property}, you get a professionally managed, fully furnished room with {transit_highlight} nearby. All-inclusive pricing from {price}/week means no surprises on your first month's bills.",
+        "Why hunt for a room on Kijiji when you can rent a furnished room in {location} from {price}/week? {property} offers secure housing with 24/7 support, a built-in community, and flexible leases starting at 1 month. Apply in 2 minutes, move in within a week."
+      ],
+      "content_angle": "Simplicity and speed. Emphasize the easy 3-step process vs. traditional room hunting.",
+      "faq_pool": [
+        {"q": "How do I rent a room in {location}?", "a": "3 simple steps: (1) Apply online — takes 2 minutes. (2) Get approved — within 48 hours. (3) Move in — your room is ready. No lengthy paperwork, no guarantor needed."},
+        {"q": "How much does it cost to rent a room in {location}?", "a": "From {price}/week at {property}. That's about {monthly}/month, all-inclusive. Compare that to the average Toronto room rental at $900-1,400/month plus utilities."},
+        {"q": "Is it safe to rent a room from Circle?", "a": "Unlike Kijiji or Facebook Marketplace, Circle is a professionally managed co-living company. Secure buildings, 24/7 support, and transparent contracts. No scam risk."},
+        {"q": "Do I need first and last month's rent?", "a": "Yes, we require first and last month's equivalent as a standard deposit. No additional damage deposits or key deposits."},
+        {"q": "Can I see the room before renting?", "a": "Yes. Book a viewing through our website — we offer in-person tours at all 4 Toronto locations. Virtual tours available for international applicants."},
+        {"q": "What if I only need a room for a few months?", "a": "Perfect — our minimum lease is 1 month. Rent a room for as short as you need. Ideal for interns, exchange students, and professionals between leases."},
+        {"q": "Is the room rent all-inclusive?", "a": "Yes. Your weekly rate covers: furnished room, WiFi, all utilities (electricity, water, heating), kitchen access, common areas, and building amenities."},
+        {"q": "Can I rent a room without a job or Canadian income?", "a": "Yes. We welcome students, newcomers, and anyone without established Canadian income. No credit check required — just complete our simple online application."}
+      ]
+    },
+    {
+      "slug": "shared-housing",
+      "name": "Shared Housing",
+      "display_name": "Shared Housing",
+      "cluster": "shared",
+      "generate_university_pages": false,
+      "url_pattern_city": "/shared-housing-toronto",
+      "url_pattern_neighborhood": "/shared-housing-in-{neighborhood}",
+      "target_keywords": ["shared housing Toronto", "shared housing downtown Toronto", "shared housing in {neighborhood}"],
+      "h1_variants": [
+        "Shared Housing in {location}, Toronto — From {price}/Week All-Inclusive",
+        "Find Shared Housing in {location}: Curated Community Living",
+        "{location} Shared Housing | Professional, Furnished, from {price}/wk"
+      ],
+      "meta_title_template": "Shared Housing in {location}, Toronto | From {price}/wk | Circle Co-Living",
+      "meta_description_template": "Shared housing in {location}, Toronto from {price}/week. Professionally managed, fully furnished. Not random roommates — an intentional community. Apply now.",
+      "intro_variants": [
+        "Shared housing in {location} doesn't have to mean random roommates from Kijiji. At {property}, you'll share a professionally managed home with vetted community members — students and young professionals who value respect, quiet hours, and genuine connection. Private rooms from {price}/week, all-inclusive.",
+        "The difference between shared housing and co-living? Intent. At {property} in {location}, shared spaces are designed for community: equipped kitchens, comfortable common areas, and regular events. Private rooms start from {price}/week with everything included. No random roommate risk.",
+        "Shared housing in {location} is the smart choice for Toronto living. At {property}, you get your own furnished room plus shared kitchen, common areas, and amenities — all for {price}/week. That's a fraction of solo apartment rent, with the bonus of a built-in community."
+      ],
+      "content_angle": "Quality of shared living experience. Differentiate from random roommate situations.",
+      "faq_pool": [
+        {"q": "What is shared housing in {location}?", "a": "Shared housing at Circle means you rent your own private, furnished room and share common spaces (kitchen, living area, bathrooms) with fellow community members. It's professionally managed — not random roommates."},
+        {"q": "How is Circle's shared housing different from a roommate situation?", "a": "Three key differences: (1) Professional management — not a stranger's apartment. (2) All-inclusive pricing — no splitting bills. (3) Community standards — quiet hours, cleanliness guidelines, and vetted residents."},
+        {"q": "How much is shared housing in {location}?", "a": "Private rooms in shared housing start from {price}/week ({monthly}/month) at {property}. Everything is included in one price."},
+        {"q": "Who are my housemates in shared housing?", "a": "A mix of international students, local students, and young professionals. All residents go through our application process. The community values focus, respect, and genuine connection."},
+        {"q": "Are shared areas clean and maintained?", "a": "Yes. Our properties are professionally managed with regular cleaning of common areas. Community guidelines ensure shared spaces stay clean and respectful."},
+        {"q": "Do I have privacy in shared housing?", "a": "Absolutely. You have your own private, lockable room. Only common areas (kitchen, living room, bathrooms) are shared. Master Suite rooms include a private ensuite bathroom."},
+        {"q": "What's included in shared housing rent?", "a": "Furnished private room, WiFi, all utilities, shared kitchen access, common areas, building amenities ({top_amenities}), and 24/7 support."},
+        {"q": "Can I choose my housemates?", "a": "While we don't offer roommate matching, our application process ensures all residents share similar values around respect, cleanliness, and community. You'll meet your housemates during move-in."}
+      ]
+    },
+    {
+      "slug": "shared-living",
+      "name": "Shared Living",
+      "display_name": "Shared Living",
+      "cluster": "shared",
+      "generate_university_pages": false,
+      "url_pattern_city": "/shared-living-toronto",
+      "url_pattern_neighborhood": "/shared-living-in-{neighborhood}",
+      "target_keywords": ["shared living Toronto", "shared living spaces Toronto", "best shared living Toronto"],
+      "h1_variants": [
+        "Shared Living in {location}: Designed Community Spaces from {price}/Week",
+        "The Best Shared Living in {location}, Toronto — Join Circle",
+        "{location} Shared Living | Not Loud. Not Chaotic. Designed."
+      ],
+      "meta_title_template": "Shared Living in {location}, Toronto | Designed Spaces from {price}/wk | Circle",
+      "meta_description_template": "Shared living in {location}, Toronto. Not loud, not chaotic — designed. Furnished rooms from {price}/week. Quiet hours, study spaces, real community.",
+      "intro_variants": [
+        "Shared living in {location} at Circle isn't what you'd expect. It's not a party house. It's not overcrowded. It's designed — quiet hours, study-friendly layouts, and a community that respects your space while being there when you want connection. Rooms from {price}/week in {location}.",
+        "The best shared living in {location} combines privacy with community. At {property}, you get your own furnished room plus thoughtfully designed shared spaces: equipped kitchen, comfortable lounge, and co-working areas. From {price}/week, everything included.",
+        "Shared living doesn't have to mean compromising on quality. At {property} in {location}, every detail is intentional — from the quiet hours policy to the study-friendly layouts to the community events. Private rooms from {price}/week, all-inclusive, with flexible leases."
+      ],
+      "content_angle": "Lifestyle and design quality. Emphasize the 'designed, not chaotic' brand positioning.",
+      "faq_pool": [
+        {"q": "What makes Circle's shared living different?", "a": "Design and intent. Our spaces aren't converted apartments — they're purpose-designed for community living with quiet hours, study areas, and professional management. Every detail considers how you actually live."},
+        {"q": "Is shared living in {location} quiet enough to study?", "a": "Yes. We enforce quiet hours and our layouts are designed to be study-friendly. {property} offers {study_space_answer}. Fast WiFi throughout."},
+        {"q": "How much is shared living in {location}?", "a": "Rooms start from {price}/week ({monthly}/month) at {property}. All-inclusive — no utility bills, no WiFi setup, no furniture costs."},
+        {"q": "Are there community events in shared living?", "a": "Yes. Circle organizes community events and gatherings. Common areas are designed to encourage natural interaction — think shared dinners, study groups, and casual conversations."},
+        {"q": "Can professionals live in shared living spaces?", "a": "Absolutely. Our community includes both students and young professionals. Shared living is increasingly popular among professionals who value community over isolation."},
+        {"q": "Is shared living safe?", "a": "Yes. All Circle properties have secure access, 24/7 support, and professional management. {safety_description}."},
+        {"q": "What's the atmosphere like?", "a": "Calm, respectful, and social by choice. Think of it as intentional living — you have your private space for downtime and shared spaces for when you want company. Not a party house."},
+        {"q": "How do I join Circle's shared living community?", "a": "Apply online in 2 minutes. We review applications within 48 hours. Once approved, choose your move-in date and welcome to the circle."}
+      ]
+    },
+    {
+      "slug": "off-campus-housing",
+      "name": "Off Campus Housing",
+      "display_name": "Off Campus Housing",
+      "cluster": "student",
+      "generate_university_pages": true,
+      "url_pattern_city": "/off-campus-housing-toronto",
+      "url_pattern_neighborhood": "/off-campus-housing-in-{neighborhood}",
+      "url_pattern_university": "/off-campus-housing-near-{university}",
+      "target_keywords": ["off campus housing Toronto", "off campus housing near {university}", "off campus housing {university}"],
+      "h1_variants": [
+        "Off Campus Housing in {location}: Furnished Rooms from {price}/Week",
+        "Off Campus Housing Near {location} — Better Than Dorms, from {price}/wk",
+        "{location} Off Campus Housing | All-Inclusive, No Waitlist, Apply Today"
+      ],
+      "meta_title_template": "Off Campus Housing {location_preposition} {location} | From {price}/wk | Circle Co-Living",
+      "meta_description_template": "Off campus housing {location_preposition} {location} from {price}/week. Furnished, all-inclusive, no credit check. Better than dorms — more freedom, real community. Apply now.",
+      "intro_variants": [
+        "Tired of dorm waitlists? Off campus housing at {property} in {location} offers more freedom, better amenities, and a real community — from {price}/week. No RA rules, no mandatory meal plans, no shared dorm rooms. Just your own furnished private room with flexible leases starting at 1 month.",
+        "Off campus housing near {nearest_campus} doesn't get better than {property}. Located {campus_distance_text} from campus via {transit_route}, you'll have a fully furnished room, high-speed WiFi, and a community of fellow students. All-inclusive from {price}/week — no credit check, no guarantor.",
+        "Why fight for on-campus housing when you can live better off campus? {property} in {location} offers furnished rooms from {price}/week with everything included. {transit_highlight} means you're always close to class, but with the independence that on-campus housing can't match."
+      ],
+      "content_angle": "Freedom and independence vs. restrictive dorm life. Campus proximity without the dorm constraints.",
+      "faq_pool": [
+        {"q": "Is off campus housing cheaper than dorms near {location}?", "a": "Often yes. Circle rooms start from {price}/week ({monthly}/month) all-inclusive. Compare that to on-campus residences at $8,000-15,000/year plus mandatory meal plans. Off campus with Circle gives you more freedom at a competitive price."},
+        {"q": "How far is off campus housing from {nearest_campus}?", "a": "{property} is {campus_distance_text} from {nearest_campus}. {transit_detail}."},
+        {"q": "Do I need to be a student for off campus housing?", "a": "No. While our off campus housing is popular with students, we also welcome young professionals and interns. Our community is a mix of students and working professionals."},
+        {"q": "Is off campus housing furnished?", "a": "Yes. Every room at {property} comes fully furnished — bed, desk, chair, wardrobe, linens. No IKEA runs needed."},
+        {"q": "Can I get off campus housing for just one semester?", "a": "Yes. Our minimum lease is 1 month. Rent for a summer term, one semester, or a full year. Flexible terms are our specialty."},
+        {"q": "Is off campus housing safe?", "a": "Yes. All Circle properties feature secure building access, 24/7 support, and professional management. Unlike a random sublet, you know exactly what you're getting."},
+        {"q": "What's included in off campus housing rent?", "a": "Everything: furnished room, WiFi, all utilities, kitchen access, common areas, and building amenities. One price, no surprises."},
+        {"q": "How do I apply for off campus housing?", "a": "Apply online in 2 minutes. No guarantor needed, no credit check. We respond within 48 hours. Move in as soon as a room is available."}
+      ]
+    },
+    {
+      "slug": "student-accommodation",
+      "name": "Student Accommodation",
+      "display_name": "Student Accommodation",
+      "cluster": "student",
+      "generate_university_pages": true,
+      "url_pattern_city": "/student-accommodation-toronto",
+      "url_pattern_neighborhood": "/student-accommodation-in-{neighborhood}",
+      "url_pattern_university": "/student-accommodation-near-{university}",
+      "target_keywords": ["student accommodation Toronto", "student accommodation near {university}", "student accommodation downtown Toronto"],
+      "h1_variants": [
+        "Student Accommodation in {location}: All-Inclusive from {price}/Week",
+        "Affordable Student Accommodation in {location}, Toronto",
+        "{location} Student Accommodation — Furnished, Flexible, from {price}/wk"
+      ],
+      "meta_title_template": "Student Accommodation in {location}, Toronto | From {price}/wk | Circle",
+      "meta_description_template": "Student accommodation in {location}, Toronto from {price}/week. Furnished rooms, no credit check, flexible leases. Near {nearest_campus}. Apply online today.",
+      "intro_variants": [
+        "Finding student accommodation in {location} shouldn't take weeks of scrolling through sketchy listings. Circle Co-Living offers verified, professionally managed rooms from {price}/week — fully furnished, all-inclusive, with no credit check. {transit_highlight} to major campuses.",
+        "Student accommodation at {property} in {location} is built for academic life: quiet hours, study-friendly spaces, fast WiFi, and a community of fellow students. From {price}/week, everything is included. Near {nearest_campus} via {transit_route}.",
+        "Whether you're an international student arriving for the first time or looking for better accommodation near {nearest_campus}, {property} in {location} has you covered. Furnished rooms from {price}/week, flexible leases from 1 month, and zero credit check hassles."
+      ],
+      "content_angle": "Academic-focused living. Study environment, campus proximity, international student friendly.",
+      "faq_pool": [
+        {"q": "What student accommodation is available in {location}?", "a": "{property} offers {room_count} room types from {price}/week. Each room is fully furnished and all-inclusive. The property is {campus_distance_text} from {nearest_campus}."},
+        {"q": "Is student accommodation in {location} affordable?", "a": "Yes. Starting from {price}/week ({monthly}/month) all-inclusive, Circle's student accommodation is significantly cheaper than solo apartments ($1,800-2,500/month) and competitive with on-campus residences — with more freedom."},
+        {"q": "Can international students get accommodation in {location}?", "a": "Absolutely. We specialize in welcoming international students. No Canadian credit history needed, no guarantor required. Just apply online and get approved within 48 hours."},
+        {"q": "Is there internet in student accommodation?", "a": "Yes. High-speed WiFi is included in every room and throughout all common areas. No setup required — it's ready when you move in."},
+        {"q": "How close is the accommodation to {nearest_campus}?", "a": "{property} is {campus_distance_text} from {nearest_campus}. {transit_detail}."},
+        {"q": "What's the shortest stay for student accommodation?", "a": "1 month. Perfect for exchange students, summer programs, or anyone who doesn't want a 12-month commitment."},
+        {"q": "Are meals included in student accommodation?", "a": "Meals are not included, but every property has a fully equipped shared kitchen where you can prepare your own food. There are also many affordable restaurants near {property} in {location}."},
+        {"q": "How do I book student accommodation?", "a": "Apply online at circlestay.ca. It takes 2 minutes. We respond within 48 hours with an offer. Once accepted, choose your move-in date and you're set."}
+      ]
+    },
+    {
+      "slug": "student-living",
+      "name": "Student Living",
+      "display_name": "Student Living",
+      "cluster": "student",
+      "generate_university_pages": false,
+      "url_pattern_city": "/student-living-toronto",
+      "url_pattern_neighborhood": "/student-living-in-{neighborhood}",
+      "target_keywords": ["student living Toronto", "student living downtown Toronto", "best student living Toronto"],
+      "h1_variants": [
+        "Student Living in {location}: More Than Just a Room",
+        "The Best Student Living in {location}, Toronto — from {price}/Week",
+        "{location} Student Living | Community, Convenience, Calm"
+      ],
+      "meta_title_template": "Student Living in {location}, Toronto | From {price}/wk | Circle Co-Living",
+      "meta_description_template": "Student living in {location}, Toronto from {price}/week. Designed for academic life: quiet hours, study spaces, fast WiFi. Join our community. Apply now.",
+      "intro_variants": [
+        "Student living at Circle isn't just about having a place to sleep. In {location}, {property} offers a complete living experience: quiet hours for studying, common areas for socializing, and a community that supports your academic journey. From {price}/week, all-inclusive.",
+        "The best student living in {location} balances academics and social life. At {property}, you'll find study-friendly spaces, fast WiFi, and events that help you build connections — without the noise and chaos of traditional student housing. Rooms from {price}/week.",
+        "Student living in {location} should enhance your university experience, not add stress. {property} provides furnished rooms from {price}/week with everything included, {transit_highlight} to campus, and a community designed around focus, respect, and genuine connection."
+      ],
+      "content_angle": "Holistic student experience. Not just housing — a living environment designed for academic success and personal growth."
+    },
+    {
+      "slug": "affordable-room-rentals",
+      "name": "Affordable Room Rentals",
+      "display_name": "Affordable Room Rentals",
+      "cluster": "rooms",
+      "generate_university_pages": true,
+      "url_pattern_city": "/affordable-room-rentals-toronto",
+      "url_pattern_neighborhood": "/affordable-room-rentals-in-{neighborhood}",
+      "url_pattern_university": "/affordable-room-rentals-near-{university}",
+      "target_keywords": ["affordable room rentals Toronto", "affordable rooms Toronto", "cheap rooms Toronto downtown", "affordable room rentals near {university}"],
+      "h1_variants": [
+        "Affordable Room Rentals in {location}, Toronto — From {price}/Week",
+        "Cheap Doesn't Mean Sketchy: Affordable Rooms in {location} from {price}/wk",
+        "{location} Affordable Room Rentals | All-Inclusive, Furnished, from {price}/wk"
+      ],
+      "meta_title_template": "Affordable Room Rentals in {location}, Toronto | From {price}/wk All-Inclusive | Circle",
+      "meta_description_template": "Affordable room rentals in {location}, Toronto from {price}/week. Fully furnished, all utilities included. No credit check, flexible leases. Professional management.",
+      "intro_variants": [
+        "Affordable room rentals in {location} that don't sacrifice quality or safety. {property} offers furnished rooms from {price}/week — that's all-inclusive (furniture, WiFi, utilities). Compare that to solo apartments at $1,800-2,500/month. You save 38-60% while living in a professionally managed home.",
+        "Looking for affordable rooms in {location}? At {property}, rooms start from just {price}/week with everything included. No furniture costs, no utility bills, no hidden fees. Just one simple weekly price for a furnished room in one of Toronto's best downtown neighborhoods.",
+        "Toronto's rental market is expensive, but affordable room rentals do exist in {location}. {property} offers all-inclusive rooms from {price}/week — that's {monthly}/month for a furnished room with WiFi, utilities, kitchen access, and building amenities. The affordable choice that doesn't feel like a compromise."
+      ],
+      "content_angle": "Value and savings. Concrete price comparisons vs. solo apartments. Prove affordability with numbers."
+    },
+    {
+      "slug": "student-rentals",
+      "name": "Student Rentals",
+      "display_name": "Student Rentals",
+      "cluster": "student",
+      "generate_university_pages": false,
+      "url_pattern_city": "/student-rentals-toronto",
+      "url_pattern_neighborhood": "/student-rentals-in-{neighborhood}",
+      "target_keywords": ["student rentals Toronto", "student rentals downtown Toronto", "student rental rooms Toronto"],
+      "h1_variants": [
+        "Student Rentals in {location}, Toronto — Furnished from {price}/Week",
+        "Affordable Student Rentals in {location}: No Credit Check, Flexible Leases",
+        "{location} Student Rentals | All-Inclusive Rooms from {price}/wk"
+      ],
+      "meta_title_template": "Student Rentals in {location}, Toronto | From {price}/wk | Circle Co-Living",
+      "meta_description_template": "Student rentals in {location}, Toronto from {price}/week. Furnished, all-inclusive, no credit check. Near major campuses. Apply online — move in this week.",
+      "intro_variants": [
+        "Student rentals in {location} at Circle are built for academic life. Furnished rooms from {price}/week, all-inclusive, with {transit_highlight} to Toronto's major campuses. No credit check, no guarantor — just a simple online application and 48-hour approval.",
+        "Finding student rentals in {location} shouldn't mean settling for overpriced shoebox apartments or sketchy roommate situations. At {property}, you get a furnished room in a professional co-living home from {price}/week. Everything's included, leases are flexible, and the community is intentional.",
+        "Student rentals that actually work for students. In {location}, {property} offers rooms from {price}/week with quiet hours, study spaces, fast WiFi, and a community of fellow students and young professionals. Apply today, move in this week."
+      ],
+      "content_angle": "Student-optimized rentals. Quick, easy, affordable. Emphasize speed of move-in and zero hassle."
+    },
+    {
+      "slug": "studio-on-rent",
+      "name": "Studio on Rent",
+      "display_name": "Studio on Rent",
+      "cluster": "rooms",
+      "generate_university_pages": false,
+      "url_pattern_city": "/studio-on-rent-toronto",
+      "url_pattern_neighborhood": "/studio-on-rent-in-{neighborhood}",
+      "target_keywords": ["studio on rent Toronto", "studio apartment Toronto", "studio rental Toronto downtown", "studio on rent in {neighborhood}"],
+      "h1_variants": [
+        "Studio-Style Rooms on Rent in {location}, Toronto — from {price}/Week",
+        "Better Than a Studio: Private Rooms in {location} from {price}/wk All-Inclusive",
+        "{location} Studio Alternative | Furnished Rooms with Community from {price}/wk"
+      ],
+      "meta_title_template": "Studio Alternative in {location}, Toronto | Rooms from {price}/wk All-Inclusive | Circle",
+      "meta_description_template": "Looking for a studio on rent in {location}, Toronto? Circle offers furnished private rooms from {price}/week — all-inclusive, with community, amenities, and flexible leases.",
+      "intro_variants": [
+        "Looking for a studio on rent in {location}? Toronto studios average $1,800-2,500/month — unfurnished, before utilities. At {property}, get a furnished private room from {price}/week ({monthly}/month) with everything included. Same privacy, better price, plus a community and amenities studios can't match.",
+        "A studio on rent in {location} sounds ideal until you see the prices. Circle offers a smarter alternative: a furnished private room in a co-living home from {price}/week, all-inclusive. You get your own space plus shared kitchen, common areas, gym, and community — all for a fraction of studio rent.",
+        "Why pay $2,000/month for a tiny studio in {location} when you can live better for {monthly}/month? {property} offers furnished private rooms with all utilities included, plus amenities most studios don't have: {top_amenities}. The smart alternative to studio living in Toronto."
+      ],
+      "content_angle": "Co-living as a studio alternative. Direct price comparison. Better value proposition with community."
+    },
+    {
+      "slug": "furnished-rooms-on-rent",
+      "name": "Furnished Rooms on Rent",
+      "display_name": "Furnished Rooms on Rent",
+      "cluster": "rooms",
+      "generate_university_pages": false,
+      "url_pattern_city": "/furnished-rooms-on-rent-toronto",
+      "url_pattern_neighborhood": "/furnished-rooms-on-rent-in-{neighborhood}",
+      "target_keywords": ["furnished rooms on rent Toronto", "furnished rooms Toronto", "furnished room rental Toronto"],
+      "h1_variants": [
+        "Furnished Rooms on Rent in {location}, Toronto — from {price}/Week",
+        "Rent a Furnished Room in {location}: Move In Ready from {price}/wk",
+        "{location} Furnished Rooms | All-Inclusive, No Setup Required, from {price}/wk"
+      ],
+      "meta_title_template": "Furnished Rooms on Rent in {location}, Toronto | From {price}/wk | Circle",
+      "meta_description_template": "Furnished rooms on rent in {location}, Toronto from {price}/week. Bed, desk, WiFi, utilities all included. No furniture shopping. Move in this week.",
+      "intro_variants": [
+        "Furnished rooms on rent in {location} — move in with just a suitcase. {property} provides everything you need: bed with linens, desk, chair, wardrobe, high-speed WiFi, and all utilities included. From {price}/week, no setup required, no IKEA runs, no utility accounts to open.",
+        "Why spend thousands furnishing a Toronto apartment when you can rent a fully furnished room in {location} from {price}/week? {property} includes all furniture, WiFi, utilities, kitchen access, and building amenities. One price, zero setup hassle.",
+        "Finding furnished rooms on rent in {location} at a fair price is rare in Toronto. {property} makes it simple: {room_count} room types from {price}/week, each fully equipped with {furniture_list}. All-inclusive pricing means no surprise bills. Apply today, move in within days."
+      ],
+      "content_angle": "Convenience and zero-hassle move-in. No furniture buying, no utility setup."
+    },
+    {
+      "slug": "shared-rooms-on-rent",
+      "name": "Shared Rooms on Rent",
+      "display_name": "Shared Rooms on Rent",
+      "cluster": "shared",
+      "generate_university_pages": false,
+      "url_pattern_city": "/shared-rooms-on-rent-toronto",
+      "url_pattern_neighborhood": "/shared-rooms-on-rent-in-{neighborhood}",
+      "target_keywords": ["shared rooms on rent Toronto", "shared room rental Toronto", "shared room Toronto"],
+      "h1_variants": [
+        "Shared Rooms on Rent in {location}, Toronto — from {price}/Week",
+        "Affordable Shared Rooms in {location}: Professionally Managed Co-Living",
+        "{location} Shared Rooms | Community Living from {price}/wk"
+      ],
+      "meta_title_template": "Shared Rooms on Rent in {location}, Toronto | From {price}/wk | Circle",
+      "meta_description_template": "Shared rooms on rent in {location}, Toronto from {price}/week. Professionally managed, furnished, all-inclusive. Not random roommates — an intentional community.",
+      "intro_variants": [
+        "Shared rooms on rent in {location} at Circle start from just {price}/week — our most affordable option. You'll share space with vetted community members in a professionally managed home. All utilities and WiFi included. Flexible leases from 1 month.",
+        "The most affordable way to live in {location} is shared rooms at {property} — from {price}/week, all-inclusive. But affordable doesn't mean low quality: professional management, secure access, community guidelines, and 24/7 support. A better shared living experience.",
+        "Shared rooms on rent in {location} don't have to mean compromising on safety or quality. At {property}, shared configurations start from {price}/week with furniture, WiFi, and all utilities included. Live in one of Toronto's best neighborhoods at a price that makes sense."
+      ],
+      "content_angle": "Most affordable entry point. Budget-conscious without sacrificing safety/quality."
+    },
+    {
+      "slug": "find-a-room",
+      "name": "Find a Room",
+      "display_name": "Find a Room",
+      "cluster": "rooms",
+      "generate_university_pages": false,
+      "url_pattern_city": "/find-a-room-toronto",
+      "url_pattern_neighborhood": "/find-a-room-in-{neighborhood}",
+      "target_keywords": ["find a room Toronto", "find a room on rent Toronto", "find a room in {neighborhood}"],
+      "h1_variants": [
+        "Find a Room in {location}, Toronto — {room_count} Options from {price}/Week",
+        "Find Your Room in {location}: Browse {room_count} Furnished Options",
+        "Looking for a Room in {location}? Explore Circle's {room_count} Room Types"
+      ],
+      "meta_title_template": "Find a Room in {location}, Toronto | {room_count} Types from {price}/wk | Circle",
+      "meta_description_template": "Find a room in {location}, Toronto. {room_count} furnished room types from {price}/week, all-inclusive. Compare rooms, check prices, and apply online. Move in this week.",
+      "intro_variants": [
+        "Find a room in {location} without the stress of endless listings. {property} offers {room_count} room types from {price}/week — each fully furnished and all-inclusive. Browse your options, compare prices, and apply in 2 minutes. You could move in within a week.",
+        "Trying to find a room in {location}? Let us make it easy. {property} has {room_count} furnished room types starting at {price}/week. All utilities included, flexible leases, no credit check. One application, 48-hour response, and you're in.",
+        "Finding a room in Toronto is frustrating. Finding one in {location} that's furnished, affordable, and safe? Even harder — unless you know about Circle. {property} offers {room_count} room types from {price}/week, all-inclusive. Compare your options below and apply today."
+      ],
+      "content_angle": "Room discovery and comparison. Make it easy to browse and choose."
+    },
+    {
+      "slug": "intern-housing",
+      "name": "Intern Housing",
+      "display_name": "Intern Housing",
+      "cluster": "rooms",
+      "generate_university_pages": false,
+      "url_pattern_city": "/intern-housing-toronto",
+      "url_pattern_neighborhood": "/intern-housing-in-{neighborhood}",
+      "target_keywords": ["intern housing Toronto", "summer intern housing Toronto", "internship housing Toronto", "short term housing Toronto interns"],
+      "h1_variants": [
+        "Intern Housing in {location}, Toronto — Short-Term from {price}/Week",
+        "Summer Intern Housing in {location}: No Long Leases, from {price}/wk",
+        "{location} Intern Housing | 1-Month Minimum, Furnished, All-Inclusive"
+      ],
+      "meta_title_template": "Intern Housing in {location}, Toronto | Short-Term from {price}/wk | Circle",
+      "meta_description_template": "Intern housing in {location}, Toronto from {price}/week. 1-month minimum lease, fully furnished, all-inclusive. Near Bay Street and downtown offices. Apply now.",
+      "intro_variants": [
+        "Interning in Toronto this summer? Don't sign a 12-month lease for a 3-month stay. {property} in {location} offers intern housing from {price}/week with a 1-month minimum lease. Fully furnished, all-inclusive, and near Toronto's business district. Focus on your internship, not your housing.",
+        "Intern housing in {location} shouldn't cost a fortune or require a year-long commitment. At {property}, rent a furnished room from {price}/week for exactly as long as your internship lasts — 1 month minimum. WiFi, utilities, and community included.",
+        "Summer interns in Toronto: {property} in {location} has housing built for you. Furnished rooms from {price}/week with flexible terms, {transit_highlight} to Bay Street and downtown offices, and a community of other young professionals and students. Apply today, move in next week."
+      ],
+      "content_angle": "Short-term flexibility for internships. No long lease commitment. Near business district."
+    }
+  ]
+}

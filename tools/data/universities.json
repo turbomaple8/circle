@@ -1,0 +1,107 @@
+{
+  "universities": [
+    {
+      "slug": "university-of-toronto",
+      "name": "University of Toronto",
+      "short_name": "UofT",
+      "campus": "St. George Campus",
+      "address": "27 King's College Circle",
+      "nearest_property": "the-york",
+      "all_properties_distance": {
+        "the-york": { "minutes": 15, "route": "Line 1 from Union to Queen's Park" },
+        "the-queen": { "minutes": 15, "route": "501 streetcar to University Ave" },
+        "the-yonge": { "minutes": 12, "route": "Line 1 from Dundas to Queen's Park" },
+        "the-maddox": { "minutes": 20, "route": "505 streetcar to Dundas, Line 1 to Queen's Park" }
+      },
+      "programs_known_for": ["Engineering", "Computer Science", "Business (Rotman)", "Medicine", "Law"],
+      "student_population": "97,000+",
+      "international_student_pct": "25%"
+    },
+    {
+      "slug": "tmu",
+      "name": "Toronto Metropolitan University",
+      "short_name": "TMU",
+      "former_name": "Ryerson University",
+      "campus": "Downtown Campus",
+      "address": "350 Victoria Street",
+      "nearest_property": "the-yonge",
+      "all_properties_distance": {
+        "the-york": { "minutes": 12, "route": "Line 1 from Union to Dundas" },
+        "the-queen": { "minutes": 12, "route": "Walk east on Queen to Yonge, north to Dundas" },
+        "the-yonge": { "minutes": 5, "route": "Walk north on Yonge" },
+        "the-maddox": { "minutes": 10, "route": "505 Dundas streetcar west" }
+      },
+      "programs_known_for": ["Creative Industries", "Engineering", "Business (TRSM)", "Journalism", "Nursing"],
+      "student_population": "46,000+",
+      "international_student_pct": "20%"
+    },
+    {
+      "slug": "george-brown-college",
+      "name": "George Brown College",
+      "short_name": "GBC",
+      "campus": "Multiple Campuses (St. James, Casa Loma, Waterfront)",
+      "address": "200 King Street East (St. James)",
+      "nearest_property": "the-maddox",
+      "all_properties_distance": {
+        "the-york": { "minutes": 10, "route": "Walk east along waterfront or 504 streetcar" },
+        "the-queen": { "minutes": 18, "route": "501 streetcar east to Jarvis" },
+        "the-yonge": { "minutes": 15, "route": "Walk south on Yonge to King" },
+        "the-maddox": { "minutes": 12, "route": "Walk south to King & Sherbourne" }
+      },
+      "programs_known_for": ["Culinary Arts", "Hospitality", "Health Sciences", "Design", "Construction Management"],
+      "student_population": "30,000+",
+      "international_student_pct": "30%"
+    },
+    {
+      "slug": "ocad-university",
+      "name": "OCAD University",
+      "short_name": "OCAD",
+      "campus": "Main Campus",
+      "address": "100 McCaul Street",
+      "nearest_property": "the-queen",
+      "all_properties_distance": {
+        "the-york": { "minutes": 15, "route": "Walk north via University Ave" },
+        "the-queen": { "minutes": 8, "route": "Walk north on McCaul" },
+        "the-yonge": { "minutes": 10, "route": "Walk west on Dundas" },
+        "the-maddox": { "minutes": 18, "route": "505 streetcar west to McCaul" }
+      },
+      "programs_known_for": ["Fine Arts", "Graphic Design", "Industrial Design", "Digital Media", "Illustration"],
+      "student_population": "5,000+",
+      "international_student_pct": "35%"
+    },
+    {
+      "slug": "humber-college",
+      "name": "Humber College",
+      "short_name": "Humber",
+      "campus": "North & Lakeshore Campuses",
+      "address": "205 Humber College Blvd (North Campus)",
+      "nearest_property": "the-york",
+      "all_properties_distance": {
+        "the-york": { "minutes": 45, "route": "Line 1 to Bloor, Line 2 to Kipling, then 37 bus" },
+        "the-queen": { "minutes": 50, "route": "501 to Dundas West, then bus" },
+        "the-yonge": { "minutes": 50, "route": "Line 1 to Bloor, Line 2 to Kipling, then bus" },
+        "the-maddox": { "minutes": 55, "route": "505 to Broadview, Line 2 to Kipling, then bus" }
+      },
+      "programs_known_for": ["Media Studies", "Business", "Health Sciences", "Trades & Technology", "Hospitality"],
+      "student_population": "33,000+",
+      "international_student_pct": "40%"
+    },
+    {
+      "slug": "seneca-college",
+      "name": "Seneca College",
+      "short_name": "Seneca",
+      "campus": "Multiple Campuses (Newnham, Seneca@York, King)",
+      "address": "1750 Finch Ave East (Newnham)",
+      "nearest_property": "the-yonge",
+      "all_properties_distance": {
+        "the-york": { "minutes": 45, "route": "Line 1 north to Finch, then bus" },
+        "the-queen": { "minutes": 50, "route": "Line 1 north from Osgoode to Finch, then bus" },
+        "the-yonge": { "minutes": 40, "route": "Line 1 from Dundas to Finch, then bus" },
+        "the-maddox": { "minutes": 50, "route": "505 to Dundas, Line 1 to Finch, then bus" }
+      },
+      "programs_known_for": ["Aviation", "IT & Computer Studies", "Business", "Animation", "Early Childhood Education"],
+      "student_population": "30,000+",
+      "international_student_pct": "45%"
+    }
+  ]
+}

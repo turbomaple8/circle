@@ -1,0 +1,68 @@
+{
+  "neighborhoods": [
+    {
+      "slug": "waterfront-financial-district",
+      "name": "Waterfront / Financial District",
+      "name_fr": "Quartier Financier / Bord de l'eau",
+      "property_slug": "the-york",
+      "vibe": "Polished, professional, fast-paced. Toronto's business hub meets lakefront living.",
+      "vibe_fr": "Professionnel, dynamique. Le centre des affaires de Toronto au bord du lac.",
+      "description": "Toronto's Financial District is the city's economic heart, home to Canada's largest banks and Bay Street. The Waterfront area offers stunning lake views, the scenic harbourfront trail, and easy access to the PATH underground network.",
+      "best_for": ["Young professionals working in finance/tech", "Students at UofT or George Brown Waterfront campus", "Anyone who wants transit access to everywhere"],
+      "transit_stations": ["Union Station (1 min)", "PATH Network (direct)", "509/510 Streetcar"],
+      "restaurants": ["Canoe (fine dining)", "Pai Northern Thai", "Momofuku Noodle Bar"],
+      "cafes": ["Balzac's Coffee (Distillery)", "Boxcar Social", "SOMA Chocolatemaker"],
+      "parks": ["Harbourfront Centre", "Sugar Beach", "Toronto Islands Ferry (10 min)"],
+      "grocery": ["Longo's (Maple Leaf Square)", "Rabba Fine Foods"],
+      "safety_description": "Well-lit, heavily patrolled business district with 24/7 foot traffic"
+    },
+    {
+      "slug": "queen-west",
+      "name": "Queen West / Entertainment District",
+      "name_fr": "Queen West / Quartier des divertissements",
+      "property_slug": "the-queen",
+      "vibe": "Creative, trendy, artsy. Toronto's cultural heartbeat with galleries, indie shops, and nightlife.",
+      "vibe_fr": "Creatif, branche, artistique. Le coeur culturel de Toronto.",
+      "description": "Queen West is consistently ranked among the world's coolest neighborhoods. It's a hub for art galleries, independent boutiques, live music venues, and some of Toronto's best restaurants. The Entertainment District offers TIFF, theatres, and nightlife.",
+      "best_for": ["Creative professionals and artists", "Students at OCAD University", "Anyone who wants to be in Toronto's cultural center"],
+      "transit_stations": ["Osgoode Station (4 min)", "St. Andrew Station (8 min)", "501 Queen Streetcar"],
+      "restaurants": ["Byblos (Mediterranean)", "Pai (Thai)", "Richmond Station"],
+      "cafes": ["Jimmy's Coffee", "Dark Horse Espresso", "Sam James Coffee Bar"],
+      "parks": ["Trinity Bellwoods Park (12 min)", "Grange Park", "Nathan Phillips Square (6 min)"],
+      "grocery": ["Metro (Queen & University)", "Sobeys Urban Fresh"],
+      "safety_description": "Busy, well-populated neighborhood with active street life day and night"
+    },
+    {
+      "slug": "downtown-core",
+      "name": "Downtown Core / Eaton Centre",
+      "name_fr": "Centre-ville / Eaton Centre",
+      "property_slug": "the-yonge",
+      "vibe": "Central, convenient, bustling. You're at the crossroads of everything Toronto has to offer.",
+      "vibe_fr": "Central, pratique, anime. Au carrefour de tout ce que Toronto offre.",
+      "description": "The Downtown Core is Toronto's most central neighborhood, anchored by the massive CF Eaton Centre mall, Yonge-Dundas Square, and easy subway access in every direction. TMU campus is a 5-minute walk away.",
+      "best_for": ["TMU students (5 min walk)", "Anyone who wants maximum transit access", "Budget-conscious residents (lowest starting price at The Yonge)"],
+      "transit_stations": ["Dundas Station (1 min)", "Queen Station (3 min)", "College Station (8 min)"],
+      "restaurants": ["Salad King (Thai, student favorite)", "Sansotei Ramen", "Khao San Road"],
+      "cafes": ["Neo Coffee Bar", "Fahrenheit Coffee", "Te Aro"],
+      "parks": ["Allan Gardens (10 min)", "College Park", "Moss Park (8 min)"],
+      "grocery": ["Metro (College Park)", "H Mart (Korean)", "Freshco"],
+      "safety_description": "Busy intersection area with heavy foot traffic and TTC security presence"
+    },
+    {
+      "slug": "garden-district-cabbagetown",
+      "name": "Garden District / Cabbagetown",
+      "name_fr": "Garden District / Cabbagetown",
+      "property_slug": "the-maddox",
+      "vibe": "Quiet, residential, green. A hidden gem with Victorian charm and the most affordable co-living in Toronto.",
+      "vibe_fr": "Calme, residentiel, verdoyant. Un joyau cache au charme victorien.",
+      "description": "The Garden District and Cabbagetown are among Toronto's oldest and most charming neighborhoods. Tree-lined streets, Victorian houses, and Allan Gardens make this a peaceful residential area that's still close to downtown action.",
+      "best_for": ["Budget-conscious students (lowest prices from C$240/week)", "TMU and George Brown students", "Anyone who prefers quiet, residential living over downtown bustle"],
+      "transit_stations": ["505 Dundas Streetcar (at door)", "Sherbourne Station (8 min)", "Castle Frank Station (12 min)"],
+      "restaurants": ["F'Amelia (Italian)", "Rasa (South Indian)", "House on Parliament"],
+      "cafes": ["Jet Fuel Coffee", "Boxcar Social", "Dark Horse Espresso"],
+      "parks": ["Allan Gardens (5 min)", "Riverdale Park (15 min)", "Cabbagetown Park"],
+      "grocery": ["Foodland (Parliament)", "No Frills (Sherbourne)"],
+      "safety_description": "Residential neighborhood with active community watch and well-lit streets along main corridors"
+    }
+  ]
+}

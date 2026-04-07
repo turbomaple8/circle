@@ -1,0 +1,133 @@
+{
+  "properties": [
+    {
+      "slug": "the-york",
+      "name": "The York",
+      "address": "12 & 14 York Street",
+      "neighborhood_slug": "waterfront-financial-district",
+      "neighborhood_name": "Waterfront / Financial District",
+      "price_from_weekly": 330,
+      "price_to_weekly": 465,
+      "price_from_monthly": 1320,
+      "price_to_monthly": 1860,
+      "rooms": [
+        { "type": "Private Basic", "price_weekly": 330, "features": ["Single bed", "Desk", "Wardrobe", "Shared bathroom"] },
+        { "type": "Flex Premium", "price_weekly": 335, "features": ["Flexible layout", "Desk", "Wardrobe", "Shared bathroom"] },
+        { "type": "Deluxe Room", "price_weekly": 370, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] },
+        { "type": "Master Room & Ensuite Bath", "price_weekly": 465, "features": ["King bed", "Ensuite bathroom", "Large desk", "Premium wardrobe"] }
+      ],
+      "amenities": ["24/7 Concierge", "Fitness Centre", "Indoor Pool", "Sauna & Steam Rooms", "Theatre & Games Rooms", "Party & Lounge Spaces", "High-Speed WiFi", "Secure Access"],
+      "transit": [
+        { "name": "Union Station", "distance_min": 2, "type": "subway" },
+        { "name": "PATH Network", "distance_min": 0, "type": "pedestrian", "note": "Direct Access" }
+      ],
+      "landmarks": [
+        { "name": "CN Tower", "distance_min": 5 },
+        { "name": "Harbourfront Centre", "distance_min": 8 },
+        { "name": "St. Lawrence Market", "distance_min": 10 },
+        { "name": "Rogers Centre", "distance_min": 7 }
+      ],
+      "nearest_universities": [
+        { "slug": "university-of-toronto", "distance_min": 15, "transit_route": "Line 1 from Union to Queen's Park" },
+        { "slug": "tmu", "distance_min": 12, "transit_route": "Line 1 from Union to Dundas" },
+        { "slug": "george-brown-college", "distance_min": 10, "transit_route": "Walk or 504 streetcar" }
+      ]
+    },
+    {
+      "slug": "the-queen",
+      "name": "The Queen",
+      "address": "215 Queen Street West",
+      "neighborhood_slug": "queen-west",
+      "neighborhood_name": "Queen West / Entertainment District",
+      "price_from_weekly": 385,
+      "price_to_weekly": 455,
+      "price_from_monthly": 1540,
+      "price_to_monthly": 1820,
+      "rooms": [
+        { "type": "Deluxe Room", "price_weekly": 385, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] },
+        { "type": "Master Room & Ensuite Bath", "price_weekly": 455, "features": ["King bed", "Ensuite bathroom", "Large desk", "Premium wardrobe"] }
+      ],
+      "amenities": ["High-Speed WiFi", "Fully Furnished", "Shared Kitchen", "Common Areas", "Secure Access"],
+      "transit": [
+        { "name": "Osgoode Station", "distance_min": 4, "type": "subway" },
+        { "name": "501 Queen Streetcar", "distance_min": 1, "type": "streetcar" }
+      ],
+      "landmarks": [
+        { "name": "TIFF Bell Lightbox", "distance_min": 3 },
+        { "name": "Graffiti Alley", "distance_min": 5 },
+        { "name": "Trinity Bellwoods Park", "distance_min": 12 },
+        { "name": "Nathan Phillips Square", "distance_min": 6 }
+      ],
+      "nearest_universities": [
+        { "slug": "ocad-university", "distance_min": 8, "transit_route": "Walk north on McCaul" },
+        { "slug": "university-of-toronto", "distance_min": 15, "transit_route": "501 streetcar to University" },
+        { "slug": "tmu", "distance_min": 12, "transit_route": "Walk east to Yonge-Dundas" }
+      ]
+    },
+    {
+      "slug": "the-yonge",
+      "name": "The Yonge",
+      "address": "197 Yonge Street",
+      "neighborhood_slug": "downtown-core",
+      "neighborhood_name": "Downtown Core / Eaton Centre",
+      "price_from_weekly": 305,
+      "price_to_weekly": 455,
+      "price_from_monthly": 1220,
+      "price_to_monthly": 1820,
+      "rooms": [
+        { "type": "Private Basic", "price_weekly": 305, "features": ["Single bed", "Desk", "Wardrobe", "Shared bathroom"] },
+        { "type": "Deluxe Room", "price_weekly": 385, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"], "legal_blocker": "BLOCKED: Gender restriction (male-only) requires Ontario Human Rights Code legal review before publishing. Display as generic 'Deluxe Room' until cleared." },
+        { "type": "Master Room & Ensuite Bath", "price_weekly": 455, "features": ["King bed", "Ensuite bathroom", "Large desk", "Premium wardrobe"], "legal_blocker": "BLOCKED: Gender restriction (male-only) requires Ontario Human Rights Code legal review before publishing. Display as generic 'Master Room' until cleared." }
+      ],
+      "amenities": ["High-Speed WiFi", "Fully Furnished", "Shared Kitchen", "Common Areas", "Secure Access"],
+      "transit": [
+        { "name": "Dundas Station", "distance_min": 1, "type": "subway" },
+        { "name": "Queen Station", "distance_min": 3, "type": "subway" }
+      ],
+      "landmarks": [
+        { "name": "CF Eaton Centre", "distance_min": 2 },
+        { "name": "Dundas Square", "distance_min": 3 },
+        { "name": "City Hall", "distance_min": 8 },
+        { "name": "Massey Hall", "distance_min": 4 }
+      ],
+      "nearest_universities": [
+        { "slug": "tmu", "distance_min": 5, "transit_route": "Walk north on Yonge" },
+        { "slug": "university-of-toronto", "distance_min": 12, "transit_route": "Line 1 to Queen's Park" },
+        { "slug": "george-brown-college", "distance_min": 15, "transit_route": "505 Dundas streetcar east" }
+      ]
+    },
+    {
+      "slug": "the-maddox",
+      "name": "The Maddox",
+      "address": "201 Sherbourne Street",
+      "neighborhood_slug": "garden-district-cabbagetown",
+      "neighborhood_name": "Garden District / Cabbagetown",
+      "price_from_weekly": 240,
+      "price_to_weekly": 315,
+      "price_from_monthly": 960,
+      "price_to_monthly": 1260,
+      "rooms": [
+        { "type": "Flex Basic", "price_weekly": 240, "features": ["Flexible layout", "Basic furnishings", "Shared bathroom"] },
+        { "type": "Flex Plus", "price_weekly": 290, "features": ["Flexible layout", "Enhanced furnishings", "Shared bathroom"] },
+        { "type": "Flex Premium with Balcony", "price_weekly": 290, "features": ["Flexible layout", "Balcony", "Enhanced furnishings", "Shared bathroom"] },
+        { "type": "Deluxe Room", "price_weekly": 315, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] }
+      ],
+      "amenities": ["24/7 Concierge", "Fitness Centre", "Co-Working Lounge", "Games Room", "Party & Entertaining Spaces", "Laundry Lounge", "High-Speed WiFi", "Secure Access"],
+      "transit": [
+        { "name": "505 Dundas Streetcar", "distance_min": 0, "type": "streetcar", "note": "At your door" },
+        { "name": "Sherbourne Station", "distance_min": 8, "type": "subway" }
+      ],
+      "landmarks": [
+        { "name": "Allan Gardens", "distance_min": 5 },
+        { "name": "CF Eaton Centre", "distance_min": 10 },
+        { "name": "Cabbagetown", "distance_min": 5 },
+        { "name": "Regent Park Aquatic Centre", "distance_min": 8 }
+      ],
+      "nearest_universities": [
+        { "slug": "tmu", "distance_min": 10, "transit_route": "505 Dundas streetcar west to Yonge" },
+        { "slug": "george-brown-college", "distance_min": 12, "transit_route": "Walk south to King & Sherbourne" },
+        { "slug": "university-of-toronto", "distance_min": 20, "transit_route": "505 to Dundas station, Line 1 to Queen's Park" }
+      ]
+    }
+  ]
+}
