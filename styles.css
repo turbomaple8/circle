@@ -827,6 +827,71 @@ h5 { font-size: 1.05rem; }
   font-size: 1.1rem;
 }
 
+/* ---- FAQ ---- */
+.faq-section {
+  padding: 5rem 0;
+}
+
+.faq-grid {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-item__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--transition);
+}
+
+.faq-item__question::-webkit-details-marker { display: none; }
+
+.faq-item__question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-left: 1rem;
+  transition: transform var(--transition);
+}
+
+.faq-item[open] .faq-item__question::after {
+  content: '\2212';
+}
+
+.faq-item__question:hover {
+  color: var(--accent-dark);
+}
+
+.faq-item__answer {
+  padding: 0 0 1.25rem;
+}
+
+.faq-item__answer p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
 /* ---- Instagram / Stay in the Loop ---- */
 .instagram-grid {
   display: grid;
