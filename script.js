@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initMobileMenu();
   initSmoothScroll();
+  initBlogTOC();
 });
 
 /* ---- Navigation Scroll Effect ---- */
@@ -256,4 +257,44 @@ function handleReserveForm(e) {
       </div>
     </div>
   `;
+}
+
+/* ---- Blog Table of Contents ---- */
+function initBlogTOC() {
+  const toc = document.querySelector('.blog-toc');
+  const content = document.querySelector('.blog-article__content');
+  if (!toc || !content) return;
+
+  const headings = content.querySelectorAll('h2');
+  if (!headings.length) return;
+
+  headings.forEach((h, i) => {
+    if (!h.id) h.id = 'section-' + i;
+    const link = document.createElement('a');
+    link.href = '#' + h.id;
+    link.textContent = h.textContent;
+    link.className = 'blog-toc__link';
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    toc.appendChild(link);
+  });
+
+  // Scroll spy
+  const links = toc.querySelectorAll('.blog-toc__link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = toc.querySelector('a[href="#' + id + '"]');
+      if (link) {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-80px 0px -75% 0px', threshold: 0 });
+
+  headings.forEach(h => observer.observe(h));
 }
