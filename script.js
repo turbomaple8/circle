@@ -266,6 +266,19 @@ function initBlogTOC() {
   const manualToc = document.querySelector('.blog-toc');
 
   if (post && !manualToc) {
+    // Auto-inject hero image from og:image meta tag
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    const postHeader = post.querySelector('.post-header, header');
+    if (ogImage && postHeader && !post.querySelector('.post-hero-image')) {
+      const hero = document.createElement('img');
+      hero.src = ogImage.content;
+      hero.alt = (document.querySelector('meta[property="og:title"]') || {}).content || '';
+      hero.className = 'post-hero-image';
+      hero.loading = 'eager';
+      hero.decoding = 'async';
+      postHeader.after(hero);
+    }
+
     // Auto-inject: wrap post in 2-column layout with sidebar
     const container = post.closest('.container');
     if (container) {
