@@ -44,12 +44,12 @@ function getTheme(slug) {
 
 function propImage(slug) {
   const map = {
-    'the-york': '/building-york.jpg',
+    'the-york': '/building-york.webp',
     'the-queen': '/building-queen.webp',
-    'the-yonge': '/building-yonge.jpg',
-    'the-maddox': '/building-maddox.jpg'
+    'the-yonge': '/building-yonge.webp',
+    'the-maddox': '/building-maddox.webp'
   };
-  return map[slug] || '/building-york.jpg';
+  return map[slug] || '/building-york.webp';
 }
 
 function propImageAlt(prop) {
@@ -708,12 +708,12 @@ function generatePage(opts) {
   <meta property="og:url" content="${canonical}">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${metaDesc}">
-  <meta property="og:image" content="${ogImage || 'https://circlestay.ca/building-york.jpg'}">
+  <meta property="og:image" content="${ogImage || 'https://circlestay.ca/building-york.webp'}">
   <meta property="og:site_name" content="Circle Co-Living">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${metaDesc}">
-  <meta name="twitter:image" content="${ogImage || 'https://circlestay.ca/building-york.jpg'}">
+  <meta name="twitter:image" content="${ogImage || 'https://circlestay.ca/building-york.webp'}">
 ${hreflangTags || ''}
 ${HEAD_TRACKING}
   <link rel="stylesheet" href="${cssPath}">
@@ -2020,7 +2020,7 @@ function generateThemeCityPage(themeSlug) {
       { name: theme.display_name + ' Toronto' }
     ]),
     extraJsonLd: faqLd,
-    lang: 'en', ogImage: 'https://circlestay.ca/building-york.jpg'
+    lang: 'en', ogImage: 'https://circlestay.ca/building-york.webp'
   })];
 }
 
