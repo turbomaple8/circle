@@ -161,7 +161,7 @@ function closeAllModals() {
 }
 
 /* ---- Backend API (handles email + dashboard) ---- */
-const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
+const BACKEND_API_URL = 'https://coliville-backend-626057356331.us-east1.run.app';
 const BACKEND_PROJECT_ID = 'circle';
 
 function sendToBackend(endpoint, payload) {

@@ -94,6 +94,14 @@ All SEO is implemented inline in each HTML file. No build step or JS generation 
 ### Base URL
 All canonical/OG URLs use `https://circlestay.ca`.
 
+## Coliville Shared Backend
+This site forwards application + tour-request submissions to the shared multi-tenant backend so they appear in the central dashboard (in addition to the FormSubmit.co email delivery).
+- **Canonical URL:** `https://coliville-backend-626057356331.us-east1.run.app` (Cloud Run service `coliville-backend`, region `us-east1`)
+- NEVER use `coliville-api-...`. That's an old duplicate service being decommissioned.
+- Hardcoded in `script.js` and `reserve-popup.js` as `BACKEND_API_URL`. `BACKEND_PROJECT_ID = 'circle'`.
+- Forwarded endpoints: `POST /v1/public/applications`, `POST /v1/public/tour-requests`, `POST /v1/public/reservations`.
+- See `/Users/turbomaple/Desktop/Claude/backend-integration/CLAUDE.md` for the full integration spec and field mappings.
+
 ## Working on This Project
 
 - Edit HTML/CSS/JS files directly - no compilation needed

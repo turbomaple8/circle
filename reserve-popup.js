@@ -2,7 +2,7 @@
 (function () {
   if (sessionStorage.getItem('reservePopupDismissed')) return;
 
-  var BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
+  var BACKEND_API_URL = 'https://coliville-backend-626057356331.us-east1.run.app';
   var BACKEND_PROJECT_ID = 'circle';
 
   var PROPERTIES = [
