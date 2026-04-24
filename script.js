@@ -10,7 +10,58 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScroll();
   initBlogTOC();
+  initConversionTracking();
 });
+
+/* ========================================
+   Conversion Tracking — Google Ads + GA4 + Meta Pixel
+   Events: application_submit (PRIMARY), application_start,
+           viewing_request, phone_call, page_scroll_50, location_card_click
+   GTM: GTM-PP74JQ4B | GA4: G-W99H70QH6H | Meta Pixel: 3281828161984067
+======================================== */
+window.dataLayer = window.dataLayer || [];
+
+function trackEvent(eventName, params, meta) {
+  try {
+    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+  } catch (_) {}
+  if (meta && meta.event && typeof window.fbq === 'function') {
+    try { window.fbq('track', meta.event, meta.params || {}); } catch (_) {}
+  }
+}
+
+function initConversionTracking() {
+  // phone_call — global delegation on tel: links (forward-compatible for when phone is added)
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    trackEvent('phone_call', { value: 30, currency: 'CAD' }, { event: 'Contact' });
+  });
+
+  // location_card_click — property card clicks on homepage / locations page
+  document.addEventListener('click', function (e) {
+    var card = e.target && e.target.closest && e.target.closest('.location-card');
+    if (!card) return;
+    var nameEl = card.querySelector('.location-card__name');
+    var propertyName = nameEl ? nameEl.textContent.trim() : '';
+    trackEvent('location_card_click', {
+      property_name: propertyName,
+      destination: card.getAttribute('href') || ''
+    }, { event: 'ViewContent', params: { content_name: propertyName, content_type: 'property' } });
+  });
+
+  // page_scroll_50 — engagement signal (GA4 only, not imported to Ads)
+  var scrollFired = false;
+  window.addEventListener('scroll', function () {
+    if (scrollFired) return;
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    if (total > 0 && scrolled / total >= 0.5) {
+      scrollFired = true;
+      trackEvent('page_scroll_50', { scroll_depth: 50 });
+    }
+  }, { passive: true });
+}
 
 /* ---- Navigation Scroll Effect ---- */
 function initNavigation() {
@@ -98,6 +149,12 @@ function initModals() {
   document.querySelectorAll('[data-modal="apply"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      // application_start — fires when user initiates application
+      trackEvent('application_start', {
+        location_preference: btn.getAttribute('data-property') || '',
+        room_type: btn.getAttribute('data-room-type') || '',
+        source_page: window.location.pathname
+      }, { event: 'InitiateCheckout', params: { content_category: 'application' } });
       openModal('applyModal');
     });
   });
@@ -188,6 +245,14 @@ function handleTourForm(e) {
     sourceWebsite: 'circlestay.ca', city: 'Toronto'
   });
 
+  // viewing_request — conversion event (value: 50 CAD)
+  trackEvent('viewing_request', {
+    value: 50,
+    currency: 'CAD',
+    location: data.get('property') || '',
+    preferred_date: data.get('date') || ''
+  }, { event: 'Schedule', params: { value: 50, currency: 'CAD' } });
+
   form.innerHTML = `
     <div class="success-message">
       <div class="success-message__icon">&#10003;</div>
@@ -210,6 +275,17 @@ function handleApplyForm(e) {
     aboutYou: data.get('message') || null,
     sourceWebsite: 'circlestay.ca', city: 'Toronto'
   });
+
+  // application_submit — PRIMARY CONVERSION (value: 100 CAD)
+  // This event must be marked as a Conversion in GA4 for Google Ads import
+  trackEvent('application_submit', {
+    value: 100,
+    currency: 'CAD',
+    location_preference: data.get('property') || '',
+    room_type: data.get('roomType') || '',
+    duration: data.get('duration') || '',
+    move_in_date: data.get('moveIn') || ''
+  }, { event: 'Lead', params: { value: 100, currency: 'CAD', content_category: 'application' } });
 
   form.innerHTML = `
     <div class="success-message">
