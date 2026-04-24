@@ -1,4 +1,141 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/studio-on-rent-in-downtown-core",
+      "destination": "/co-living-in-downtown-core",
+      "permanent": true
+    },
+    {
+      "source": "/studio-on-rent-in-garden-district-cabbagetown",
+      "destination": "/co-living-in-garden-district-cabbagetown",
+      "permanent": true
+    },
+    {
+      "source": "/studio-on-rent-in-queen-west",
+      "destination": "/co-living-in-queen-west",
+      "permanent": true
+    },
+    {
+      "source": "/studio-on-rent-in-waterfront-financial-district",
+      "destination": "/co-living-in-waterfront-financial-district",
+      "permanent": true
+    },
+    {
+      "source": "/studio-on-rent-toronto",
+      "destination": "/coliving-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/basic-rooms-toronto",
+      "destination": "/coliving-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-toronto",
+      "destination": "/coliving-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-in-downtown-core",
+      "destination": "/co-living-in-downtown-core",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-in-queen-west",
+      "destination": "/co-living-in-queen-west",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-in-waterfront-financial-district",
+      "destination": "/co-living-in-waterfront-financial-district",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-in-garden-district-cabbagetown",
+      "destination": "/co-living-in-garden-district-cabbagetown",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-tmu",
+      "destination": "/co-living-near-tmu",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-university-of-toronto",
+      "destination": "/co-living-near-university-of-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-ocad-university",
+      "destination": "/co-living-near-ocad-university",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-george-brown-college",
+      "destination": "/co-living-near-george-brown-college",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/affordable-room-rentals-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/co-living-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/co-living-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/off-campus-housing-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/off-campus-housing-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/student-housing-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/student-housing-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/student-accommodation-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/student-accommodation-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/rooms-on-rent-near-humber-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/rooms-on-rent-near-seneca-college",
+      "destination": "/off-campus-housing-toronto",
+      "permanent": true
+    }
+  ]
 }

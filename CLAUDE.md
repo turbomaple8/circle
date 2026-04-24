@@ -1,3 +1,9 @@
+---
+updated_at: 2026-04-01T16:29:51Z
+updated_by_session: pre_srp_migration
+content_hash: sha256:4dc5afcbcf03010c0baf92e620d222dd4bfbffce5bc959c700240f50d51a077a
+version: 1
+---
 # Circle — Co-Living in Toronto
 
 ## What is Circle?

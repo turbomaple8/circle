@@ -170,7 +170,7 @@ function navHTML(lang) {
       </div>
       <div class="nav__actions">
         <a href="/locations" class="nav__cta nav__cta--outline">Explorer &rarr;</a>
-        <a href="#" class="nav__cta nav__cta--primary" data-modal="apply">Postuler</a>
+        <a href="/apply" class="nav__cta nav__cta--primary">Postuler</a>
       </div>
       <button class="nav__hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -183,7 +183,7 @@ function navHTML(lang) {
       <a href="/blog">Blogue</a>
       <a href="/#faq">FAQ</a>
       <a href="#" data-modal="tour">R&eacute;server une visite</a>
-      <a href="#" data-modal="apply">Postuler</a>
+      <a href="/apply">Postuler</a>
     </div>
   </nav>`;
   }
@@ -199,7 +199,7 @@ function navHTML(lang) {
       </div>
       <div class="nav__actions">
         <a href="/locations" class="nav__cta nav__cta--outline">Explore Rooms &rarr;</a>
-        <a href="#" class="nav__cta nav__cta--primary" data-modal="apply">Apply</a>
+        <a href="/apply" class="nav__cta nav__cta--primary">Apply</a>
       </div>
       <button class="nav__hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -212,7 +212,7 @@ function navHTML(lang) {
       <a href="/blog">Blog</a>
       <a href="/#faq">FAQ</a>
       <a href="#" data-modal="tour">Book a Viewing</a>
-      <a href="#" data-modal="apply">Apply</a>
+      <a href="/apply">Apply</a>
     </div>
   </nav>`;
 }
@@ -240,7 +240,7 @@ function footerHTML(lang) {
             <a href="/locations">Chambres</a>
             <a href="/locations">Emplacements</a>
             <a href="/blog">Blogue</a>
-            <a href="#" data-modal="apply">Postuler</a>
+            <a href="/apply">Postuler</a>
             <a href="#" data-modal="tour">R&eacute;server une visite</a>
           </div>
         </div>
@@ -293,7 +293,7 @@ function footerHTML(lang) {
             <a href="/locations">Rooms</a>
             <a href="/locations">Locations</a>
             <a href="/blog">Blog</a>
-            <a href="#" data-modal="apply">Apply Now</a>
+            <a href="/apply">Apply Now</a>
             <a href="#" data-modal="tour">Book a Viewing</a>
           </div>
         </div>
@@ -607,7 +607,7 @@ function ctaSectionHTML(lang) {
       <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Pr&ecirc;t &agrave; rejoindre le cercle?</h2>
       <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; color: #666;">Postulez en 2 minutes. Approbation en 48 heures. Emm&eacute;nagez cette semaine.</p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#" class="btn btn--primary" data-modal="apply" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Postuler maintenant</a>
+        <a href="/apply" class="btn btn--primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Postuler maintenant</a>
         <a href="#" class="btn btn--outline" data-modal="tour" style="padding: 1rem 2.5rem; font-size: 1.1rem;">R&eacute;server une visite</a>
       </div>
     </div>
@@ -619,7 +619,7 @@ function ctaSectionHTML(lang) {
       <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1rem;">Ready to Join the Circle?</h2>
       <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; color: #666;">Apply in 2 minutes. Get approved within 48 hours. Move in this week.</p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#" class="btn btn--primary" data-modal="apply" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Apply Now</a>
+        <a href="/apply" class="btn btn--primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Apply Now</a>
         <a href="#" class="btn btn--outline" data-modal="tour" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Book a Viewing</a>
       </div>
     </div>

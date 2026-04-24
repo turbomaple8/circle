@@ -13,6 +13,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://circlestay.ca/apply</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://circlestay.ca/about</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -118,8 +124,7 @@
   <url><loc>https://circlestay.ca/co-living-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/co-living-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/co-living-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/co-living-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/co-living-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/co-living-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <!-- pSEO: Audience Segments -->
   <url><loc>https://circlestay.ca/student-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/young-professional-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -137,22 +142,15 @@
   <url><loc>https://circlestay.ca/fr/colocation-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://circlestay.ca/fr/logement-etudiant-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <!-- pSEO: Room Types -->
-  <url><loc>https://circlestay.ca/basic-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/private-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/private-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/deluxe-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/master-suite-rooms-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/affordable-room-rentals-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/coliving-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/affordable-room-rentals-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/affordable-room-rentals-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/affordable-room-rentals-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/affordable-room-rentals-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/affordable-room-rentals-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/coliving-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/coliving-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/coliving-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/coliving-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -176,10 +174,8 @@
   <url><loc>https://circlestay.ca/off-campus-housing-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/off-campus-housing-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/off-campus-housing-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/off-campus-housing-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/off-campus-housing-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/off-campus-housing-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/off-campus-housing-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/off-campus-housing-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/off-campus-housing-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/off-campus-housing-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/off-campus-housing-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/rent-a-room-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -192,10 +188,8 @@
   <url><loc>https://circlestay.ca/rooms-on-rent-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/rooms-on-rent-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/rooms-on-rent-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/rooms-on-rent-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/rooms-on-rent-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/rooms-on-rent-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/rooms-on-rent-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/rooms-on-rent-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/rooms-on-rent-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/rooms-on-rent-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/rooms-on-rent-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/shared-housing-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -218,10 +212,8 @@
   <url><loc>https://circlestay.ca/student-accommodation-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-accommodation-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-accommodation-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-accommodation-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-accommodation-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-accommodation-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-accommodation-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/student-accommodation-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/student-accommodation-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-accommodation-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-accommodation-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-housing-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -229,10 +221,8 @@
   <url><loc>https://circlestay.ca/student-housing-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-housing-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-housing-near-george-brown-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-housing-near-humber-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-housing-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-housing-near-seneca-college</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/student-housing-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/student-housing-near-ocad-university</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/student-housing-near-tmu</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-housing-near-university-of-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-living-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-living-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -244,13 +234,9 @@
   <url><loc>https://circlestay.ca/student-rentals-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-rentals-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://circlestay.ca/student-rentals-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/studio-on-rent-in-downtown-core</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/studio-on-rent-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/studio-on-rent-in-queen-west</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/studio-on-rent-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://circlestay.ca/studio-on-rent-toronto</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url>
+<url><loc>https://circlestay.ca/studio-on-rent-in-garden-district-cabbagetown</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://circlestay.ca/studio-on-rent-in-waterfront-financial-district</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url>
     <loc>https://circlestay.ca/privacy</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>yearly</changefreq>
