@@ -108,10 +108,24 @@ This site forwards application + tour-request submissions to the shared multi-te
 - Forwarded endpoints: `POST /v1/public/applications`, `POST /v1/public/tour-requests`, `POST /v1/public/reservations`.
 - See `/Users/turbomaple/Desktop/Claude/backend-integration/CLAUDE.md` for the full integration spec and field mappings.
 
+## Blog Layout Standard (LOCKED 2026-05-02)
+
+All blog pages MUST use the canonical `.blog-post` BEM pattern documented in [BLOG_LAYOUT_STANDARD.md](BLOG_LAYOUT_STANDARD.md).
+
+- **Spoke posts:** `<article class="blog-post">`
+- **Pillar posts:** `<article class="blog-post blog-post--pillar">`
+- Required children: `.blog-post__header` (h1 + intro), `.blog-post__section` (per H2), `.blog-post__cta-section` (end-of-article CTA)
+- CSS BEM family lives in `styles.css` under marker comment "Blog Post BEM Modifiers — Standardized 2026-05-02"
+- Forbidden going forward: `blog-article*`, `article-header`, `article-body`, `post-header`/`post-intro`, `blog-cta`, `blog-post-footer` (all swept on 2026-05-02)
+- Canonical references: `blog/queen-west-neighbourhood-guide.html` (spoke), `blog/young-professional-housing-toronto-guide.html` (pillar)
+
+When creating a new blog post, copy-paste the skeleton from BLOG_LAYOUT_STANDARD.md and fill in content. Do NOT invent new class systems outside `.blog-post__*`.
+
 ## Working on This Project
 
 - Edit HTML/CSS/JS files directly - no compilation needed
 - Test locally by opening `index.html` in a browser (or use a local server)
 - The CSS comment at the top still says "LIEVE" (original brand name before rebranding to Circle) - this is cosmetic only
 - When adding new properties, follow the `property-*.html` template pattern and the SEO checklist above
+- When adding new blog posts, follow the BLOG_LAYOUT_STANDARD.md skeleton (spoke or pillar)
 - When modifying forms, update both the modal HTML and the handler in `script.js`
