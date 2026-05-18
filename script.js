@@ -25,6 +25,9 @@ function trackEvent(eventName, params, meta) {
   try {
     window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
   } catch (_) {}
+  if (typeof window.gtag === 'function') {
+    try { window.gtag('event', eventName, params || {}); } catch (_) {}
+  }
   if (meta && meta.event && typeof window.fbq === 'function') {
     try { window.fbq('track', meta.event, meta.params || {}); } catch (_) {}
   }
