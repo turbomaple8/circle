@@ -318,6 +318,16 @@ function handleReserveForm(e) {
     roomName: room || null, sourceWebsite: 'circlestay.ca', city: 'Toronto'
   });
 
+  // reserve_no_payment — PRIMARY CONVERSION (24h hold, no payment charged)
+  // Deepest funnel intent: user picked specific property + room + move-in date.
+  // Value parameter intentionally omitted — to be calibrated after first conversion data.
+  // This event must be marked as a Conversion in GA4 for Google Ads import.
+  trackEvent('reserve_no_payment', {
+    location_preference: property || '',
+    room_name: room || '',
+    move_in_date: moveIn || ''
+  }, { event: 'Lead', params: { content_category: 'reservation' } });
+
   // Show success with context
   const ctx = document.getElementById('reserveContext');
   if (ctx) ctx.style.display = 'none';
