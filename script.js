@@ -494,3 +494,88 @@ function injectRelatedPosts(wrapper) {
 
   wrapper.parentNode.insertBefore(section, wrapper.nextSibling);
 }
+
+/* ==========================================================================
+   Phone country-code picker (intl-tel-input) — mandatory country code → E.164
+   --------------------------------------------------------------------------
+   Loads intl-tel-input from a CDN and attaches it to every <input type="tel">
+   so the visitor picks a country (default Canada for circle) and the submitted
+   phone is rewritten to E.164 (+<cc><national>) before each form's own submit
+   handler reads it. A single document-level capture listener runs before those
+   handlers. Fully defensive: if the CDN fails to load or the validation utils
+   aren't ready yet, the form still submits with the raw number and the backend
+   normalizes it — nothing ever blocks a lead.
+   ========================================================================== */
+(function () {
+  var ITI = 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/';
+  var DEFAULT_COUNTRY = 'ca'; // circle = Toronto / Canada
+  var loading = false, queue = [];
+
+  function ensureLib(cb) {
+    if (window.intlTelInput) { cb(); return; }
+    queue.push(cb);
+    if (loading) return;
+    loading = true;
+    if (!document.getElementById('iti-css')) {
+      var link = document.createElement('link');
+      link.id = 'iti-css'; link.rel = 'stylesheet';
+      link.href = ITI + 'css/intlTelInput.css';
+      document.head.appendChild(link);
+    }
+    var s = document.createElement('script');
+    s.src = ITI + 'js/intlTelInput.min.js';
+    s.onload = function () { var q = queue; queue = []; q.forEach(function (f) { f(); }); };
+    s.onerror = function () { loading = false; queue = []; }; // CDN blocked → leave inputs as-is
+    document.head.appendChild(s);
+  }
+
+  function enhance(input) {
+    if (!input || input.__itiDone) return;
+    ensureLib(function () {
+      if (!window.intlTelInput || input.__itiDone) return;
+      input.__itiDone = true;
+      var iti = window.intlTelInput(input, {
+        initialCountry: DEFAULT_COUNTRY,
+        separateDialCode: true,
+        utilsScript: ITI + 'js/utils.js'
+      });
+      input.__iti = iti;
+      input.__itiReady = false;
+      if (iti.promise && iti.promise.then) {
+        iti.promise.then(function () { input.__itiReady = true; });
+      }
+    });
+  }
+
+  function enhanceAll(root) {
+    (root || document).querySelectorAll('input[type="tel"]').forEach(enhance);
+  }
+
+  // One capture-phase listener for the whole document: it fires before any
+  // individual form's submit handler, so the rewritten E.164 value is in place
+  // by the time that handler reads input.value / FormData.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form || form.tagName !== 'FORM') return;
+    var ti = form.querySelector('input[type="tel"]');
+    if (!ti || !ti.__iti) return;
+    var val = (ti.value || '').trim();
+    if (val === '') return; // empty optional phone — let it through
+    if (!ti.__itiReady) return; // utils not loaded yet — backend will normalize
+    if (!ti.__iti.isValidNumber()) {
+      e.preventDefault();
+      e.stopPropagation();
+      alert('Please enter a valid phone number, including the country code.');
+      return;
+    }
+    ti.value = ti.__iti.getNumber(); // E.164
+  }, true);
+
+  window.CirclePhone = { enhance: enhance, enhanceAll: enhanceAll };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { enhanceAll(); });
+  } else {
+    enhanceAll();
+  }
+})();

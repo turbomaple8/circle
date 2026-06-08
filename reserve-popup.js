@@ -236,6 +236,11 @@
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden';
 
+    // Attach the country-code picker to the dynamically-built phone input
+    // (defined in script.js, loaded before this file). The shared document-level
+    // submit listener rewrites the value to E.164 before this form's handler reads it.
+    if (window.CirclePhone) window.CirclePhone.enhance(document.querySelector('#rpStandaloneForm input[type="tel"]'));
+
     function closeStandalone() {
       overlay.remove();
       document.body.style.overflow = '';
