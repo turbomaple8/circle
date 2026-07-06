@@ -2898,3 +2898,34 @@ h5 { font-size: 1.05rem; }
     padding: 1.25rem 1.4rem;
   }
 }
+
+/* ========================================
+   WhatsApp Floating Button
+======================================== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: var(--transition);
+}
+
+.whatsapp-fab:hover {
+  background: #1ebe5d;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+}
