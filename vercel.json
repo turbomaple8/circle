@@ -478,11 +478,6 @@
       "permanent": true
     },
     {
-      "source": "/rent-a-room-toronto",
-      "destination": "/coliving-toronto",
-      "permanent": true
-    },
-    {
       "source": "/find-a-room-toronto",
       "destination": "/rent-a-room-toronto",
       "permanent": true
