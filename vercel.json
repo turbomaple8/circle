@@ -474,7 +474,7 @@
     },
     {
       "source": "/rooms-on-rent-toronto",
-      "destination": "/coliving-toronto",
+      "destination": "/rent-a-room-toronto",
       "permanent": true
     },
     {
@@ -484,7 +484,7 @@
     },
     {
       "source": "/find-a-room-toronto",
-      "destination": "/coliving-toronto",
+      "destination": "/rent-a-room-toronto",
       "permanent": true
     },
     {
