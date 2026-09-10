@@ -20,10 +20,10 @@
         "{location} Coliving — Intentional Community Living from {price}/wk"
       ],
       "meta_title_template": "Coliving in {location}, Toronto | Rooms from {price}/wk | Circle",
-      "meta_description_template": "Explore coliving spaces in {location}, Toronto. Fully furnished, all-inclusive from {price}/week. Flexible leases from 1 month. Join a community of students and professionals.",
+      "meta_description_template": "Explore coliving spaces in {location}, Toronto. Fully furnished, all-inclusive from {price}/week. 4-month minimum stay. Join a community of students and professionals.",
       "intro_variants": [
         "Looking for coliving in {location}? {property} offers curated co-living rooms designed for how you actually live — not loud, not chaotic, but intentional. Starting from {price}/week, everything is included: furniture, WiFi, utilities, and a built-in community of students and young professionals.",
-        "{location} is one of Toronto's most sought-after neighborhoods for coliving. At {property} ({address}), you'll find {room_count} room types, shared common areas, and a community that values focus, connection, and calm. All-inclusive from {price}/week with flexible leases starting at 1 month.",
+        "{location} is one of Toronto's most sought-after neighborhoods for coliving. At {property} ({address}), you'll find {room_count} room types, shared common areas, and a community that values focus, connection, and calm. All-inclusive from {price}/week with a 4-month minimum stay.",
         "Coliving in {location} means more than just a room — it's a lifestyle designed around community, convenience, and affordability. {property} puts you in the heart of {neighborhood_vibe}, with {transit_highlight} nearby. From {price}/week, fully furnished and all-inclusive."
       ],
       "content_angle": "Community and intentional living. Position co-living as a lifestyle choice, not a budget compromise.",
@@ -42,7 +42,7 @@
         },
         {
           "q": "What's the minimum lease for coliving in {location}?",
-          "a": "Just 1 month. We offer flexible terms from 1 month to 12+ months. No long-term commitment required — perfect for students, interns, and professionals in transition."
+          "a": "Our minimum stay is 4 months. Circle is residential co-living, not short-term or nightly accommodation, so we don't offer stays of a few days or weeks. Terms run from 4 months to 12+ months and you can extend when you're ready — a natural fit for a semester, a co-op term, or a full year."
         },
         {
           "q": "Do I need a credit check for coliving?",
@@ -54,7 +54,7 @@
         },
         {
           "q": "Is coliving better than renting an apartment in {location}?",
-          "a": "For many people, yes. Coliving saves you 38-60% compared to a solo apartment, includes all utilities and furniture, offers flexible leases, and provides a built-in community. No furniture shopping, no separate utility bills, no isolation."
+          "a": "For many people, yes. Coliving saves you 38-60% compared to a solo apartment, includes all utilities and furniture, offers terms from 4 months, and provides a built-in community. No furniture shopping, no separate utility bills, no isolation."
         },
         {
           "q": "How do I apply for coliving in {location}?",
@@ -79,14 +79,14 @@
       "h1_variants": [
         "Student Housing in {location}: All-Inclusive Rooms from {price}/Week",
         "Affordable Student Housing in {location}, Toronto — No Credit Check",
-        "{location} Student Housing | Furnished Rooms, Flexible Leases, from {price}/wk"
+        "{location} Student Housing | Furnished Rooms, 4-Month Terms, from {price}/wk"
       ],
       "meta_title_template": "Student Housing in {location}, Toronto | From {price}/wk All-Inclusive | Circle",
-      "meta_description_template": "Student housing in {location}, Toronto from {price}/week. Fully furnished, no credit check, flexible leases from 1 month. Near {nearest_campus}. Apply now.",
+      "meta_description_template": "Student housing in {location}, Toronto from {price}/week. Fully furnished, no credit check, 4-month minimum stay. Near {nearest_campus}. Apply now.",
       "intro_variants": [
-        "Finding safe, affordable student housing in {location} shouldn't be stressful. Circle Co-Living offers fully furnished rooms from {price}/week with everything included — furniture, WiFi, utilities. No credit check required, and leases start at just 1 month. Perfect for international students, exchange students, and anyone studying in Toronto.",
+        "Finding safe, affordable student housing in {location} shouldn't be stressful. Circle Co-Living offers fully furnished rooms from {price}/week with everything included — furniture, WiFi, utilities. No credit check required, and the minimum stay is 4 months. Perfect for international students, exchange students, and anyone studying in Toronto.",
         "Forget the dorm waitlists and sketchy Kijiji listings. Student housing at {property} in {location} is designed for how students actually live: quiet study spaces, fast WiFi, furnished rooms, and a community of fellow students and young professionals. From {price}/week, all-inclusive, no credit check.",
-        "Whether you're arriving from abroad or transferring to a Toronto campus, {property} has student housing ready for you in {location}. {transit_highlight} gets you to campus fast. Rooms start at {price}/week — fully furnished, all utilities included, with flexible leases from 1 month."
+        "Whether you're arriving from abroad or transferring to a Toronto campus, {property} has student housing ready for you in {location}. {transit_highlight} gets you to campus fast. Rooms start at {price}/week — fully furnished, all utilities included, with a 4-month minimum stay."
       ],
       "content_angle": "Safety, affordability, and campus proximity. Address international student pain points: no credit history, scam fears, loneliness.",
       "faq_pool": [
@@ -104,7 +104,7 @@
         },
         {
           "q": "Can I rent student housing for just one semester?",
-          "a": "Yes. Our minimum stay is 1 month. Whether you need housing for a summer term, one semester, or a full academic year, we have flexible options."
+          "a": "Yes, as long as your stay is at least 4 months. Our minimum stay is 4 months, which lines up with a standard semester or co-op term. Whether you need housing for one semester, two, or a full academic year, we have options. We don't offer stays shorter than 4 months."
         },
         {
           "q": "Is there a study space at {property}?",
@@ -145,7 +145,7 @@
       "meta_title_template": "Off Campus Housing {location_preposition} {location} | From {price}/wk | Circle Co-Living",
       "meta_description_template": "Off campus housing {location_preposition} {location} from {price}/week. Furnished, all-inclusive, no credit check. Better than dorms — more freedom, real community. Apply now.",
       "intro_variants": [
-        "Tired of dorm waitlists? Off campus housing at {property} in {location} offers more freedom, better amenities, and a real community — from {price}/week. No RA rules, no mandatory meal plans, no shared dorm rooms. Just your own furnished private room with flexible leases starting at 1 month.",
+        "Tired of dorm waitlists? Off campus housing at {property} in {location} offers more freedom, better amenities, and a real community — from {price}/week. No RA rules, no mandatory meal plans, no shared dorm rooms. Just your own furnished private room with a 4-month minimum stay.",
         "Off campus housing near {nearest_campus} doesn't get better than {property}. Located {campus_distance_text} from campus via {transit_route}, you'll have a fully furnished room, high-speed WiFi, and a community of fellow students. All-inclusive from {price}/week — no credit check, no guarantor.",
         "Why fight for on-campus housing when you can live better off campus? {property} in {location} offers furnished rooms from {price}/week with everything included. {transit_highlight} means you're always close to class, but with the independence that on-campus housing can't match."
       ],
@@ -169,7 +169,7 @@
         },
         {
           "q": "Can I get off campus housing for just one semester?",
-          "a": "Yes. Our minimum lease is 1 month. Rent for a summer term, one semester, or a full year. Flexible terms are our specialty."
+          "a": "Yes, with a 4-month minimum stay. Rent for one semester, two, or a full year. We don't offer stays shorter than 4 months."
         },
         {
           "q": "Is off campus housing safe?",
@@ -226,18 +226,18 @@
         "short term housing Toronto interns"
       ],
       "h1_variants": [
-        "Intern Housing in {location}, Toronto — Short-Term from {price}/Week",
-        "Summer Intern Housing in {location}: No Long Leases, from {price}/wk",
-        "{location} Intern Housing | 1-Month Minimum, Furnished, All-Inclusive"
+        "Intern Housing in {location}, Toronto — 4-Month Terms from {price}/Week",
+        "Summer Intern Housing in {location}: No 12-Month Leases, from {price}/wk",
+        "{location} Intern Housing | 4-Month Minimum, Furnished, All-Inclusive"
       ],
-      "meta_title_template": "Intern Housing in {location}, Toronto | Short-Term from {price}/wk | Circle",
-      "meta_description_template": "Intern housing in {location}, Toronto from {price}/week. 1-month minimum lease, fully furnished, all-inclusive. Near Bay Street and downtown offices. Apply now.",
+      "meta_title_template": "Intern Housing in {location}, Toronto | 4-Month Terms from {price}/wk | Circle",
+      "meta_description_template": "Intern housing in {location}, Toronto from {price}/week. 4-month minimum stay, fully furnished, all-inclusive. Near Bay Street and downtown offices. Apply now.",
       "intro_variants": [
-        "Interning in Toronto this summer? Don't sign a 12-month lease for a 3-month stay. {property} in {location} offers intern housing from {price}/week with a 1-month minimum lease. Fully furnished, all-inclusive, and near Toronto's business district. Focus on your internship, not your housing.",
-        "Intern housing in {location} shouldn't cost a fortune or require a year-long commitment. At {property}, rent a furnished room from {price}/week for exactly as long as your internship lasts — 1 month minimum. WiFi, utilities, and community included.",
-        "Summer interns in Toronto: {property} in {location} has housing built for you. Furnished rooms from {price}/week with flexible terms, {transit_highlight} to Bay Street and downtown offices, and a community of other young professionals and students. Apply today, move in next week."
+        "Interning in Toronto this summer? Don't sign a 12-month lease for a 4-month internship. {property} in {location} offers intern housing from {price}/week on a 4-month minimum stay. Fully furnished, all-inclusive, and near Toronto's business district. Focus on your internship, not your housing.",
+        "Intern housing in {location} shouldn't cost a fortune or require a year-long commitment. At {property}, rent a furnished room from {price}/week for the length of your internship — 4-month minimum stay. WiFi, utilities, and community included.",
+        "Summer interns in Toronto: {property} in {location} has housing built for you. Furnished rooms from {price}/week on 4-month terms, {transit_highlight} to Bay Street and downtown offices, and a community of other young professionals and students. Apply today, move in next week."
       ],
-      "content_angle": "Short-term flexibility for internships. No long lease commitment. Near business district."
+      "content_angle": "Term-length flexibility for 4-month internships. No 12-month lease commitment. Near business district."
     }
   ]
 }

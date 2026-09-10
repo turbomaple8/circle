@@ -437,11 +437,10 @@ const MODALS_HTML = `
               <input type="date" name="moveIn">
             </div>
             <div class="form-group">
-              <label>Anticipated Duration</label>
+              <label>Anticipated Duration (4-month minimum)</label>
               <select name="duration">
                 <option value="">Select duration</option>
-                <option value="1-3 months">1 - 3 months</option>
-                <option value="3-6 months">3 - 6 months</option>
+                <option value="4-6 months">4 - 6 months</option>
                 <option value="6-12 months">6 - 12 months</option>
                 <option value="12+ months">12+ months</option>
               </select>
@@ -851,7 +850,7 @@ function generateNeighborhoodPages() {
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
 ${roomCardsHTML(prop)}
       </div>
-      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">All rooms fully furnished. WiFi, utilities, and amenities included. Flexible leases from 1 month.</p>
+      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">All rooms fully furnished. WiFi, utilities, and amenities included. Minimum stay: 4 months.</p>
     </div>
   </section>
 
@@ -1081,9 +1080,9 @@ function generateAudiencePages() {
       slug: 'student-housing-toronto',
       h1: 'Student Housing in Toronto: All-Inclusive Furnished Rooms from C$240/Week',
       title: 'Student Housing in Toronto | Furnished Rooms from C$240/wk | Circle Co-Living',
-      metaDesc: 'Student housing in Toronto from C$240/week. Fully furnished, no credit check, flexible leases from 1 month. 4 downtown locations near major campuses. Apply now.',
-      subtitle: 'Fully furnished rooms near UofT, TMU, George Brown, OCAD and more. No credit check, flexible leases, all-inclusive.',
-      intro: `Finding student housing in Toronto can be overwhelming — especially if you're arriving from abroad or navigating the city's expensive rental market for the first time. Circle Co-Living makes it simple: 4 downtown locations, fully furnished rooms from C$240/week, and everything included in one price. No credit check, no guarantor, no furniture shopping. Just apply online, get approved within 48 hours, and move in with nothing more than a suitcase. Our community includes students from UofT, TMU, George Brown, OCAD, and colleges across the GTA. Whether you need housing for a single semester, a summer internship, or a full academic year, our flexible leases start at just 1 month. Every room comes with a bed, desk, wardrobe, high-speed WiFi, and all utilities. Shared kitchens, common areas, and building amenities are included. Toronto's average studio apartment costs $1,800-2,500/month unfurnished — at Circle, you pay a fraction of that and get more.`,
+      metaDesc: 'Student housing in Toronto from C$240/week. Fully furnished, no credit check, 4-month minimum stay. 4 downtown locations near major campuses. Apply now.',
+      subtitle: 'Fully furnished rooms near UofT, TMU, George Brown, OCAD and more. No credit check, 4-month minimum stay, all-inclusive.',
+      intro: `Finding student housing in Toronto can be overwhelming — especially if you're arriving from abroad or navigating the city's expensive rental market for the first time. Circle Co-Living makes it simple: 4 downtown locations, fully furnished rooms from C$240/week, and everything included in one price. No credit check, no guarantor, no furniture shopping. Just apply online, get approved within 48 hours, and move in with nothing more than a suitcase. Our community includes students from UofT, TMU, George Brown, OCAD, and colleges across the GTA. Whether you need housing for a single semester, a 4-month co-op term, or a full academic year, our minimum stay is 4 months. Every room comes with a bed, desk, wardrobe, high-speed WiFi, and all utilities. Shared kitchens, common areas, and building amenities are included. Toronto's average studio apartment costs $1,800-2,500/month unfurnished — at Circle, you pay a fraction of that and get more.`,
       bodyExtra: 'student',
       faqTheme: 'student-housing'
     },
@@ -1091,29 +1090,29 @@ function generateAudiencePages() {
       slug: 'young-professional-housing-toronto',
       h1: 'Young Professional Housing in Toronto: Co-Living from C$240/Week',
       title: 'Young Professional Housing Toronto | Co-Living from C$240/wk | Circle',
-      metaDesc: 'Young professional housing in Toronto from C$240/week. Furnished rooms, flexible leases, built-in community. Near Bay Street and downtown. Apply now.',
+      metaDesc: 'Young professional housing in Toronto from C$240/week. Furnished rooms, 4-month minimum stay, built-in community. Near Bay Street and downtown. Apply now.',
       subtitle: 'Skip the solo apartment grind. Furnished rooms, built-in community, and all-inclusive pricing near Toronto\'s business core.',
-      intro: `Starting your career in Toronto is exciting — but finding affordable housing near your office shouldn't be the hardest part. Circle Co-Living offers young professionals a smarter alternative to overpriced studio apartments: furnished private rooms in curated co-living homes from C$240/week, all-inclusive. Our four downtown Toronto locations put you within minutes of Bay Street, the Financial District, Queen West's creative agencies, and downtown's tech hubs. Each room comes fully furnished with a desk, fast WiFi, and everything you need to work from home when needed. But co-living isn't just about saving money — it's about building genuine connections. Our community of students and young professionals values focus during the week and connection on weekends. Quiet hours, professional management, and community events create the right balance. No long leases required: start with just 1 month and extend as you settle in. No credit check means newcomers to Toronto can move in quickly. Compare our all-inclusive weekly rates to the $1,800-2,500/month you'd pay for a bare studio apartment, and the choice is clear.`,
+      intro: `Starting your career in Toronto is exciting — but finding affordable housing near your office shouldn't be the hardest part. Circle Co-Living offers young professionals a smarter alternative to overpriced studio apartments: furnished private rooms in curated co-living homes from C$240/week, all-inclusive. Our four downtown Toronto locations put you within minutes of Bay Street, the Financial District, Queen West's creative agencies, and downtown's tech hubs. Each room comes fully furnished with a desk, fast WiFi, and everything you need to work from home when needed. But co-living isn't just about saving money — it's about building genuine connections. Our community of students and young professionals values focus during the week and connection on weekends. Quiet hours, professional management, and community events create the right balance. No 12-month lease required: the minimum stay is 4 months, and you can extend as you settle in. No credit check means newcomers to Toronto can move in quickly. Compare our all-inclusive weekly rates to the $1,800-2,500/month you'd pay for a bare studio apartment, and the choice is clear.`,
       bodyExtra: 'professional',
       faqTheme: 'coliving'
     },
     {
       slug: 'exchange-student-housing-toronto',
-      h1: 'Exchange Student Housing in Toronto: Short-Term from C$240/Week',
-      title: 'Exchange Student Housing Toronto | Short-Term from C$240/wk | Circle',
-      metaDesc: 'Exchange student housing in Toronto from C$240/week. 1-month minimum lease, fully furnished, no credit check. Near UofT, TMU, George Brown. Apply online.',
-      subtitle: 'Short-term, furnished, and hassle-free housing for exchange students coming to Toronto. No Canadian credit history needed.',
-      intro: `Coming to Toronto on exchange? You need housing that works on your timeline — not a 12-month lease for a 4-month stay. Circle Co-Living offers exchange students furnished rooms from C$240/week with a minimum stay of just 1 month. No Canadian credit history required, no guarantor needed, and you can apply from anywhere in the world. Our four downtown locations put you near UofT (15 min from The York), TMU (5 min from The Yonge), George Brown (10-12 min), and OCAD (8 min from The Queen). Every room is move-in ready with furniture, linens, WiFi, and all utilities included. Just arrive with your suitcase. The co-living community at Circle includes fellow international students, Canadian students, and young professionals. It's the fastest way to build a social network in a new city — no awkward Kijiji roommate situations, no isolation in a solo apartment. Our properties are professionally managed with secure access and 24/7 support, so your parents can rest easy knowing you're in safe hands.`,
+      h1: 'Exchange Student Housing in Toronto: Semester-Length Rooms from C$240/Week',
+      title: 'Exchange Student Housing Toronto | Semester Terms from C$240/wk | Circle',
+      metaDesc: 'Exchange student housing in Toronto from C$240/week. 4-month minimum stay, fully furnished, no credit check. Near UofT, TMU, George Brown. Apply online.',
+      subtitle: 'Semester-length, furnished, and hassle-free housing for exchange students coming to Toronto. 4-month minimum stay, no Canadian credit history needed.',
+      intro: `Coming to Toronto on exchange? You need housing that works on your timeline — not a 12-month lease for a 4-month stay. Circle Co-Living offers exchange students furnished rooms from C$240/week with a minimum stay of 4 months, matching a standard exchange semester. No Canadian credit history required, no guarantor needed, and you can apply from anywhere in the world. Our four downtown locations put you near UofT (15 min from The York), TMU (5 min from The Yonge), George Brown (10-12 min), and OCAD (8 min from The Queen). Every room is move-in ready with furniture, linens, WiFi, and all utilities included. Just arrive with your suitcase. The co-living community at Circle includes fellow international students, Canadian students, and young professionals. It's the fastest way to build a social network in a new city — no awkward Kijiji roommate situations, no isolation in a solo apartment. Our properties are professionally managed with secure access and 24/7 support, so your parents can rest easy knowing you're in safe hands.`,
       bodyExtra: 'exchange',
       faqTheme: 'student-housing'
     },
     {
       slug: 'intern-housing-toronto',
-      h1: 'Intern Housing in Toronto: Flexible Short-Term Rooms from C$240/Week',
-      title: 'Intern Housing Toronto | Short-Term from C$240/wk | Circle Co-Living',
-      metaDesc: 'Intern housing in Toronto from C$240/week. 1-month minimum, fully furnished, near Bay Street. No long lease required. Apply online and move in this week.',
-      subtitle: 'Don\'t sign a 12-month lease for a 3-month internship. Flexible, furnished rooms near Toronto\'s business district.',
-      intro: `Interning in Toronto this summer? The last thing you need is the stress of finding affordable short-term housing in one of Canada's most expensive cities. Circle Co-Living solves this: furnished rooms from C$240/week with a 1-month minimum lease. No 12-month commitments, no furniture shopping, no utility setup. Just apply online, get approved within 48 hours, and focus on your internship — not your living situation. Our four downtown locations are strategically positioned near Toronto's major employment hubs. The York (Waterfront/Financial District) puts you 2 minutes from Union Station and direct PATH access to Bay Street. The Queen (Queen West) is in the heart of Toronto's creative and media district. The Yonge is central to everything via Dundas Station. And The Maddox offers the most affordable entry point from just C$240/week. Every room comes fully furnished with a bed, desk, wardrobe, high-speed WiFi, and all utilities included. Shared kitchens mean you can cook instead of eating out every meal. And the built-in community of fellow interns, students, and young professionals means you won't spend your Toronto summer in isolation.`,
+      h1: 'Intern Housing in Toronto: 4-Month Furnished Rooms from C$240/Week',
+      title: 'Intern Housing Toronto | 4-Month Terms from C$240/wk | Circle Co-Living',
+      metaDesc: 'Intern housing in Toronto from C$240/week. 4-month minimum stay, fully furnished, near Bay Street. No 12-month lease required. Apply online.',
+      subtitle: 'Don\'t sign a 12-month lease for a 4-month internship. Furnished rooms on 4-month terms near Toronto\'s business district.',
+      intro: `Interning in Toronto this summer? The last thing you need is the stress of finding affordable housing for a single term in one of Canada's most expensive cities. Circle Co-Living solves this: furnished rooms from C$240/week on a 4-month minimum stay that matches a standard internship or co-op term. No 12-month commitments, no furniture shopping, no utility setup. Just apply online, get approved within 48 hours, and focus on your internship — not your living situation. Our four downtown locations are strategically positioned near Toronto's major employment hubs. The York (Waterfront/Financial District) puts you 2 minutes from Union Station and direct PATH access to Bay Street. The Queen (Queen West) is in the heart of Toronto's creative and media district. The Yonge is central to everything via Dundas Station. And The Maddox offers the most affordable entry point from just C$240/week. Every room comes fully furnished with a bed, desk, wardrobe, high-speed WiFi, and all utilities included. Shared kitchens mean you can cook instead of eating out every meal. And the built-in community of fellow interns, students, and young professionals means you won't spend your Toronto summer in isolation.`,
       bodyExtra: 'intern',
       faqTheme: 'intern-housing'
     }
@@ -1165,8 +1164,8 @@ ${allPropsHTML}
         </div>
         <div class="fade-in" style="text-align: center; padding: 1.5rem;">
           <p style="font-size: 2.5rem; margin-bottom: 0.75rem;">&#128197;</p>
-          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Flexible Leases</h3>
-          <p style="font-size: 0.95rem; color: #666;">1-month minimum. No long-term commitment required. Stay as short or long as you need.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">4-Month Minimum Stay</h3>
+          <p style="font-size: 0.95rem; color: #666;">4-month minimum stay. No 12-month lock-in. Stay for a semester, a co-op term, or a full year.</p>
         </div>
         <div class="fade-in" style="text-align: center; padding: 1.5rem;">
           <p style="font-size: 2.5rem; margin-bottom: 0.75rem;">&#9989;</p>
@@ -1222,7 +1221,7 @@ ${allPropsHTML}
           </tr>
           <tr style="border-bottom: 1px solid #eee;">
             <td style="padding: 0.75rem;">Minimum Lease</td>
-            <td style="padding: 0.75rem; text-align: center; color: var(--accent);">1 month</td>
+            <td style="padding: 0.75rem; text-align: center; color: var(--accent);">4 months</td>
             <td style="padding: 0.75rem; text-align: center;">12 months</td>
           </tr>
           <tr style="border-bottom: 1px solid #eee;">
@@ -1417,7 +1416,7 @@ function generateFrenchPages() {
 
     const h1 = `Colocation ${hood.name_fr} : Chambres meubl&eacute;es d&egrave;s ${formatPrice(prop.price_from_weekly)}/semaine`;
     const metaTitle = `Colocation ${hood.name_fr}, Toronto | D&egrave;s ${formatPrice(prop.price_from_weekly)}/sem | Circle`;
-    const metaDesc = `Colocation ${hood.name_fr}, Toronto. Chambres meubl&eacute;es tout compris d&egrave;s ${formatPrice(prop.price_from_weekly)}/semaine. Baux flexibles, pas de v&eacute;rification de cr&eacute;dit. Postulez maintenant.`;
+    const metaDesc = `Colocation ${hood.name_fr}, Toronto. Chambres meubl&eacute;es tout compris d&egrave;s ${formatPrice(prop.price_from_weekly)}/semaine. S&eacute;jour minimum 4 mois, pas de v&eacute;rification de cr&eacute;dit. Postulez maintenant.`;
 
     const intro = `Vous cherchez une colocation ${hood.name_fr.toLowerCase()} &agrave; Toronto? ${prop.name} offre des chambres meubl&eacute;es d&egrave;s ${formatPrice(prop.price_from_weekly)}/semaine, tout compris : meubles, WiFi, services publics et une communaut&eacute; d'&eacute;tudiants et de jeunes professionnels. Pas de v&eacute;rification de cr&eacute;dit, baux flexibles &agrave; partir d'un mois. ${hood.vibe_fr} Chaque chambre est pr&ecirc;te &agrave; emm&eacute;nager avec lit, bureau, garde-robe et linge de maison. Les espaces communs comprennent une cuisine &eacute;quip&eacute;e, des salons et des commodit&eacute;s du b&acirc;timent. Postulez en ligne en 2 minutes et emm&eacute;nagez cette semaine.`;
 
@@ -1444,7 +1443,7 @@ function generateFrenchPages() {
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
 ${roomCardsHTML(prop)}
       </div>
-      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">Toutes les chambres sont meubl&eacute;es. WiFi, services publics et commodit&eacute;s inclus. Baux flexibles &agrave; partir d'un mois.</p>
+      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">Toutes les chambres sont meubl&eacute;es. WiFi, services publics et commodit&eacute;s inclus. S&eacute;jour minimum de 4 mois.</p>
     </div>
   </section>
 
@@ -1471,7 +1470,7 @@ ${roomCardsHTML(prop)}
       { q: `Qu'est-ce que la colocation ${hood.name_fr}?`, a: `La colocation chez Circle est un concept de logement moderne o&ugrave; vous louez une chambre priv&eacute;e meubl&eacute;e dans une maison partag&eacute;e et g&eacute;r&eacute;e professionnellement. &Agrave; ${prop.name} dans ${hood.name_fr}, cela comprend votre propre chambre plus cuisine partag&eacute;e, espaces communs et commodit&eacute;s &mdash; le tout inclus dans un prix hebdomadaire &agrave; partir de ${formatPrice(prop.price_from_weekly)}.` },
       { q: `Combien co&ucirc;te la colocation ${hood.name_fr}?`, a: `Les chambres au ${prop.name} commencent &agrave; ${formatPrice(prop.price_from_weekly)}/semaine (${formatMonthly(prop.price_from_weekly)}/mois). Tous les services publics, WiFi et ameublement sont inclus. C'est 38-60% moins cher qu'un appartement solo dans le m&ecirc;me quartier.` },
       { q: `Ai-je besoin d'un historique de cr&eacute;dit canadien?`, a: `Non. Circle Co-Living n'exige pas d'historique de cr&eacute;dit canadien. Postulez en ligne, approbation en 48 heures. Id&eacute;al pour les &eacute;tudiants internationaux et les nouveaux arrivants.` },
-      { q: `Quelle est la dur&eacute;e minimale du bail?`, a: `Un mois seulement. Nous offrons des baux flexibles de 1 &agrave; 12+ mois. Parfait pour les &eacute;tudiants, stagiaires et professionnels en transition.` }
+      { q: `Quelle est la dur&eacute;e minimale du bail?`, a: `Quatre mois. Notre s&eacute;jour minimum est de 4 mois; nous n'offrons pas de s&eacute;jours de quelques jours ou semaines. Les dur&eacute;es vont de 4 &agrave; 12+ mois, id&eacute;al pour un semestre, un stage coop ou une ann&eacute;e compl&egrave;te.` }
     ];
 
     let faqItems = '';
@@ -1588,8 +1587,8 @@ ${allPropsHTML}
         </div>
         <div class="fade-in" style="text-align: center; padding: 1.5rem;">
           <p style="font-size: 2.5rem; margin-bottom: 0.75rem;">&#128197;</p>
-          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Baux flexibles</h3>
-          <p style="font-size: 0.95rem; color: #666;">Minimum 1 mois. Pas d'engagement &agrave; long terme.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">S&eacute;jour minimum 4 mois</h3>
+          <p style="font-size: 0.95rem; color: #666;">S&eacute;jour minimum de 4 mois. Aucun bail de 12 mois obligatoire.</p>
         </div>
         <div class="fade-in" style="text-align: center; padding: 1.5rem;">
           <p style="font-size: 2.5rem; margin-bottom: 0.75rem;">&#9989;</p>
@@ -1603,7 +1602,7 @@ ${allPropsHTML}
     const frFaqs = [
       { q: 'Combien co&ucirc;te le logement &eacute;tudiant &agrave; Toronto?', a: `Les chambres chez Circle commencent &agrave; C$${cheapest.price_from_weekly}/semaine (C$${cheapest.price_from_weekly * 4}/mois), tout compris. Meubles, WiFi, services publics et commodit&eacute;s du b&acirc;timent sont inclus.` },
       { q: 'Faut-il un historique de cr&eacute;dit canadien?', a: 'Non. Circle Co-Living n\'exige pas d\'historique de cr&eacute;dit. Les &eacute;tudiants internationaux et les nouveaux arrivants sont les bienvenus. Postulez en ligne, approbation en 48 heures.' },
-      { q: 'Quelle est la dur&eacute;e minimale du bail?', a: 'Un mois. Que vous ayez besoin d\'un logement pour un trimestre d\'&eacute;t&eacute;, un semestre ou une ann&eacute;e compl&egrave;te, nous avons des options flexibles.' },
+      { q: 'Quelle est la dur&eacute;e minimale du bail?', a: 'Quatre mois. Que vous ayez besoin d\'un logement pour un trimestre d\'&eacute;t&eacute;, un semestre ou une ann&eacute;e compl&egrave;te, nous avons des options &agrave; partir de 4 mois.' },
       { q: 'Les chambres sont-elles meubl&eacute;es?', a: 'Oui. Chaque chambre est enti&egrave;rement meubl&eacute;e avec lit, bureau, chaise, garde-robe et linge de maison. Les espaces partag&eacute;s comprennent une cuisine &eacute;quip&eacute;e et des aires communes.' }
     ];
 
@@ -1686,7 +1685,7 @@ function generateRoomTypePages() {
       title: 'Master Suite Rooms in Toronto | Ensuite from C$455/wk | Circle Co-Living',
       metaDesc: 'Master suite rooms in Toronto from C$455/week. King bed, private ensuite bathroom. Maximum privacy in a co-living community. Apply now.',
       subtitle: 'King bed and private ensuite bathroom. Maximum privacy with all the benefits of co-living community.',
-      intro: 'Master suite rooms are the premium option at Circle Co-Living — your own king bed, large desk, premium wardrobe, and a private ensuite bathroom. Available at The York (C$465/week) and The Queen (C$455/week), master suites combine the privacy of your own apartment with the community, convenience, and value of co-living. At The York in the Financial District, the master suite puts you 2 minutes from Union Station with access to the PATH network, indoor pool, fitness centre, and sauna. At The Queen on Queen West, you are in the heart of Toronto\'s cultural and entertainment district, steps from Osgoode Station and the 501 streetcar. Master suites are ideal for young professionals who want maximum privacy, couples considering co-living, or anyone who values their own bathroom space. Even at the premium price point, master suites are significantly cheaper than comparable studio apartments in the same neighborhoods, which typically run C$2,000-2,800/month unfurnished. All utilities, WiFi, and amenities are included in one weekly price. Flexible leases from 1 month, no credit check required.'
+      intro: 'Master suite rooms are the premium option at Circle Co-Living — your own king bed, large desk, premium wardrobe, and a private ensuite bathroom. Available at The York (C$465/week) and The Queen (C$455/week), master suites combine the privacy of your own apartment with the community, convenience, and value of co-living. At The York in the Financial District, the master suite puts you 2 minutes from Union Station with access to the PATH network, indoor pool, fitness centre, and sauna. At The Queen on Queen West, you are in the heart of Toronto\'s cultural and entertainment district, steps from Osgoode Station and the 501 streetcar. Master suites are ideal for young professionals who want maximum privacy, couples considering co-living, or anyone who values their own bathroom space. Even at the premium price point, master suites are significantly cheaper than comparable studio apartments in the same neighborhoods, which typically run C$2,000-2,800/month unfurnished. All utilities, WiFi, and amenities are included in one weekly price. 4-month minimum stay, no credit check required.'
     }
   ];
 
@@ -1872,7 +1871,7 @@ function generateThemeNeighborhoodPages(themeSlug) {
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
 ${roomCardsHTML(prop)}
       </div>
-      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">All rooms fully furnished. WiFi, utilities, and amenities included. Flexible leases from 1 month.</p>
+      <p class="fade-in" style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: #666;">All rooms fully furnished. WiFi, utilities, and amenities included. Minimum stay: 4 months.</p>
     </div>
   </section>
   <section class="section">
@@ -2002,7 +2001,7 @@ function generateThemeCityPage(themeSlug) {
     <div class="container" style="text-align: center;">
       <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
-        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'Flexible Leases', 'No Credit Check', '24/7 Support'].map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', '4-Month Minimum Stay', 'No Credit Check', '24/7 Support'].map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
       </div>
     </div>
   </section>`;
@@ -2069,7 +2068,7 @@ function generateThemeUniversityPages(themeSlug) {
     <div class="container" style="text-align: center;">
       <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
-        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'No Credit Check', 'Flexible Leases', '24/7 Support'].map(a => `<span class="fade-in" style="background: white; padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'No Credit Check', '4-Month Minimum Stay', '24/7 Support'].map(a => `<span class="fade-in" style="background: white; padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
       </div>
     </div>
   </section>`;

@@ -57,6 +57,12 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 - Smooth scroll for anchor links (`#section`)
 - Property pages follow a consistent template structure
 
+## Business Rules (Site Copy Must Match)
+
+- **Minimum stay is 4 months.** Circle is residential co-living, not short-term, nightly, or weekly accommodation. Never write "from 1 month", "month-to-month", "short-term", or similar about Circle's own offering. Weekly rates are a pricing unit only; say so where it could be misread (updated site-wide 2026-09-10).
+- Duration dropdowns start at "4 - 6 months". FAQ answers about stay length must state the 4-month minimum explicitly.
+- General market discussion in blog posts (e.g. what month-to-month means in Ontario) is fine, but any sentence about what Circle offers must respect the 4-month minimum.
+
 ## Properties (Current Listings)
 
 1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
