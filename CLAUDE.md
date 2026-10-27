@@ -68,7 +68,8 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
 2. **The Queen** - 215 Queen Street West (Queen West / Entertainment District)
 3. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
-4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown) - listed but no property page yet
+4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown)
+5. **561 Sherbourne** - 561 Sherbourne Street (Sherbourne & Wellesley) - `property-561-sherbourne.html`, added 2026-10-28. Backend property `ci-561-sherbourne` (SHB). Room data and photos come from the building's Harrington listings; Circle weekly price = Harrington `weeklyRent`.
 
 ## Deployment
 
