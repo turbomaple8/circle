@@ -705,6 +705,50 @@ h5 { font-size: 1.05rem; }
   color: var(--text-light);
 }
 
+/* ---- Featured Residences (homepage) ---- */
+.locations-grid--featured {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.locations-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.location-card--featured .location-card__image {
+  height: 320px;
+}
+
+.location-card--featured .location-card__body {
+  padding: 1.5rem 1.75rem;
+}
+
+.location-card--featured .location-card__name {
+  font-size: 1.65rem;
+}
+
+.location-card__featured-tag {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.location-card__summary {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
 /* ---- Not Just Student Housing ---- */
 .split-section {
   display: grid;
@@ -2928,4 +2972,12 @@ h5 { font-size: 1.05rem; }
 .whatsapp-fab svg {
   width: 28px;
   height: 28px;
+}
+
+/* Featured Residences — small screens */
+@media (max-width: 768px) {
+  .locations-grid--featured { gap: 1.5rem; margin-bottom: 2.5rem; }
+  .location-card--featured .location-card__image { height: 220px; }
+  .location-card--featured .location-card__body { padding: 1.25rem; }
+  .location-card--featured .location-card__name { font-size: 1.4rem; }
 }
