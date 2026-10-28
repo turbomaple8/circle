@@ -109,7 +109,7 @@
       "rooms": [
         { "type": "Flex Basic", "price_weekly": 240, "features": ["Flexible layout", "Basic furnishings", "Shared bathroom"] },
         { "type": "Flex Plus", "price_weekly": 290, "features": ["Flexible layout", "Enhanced furnishings", "Shared bathroom"] },
-        { "type": "Flex Premium with Balcony", "price_weekly": 290, "features": ["Flexible layout", "Balcony", "Enhanced furnishings", "Shared bathroom"] },
+        { "type": "Deluxe Balcony", "price_weekly": 290, "features": ["Flexible layout", "Balcony", "Enhanced furnishings", "Shared bathroom"] },
         { "type": "Deluxe Room", "price_weekly": 315, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] }
       ],
       "amenities": ["24/7 Concierge", "Fitness Centre", "Co-Working Lounge", "Games Room", "Party & Entertaining Spaces", "Laundry Lounge", "High-Speed WiFi", "Secure Access"],

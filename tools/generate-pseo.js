@@ -361,7 +361,7 @@ const MODALS_HTML = `
                 <option value="The Queen - Queen West">The Queen - Queen West</option>
                 <option value="The Yonge - 197 Yonge">The Yonge - 197 Yonge</option>
                 <option value="The Maddox - Sherbourne">The Maddox - Sherbourne</option>
-                <option value="561 Sherbourne - Wellesley">561 Sherbourne - Wellesley</option>
+                <option value="The Sherbourne - Bloor">The Sherbourne - Bloor</option>
               </select>
             </div>
             <div class="form-group">
@@ -419,7 +419,7 @@ const MODALS_HTML = `
                 <option value="The Queen - Queen West">The Queen - Queen West</option>
                 <option value="The Yonge - 197 Yonge">The Yonge - 197 Yonge</option>
                 <option value="The Maddox - Sherbourne">The Maddox - Sherbourne</option>
-                <option value="561 Sherbourne - Wellesley">561 Sherbourne - Wellesley</option>
+                <option value="The Sherbourne - Bloor">The Sherbourne - Bloor</option>
               </select>
             </div>
             <div class="form-group">
@@ -1094,7 +1094,7 @@ function generateAudiencePages() {
       title: 'Young Professional Housing Toronto | Co-Living from C$240/wk | Circle',
       metaDesc: 'Young professional housing in Toronto from C$240/week. Furnished rooms, 4-month minimum stay, built-in community. Near Bay Street and downtown. Apply now.',
       subtitle: 'Skip the solo apartment grind. Furnished rooms, built-in community, and all-inclusive pricing near Toronto\'s business core.',
-      intro: `Starting your career in Toronto is exciting — but finding affordable housing near your office shouldn't be the hardest part. Circle Co-Living offers young professionals a smarter alternative to overpriced studio apartments: furnished private rooms in curated co-living homes from C$240/week, all-inclusive. Our four downtown Toronto locations put you within minutes of Bay Street, the Financial District, Queen West's creative agencies, and downtown's tech hubs. Each room comes fully furnished with a desk, fast WiFi, and everything you need to work from home when needed. But co-living isn't just about saving money — it's about building genuine connections. Our community of students and young professionals values focus during the week and connection on weekends. Quiet hours, professional management, and community events create the right balance. No 12-month lease required: the minimum stay is 4 months, and you can extend as you settle in. No credit check means newcomers to Toronto can move in quickly. Compare our all-inclusive weekly rates to the $1,800-2,500/month you'd pay for a bare studio apartment, and the choice is clear.`,
+      intro: `Starting your career in Toronto is exciting — but finding affordable housing near your office shouldn't be the hardest part. Circle Co-Living offers young professionals a smarter alternative to overpriced studio apartments: furnished private rooms in curated co-living homes from C$240/week, all-inclusive. Our four downtown Toronto locations put you within minutes of Bay Street, the Financial District, Queen West's creative agencies, and downtown's tech hubs. Each room comes fully furnished with a desk, fast WiFi, and everything you need to work from home when needed. But co-living isn't just about saving money — it's about building genuine connections. Our community of students and young professionals values focus during the week and connection on weekends. Quiet hours, professional management, and community events create the right balance. No 12-month lease required: the minimum stay is 4 months, and you can extend as you settle in. No credit check means newcomers to Toronto can move in quickly. Compare our all-inclusive prices to the $1,800-2,500/month you'd pay for a bare studio apartment, and the choice is clear.`,
       bodyExtra: 'professional',
       faqTheme: 'coliving'
     },
@@ -1677,7 +1677,7 @@ function generateRoomTypePages() {
       title: 'Deluxe Rooms in Toronto | Premium from C$315/wk | Circle Co-Living',
       metaDesc: 'Deluxe rooms in Toronto from C$315/week. Queen bed, large desk, premium wardrobe. Available at all 4 downtown locations. Apply now.',
       subtitle: 'Queen bed, large desk, and premium wardrobe. Our most popular room type across all locations.',
-      intro: 'Deluxe rooms are Circle Co-Living\'s most popular room type, available at all four Toronto locations. Each deluxe room features a queen bed, large desk, and premium wardrobe in a spacious layout designed for comfort and productivity. At The Maddox in the Garden District, deluxe rooms start from C$315/week. The York in the Financial District offers deluxe rooms from C$370/week with access to premium amenities including a fitness centre, indoor pool, and sauna. The Queen in Queen West and The Yonge in the Downtown Core both offer deluxe rooms at C$385/week. Every deluxe room comes fully furnished with all utilities and WiFi included. Shared bathrooms are professionally maintained with regular cleaning. You also get full access to building amenities, common areas, and shared kitchens. Deluxe rooms are the sweet spot between affordability and comfort — more space and premium furnishings compared to basic rooms, at a price point that is still 40-55% less than a solo apartment in the same neighborhood. No credit check, flexible leases from 1 month, and professional management at every property.'
+      intro: 'Deluxe rooms are Circle Co-Living\'s most popular room type, available at all four Toronto locations. Each deluxe room features a queen bed, large desk, and premium wardrobe in a spacious layout designed for comfort and productivity. At The Maddox in the Garden District, deluxe rooms start from C$315/week. The York in the Financial District offers deluxe rooms from C$370/week with access to premium amenities including a fitness centre, indoor pool, and sauna. The Queen in Queen West and The Yonge in the Downtown Core both offer deluxe rooms at C$385/week. Every deluxe room comes fully furnished with all utilities and WiFi included. Shared bathrooms are professionally maintained. You also get full access to building amenities, common areas, and shared kitchens. Deluxe rooms are the sweet spot between affordability and comfort — more space and premium furnishings compared to basic rooms, at a price point that is still 40-55% less than a solo apartment in the same neighborhood. No credit check, flexible leases from 1 month, and professional management at every property.'
     },
     {
       slug: 'master-suite-rooms-toronto',
@@ -2003,7 +2003,7 @@ function generateThemeCityPage(themeSlug) {
     <div class="container" style="text-align: center;">
       <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
-        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', '4-Month Minimum Stay', 'No Credit Check', '24/7 Support'].map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', '4-Month Minimum Stay', 'No Credit Check', 'Support Ticket System'].map(a => `<span class="fade-in" style="background: var(--cream); padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
       </div>
     </div>
   </section>`;
@@ -2070,7 +2070,7 @@ function generateThemeUniversityPages(themeSlug) {
     <div class="container" style="text-align: center;">
       <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem;">What's Included</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 700px; margin: 0 auto;">
-        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'No Credit Check', '4-Month Minimum Stay', '24/7 Support'].map(a => `<span class="fade-in" style="background: white; padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
+        ${['Fully Furnished', 'High-Speed WiFi', 'All Utilities', 'No Credit Check', '4-Month Minimum Stay', 'Support Ticket System'].map(a => `<span class="fade-in" style="background: white; padding: 0.6rem 1.2rem; border-radius: 20px; font-size: 0.95rem;">${a}</span>`).join('\n        ')}
       </div>
     </div>
   </section>`;

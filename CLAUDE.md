@@ -61,6 +61,10 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 
 - **Minimum stay is 4 months.** Circle is residential co-living, not short-term, nightly, or weekly accommodation. Never write "from 1 month", "month-to-month", "short-term", or similar about Circle's own offering. Weekly rates are a pricing unit only; say so where it could be misread (updated site-wide 2026-09-10).
 - Duration dropdowns start at "4 - 6 months". FAQ answers about stay length must state the 4-month minimum explicitly.
+- **Exception: The Sherbourne (561 Sherbourne) has a 6-month minimum** (client, 2026-10-28). Its page and apply modal say 6 months; site-wide FAQs say "4 months (6 months at The Sherbourne)".
+- **Common-area cleaning is bi-weekly, and only at The York, The Queen and The Yonge.** The Sherbourne and The Maddox have no common-area cleaning. Never write "weekly cleaning" or imply cleaning at every building (client, 2026-10-28).
+- **Don't present the weekly price as a payment schedule.** Say "price" / "all-inclusive price", not "weekly rate", in copy about what is included; prices may still be displayed as C$X/week.
+- Support is a **support ticket system**, not "24/7 support" / "team available around the clock". Access is key-fob (no key-card).
 - General market discussion in blog posts (e.g. what month-to-month means in Ontario) is fine, but any sentence about what Circle offers must respect the 4-month minimum.
 
 ## Properties (Current Listings)
@@ -68,8 +72,8 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
 2. **The Queen** - 215 Queen Street West (Queen West / Entertainment District)
 3. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
-4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown)
-5. **561 Sherbourne** - 561 Sherbourne Street (Sherbourne & Wellesley) - `property-561-sherbourne.html`, added 2026-10-28. Backend property `ci-561-sherbourne` (SHB). Room data and photos come from the building's Harrington listings; Circle weekly price = Harrington `weeklyRent`.
+4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown). **Flex Basic is deactivated** (card + room option removed 2026-10-28; prices on the site intentionally left unchanged, restore from git history when it reopens). "Flex Premium with Balcony" is now called **Deluxe Balcony**.
+5. **The Sherbourne** - 561 Sherbourne Street (Sherbourne & Bloor) - `property-561-sherbourne.html`, added 2026-10-28, renamed from "561 Sherbourne" the same day. Backend property `ci-561-sherbourne` (SHB; backend name is still "561 Sherbourne"). Room data and photos come from the building's Harrington listings; Circle weekly price = Harrington `weeklyRent`. 6-month minimum stay. Rooms: 3-bedroom suites are shown as "3 beds / 1 bath".
 
 ## Deployment
 

@@ -7,7 +7,7 @@
 
   var PROPERTIES = [
     { name: 'The Maddox', slug: 'maddox' },
-    { name: '561 Sherbourne', slug: '561-sherbourne' },
+    { name: 'The Sherbourne', slug: 'sherbourne' },
     { name: 'The Queen', slug: 'queen' },
     { name: 'The Yonge', slug: 'yonge' },
     { name: 'The York', slug: 'york' }
