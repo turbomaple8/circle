@@ -62,7 +62,7 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 - **Minimum stay is 4 months.** Circle is residential co-living, not short-term, nightly, or weekly accommodation. Never write "from 1 month", "month-to-month", "short-term", or similar about Circle's own offering. Weekly rates are a pricing unit only; say so where it could be misread (updated site-wide 2026-09-10).
 - Duration dropdowns start at "4 - 6 months". FAQ answers about stay length must state the 4-month minimum explicitly.
 - **Exception: The Sherbourne (561 Sherbourne) has a 6-month minimum** (client, 2026-10-28). Its page and apply modal say 6 months; site-wide FAQs say "4 months (6 months at The Sherbourne)".
-- **Common-area cleaning is bi-weekly, and only at The York, The Queen and The Yonge.** The Sherbourne and The Maddox have no common-area cleaning. Never write "weekly cleaning" or imply cleaning at every building (client, 2026-10-28).
+- **Common-area cleaning is bi-weekly, at The York, The Queen, The Yonge and The Maddox.** The Sherbourne (561) has no common-area cleaning. Never write "weekly cleaning" or imply cleaning at every building (client, 2026-10-28; Maddox added the same day).
 - **Don't present the weekly price as a payment schedule.** Say "price" / "all-inclusive price", not "weekly rate", in copy about what is included; prices may still be displayed as C$X/week.
 - Support is a **support ticket system**, not "24/7 support" / "team available around the clock". Access is key-fob (no key-card).
 - General market discussion in blog posts (e.g. what month-to-month means in Ontario) is fine, but any sentence about what Circle offers must respect the 4-month minimum.
