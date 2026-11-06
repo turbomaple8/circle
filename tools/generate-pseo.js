@@ -1673,11 +1673,11 @@ function generateRoomTypePages() {
       slug: 'deluxe-rooms-toronto',
       displayName: 'Deluxe Rooms',
       searchTerm: 'deluxe',
-      h1: 'Deluxe Rooms in Toronto: Premium Co-Living from C$315/Week',
-      title: 'Deluxe Rooms in Toronto | Premium from C$315/wk | Circle Co-Living',
-      metaDesc: 'Deluxe rooms in Toronto from C$315/week. Queen bed, large desk, premium wardrobe. Available at all 4 downtown locations. Apply now.',
+      h1: 'Deluxe Rooms in Toronto: Premium Co-Living from C$300/Week',
+      title: 'Deluxe Rooms in Toronto | Premium from C$300/wk | Circle Co-Living',
+      metaDesc: 'Deluxe rooms in Toronto from C$300/week. Queen bed, large desk, premium wardrobe. Available at all 4 downtown locations. Apply now.',
       subtitle: 'Queen bed, large desk, and premium wardrobe. Our most popular room type across all locations.',
-      intro: 'Deluxe rooms are Circle Co-Living\'s most popular room type, available at all four Toronto locations. Each deluxe room features a queen bed, large desk, and premium wardrobe in a spacious layout designed for comfort and productivity. At The Maddox in the Garden District, deluxe rooms start from C$315/week. The York in the Financial District offers deluxe rooms from C$370/week with access to premium amenities including a fitness centre, indoor pool, and sauna. The Queen in Queen West and The Yonge in the Downtown Core both offer deluxe rooms at C$385/week. Every deluxe room comes fully furnished with all utilities and WiFi included. Shared bathrooms are professionally maintained. You also get full access to building amenities, common areas, and shared kitchens. Deluxe rooms are the sweet spot between affordability and comfort — more space and premium furnishings compared to basic rooms, at a price point that is still 40-55% less than a solo apartment in the same neighborhood. No credit check, flexible leases from 1 month, and professional management at every property.'
+      intro: 'Deluxe rooms are Circle Co-Living\'s most popular room type, available at all four Toronto locations. Each deluxe room features a queen bed, large desk, and premium wardrobe in a spacious layout designed for comfort and productivity. At The Maddox in the Garden District, deluxe rooms start from C$300/week. The York in the Financial District offers deluxe rooms from C$370/week with access to premium amenities including a fitness centre, indoor pool, and sauna. The Queen in Queen West and The Yonge in the Downtown Core both offer deluxe rooms at C$385/week. Every deluxe room comes fully furnished with all utilities and WiFi included. Shared bathrooms are professionally maintained. You also get full access to building amenities, common areas, and shared kitchens. Deluxe rooms are the sweet spot between affordability and comfort — more space and premium furnishings compared to basic rooms, at a price point that is still 40-55% less than a solo apartment in the same neighborhood. No credit check, flexible leases from 1 month, and professional management at every property.'
     },
     {
       slug: 'master-suite-rooms-toronto',

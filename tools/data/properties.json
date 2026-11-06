@@ -103,14 +103,14 @@
       "neighborhood_slug": "garden-district-cabbagetown",
       "neighborhood_name": "Garden District / Cabbagetown",
       "price_from_weekly": 240,
-      "price_to_weekly": 315,
+      "price_to_weekly": 350,
       "price_from_monthly": 960,
-      "price_to_monthly": 1260,
+      "price_to_monthly": 1400,
       "rooms": [
-        { "type": "Flex Basic", "price_weekly": 240, "features": ["Flexible layout", "Basic furnishings", "Shared bathroom"] },
         { "type": "Flex Plus", "price_weekly": 290, "features": ["Flexible layout", "Enhanced furnishings", "Shared bathroom"] },
-        { "type": "Deluxe Balcony", "price_weekly": 290, "features": ["Flexible layout", "Balcony", "Enhanced furnishings", "Shared bathroom"] },
-        { "type": "Deluxe Room", "price_weekly": 315, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] }
+        { "type": "Deluxe Room", "price_weekly": 300, "features": ["Queen bed", "Large desk", "Premium wardrobe", "Shared bathroom"] },
+        { "type": "Deluxe Walk-in Closet", "price_weekly": 325, "features": ["Walk-in closet", "Enhanced furnishings", "Shared bathroom"] },
+        { "type": "Deluxe Balcony", "price_weekly": 350, "features": ["Flexible layout", "Balcony", "Enhanced furnishings", "Shared bathroom"] }
       ],
       "amenities": ["24/7 Concierge", "Fitness Centre", "Co-Working Lounge", "Games Room", "Party & Entertaining Spaces", "Laundry Lounge", "High-Speed WiFi", "Secure Access"],
       "transit": [

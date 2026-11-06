@@ -73,7 +73,7 @@ Circle is a co-living brand in Toronto for students and young professionals. The
 1. **The York** - 12 & 14 York Street (Waterfront / Financial District)
 2. **The Queen** - 215 Queen Street West (Queen West / Entertainment District)
 3. **The Yonge** - 197 Yonge Street (Downtown Core / Eaton Centre)
-4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown). **Flex Basic is deactivated** (card + room option removed 2026-10-28; prices on the site intentionally left unchanged, restore from git history when it reopens). "Flex Premium with Balcony" is now called **Deluxe Balcony**.
+4. **The Maddox** - 201 Sherbourne Street (Garden District / Cabbagetown). **Four active rooms, cheapest first (client, 2026-11-05): Flex Plus C$290, Deluxe Room C$300, Deluxe Walk-in Closet C$325, Deluxe Balcony C$350 per week.** Deluxe Walk-in Closet was added 2026-11-05; its card borrows a Deluxe Room photo until a real one arrives. **Flex Basic is deactivated** (removed from the property page 2026-10-28 and from SEO room cards 2026-11-05; restore from git history when it reopens). "From C$240" mentions across the site were left unchanged by client decision on 2026-10-28, so they no longer match any active Maddox room. "Flex Premium with Balcony" is now called **Deluxe Balcony**.
 5. **The Sherbourne** - 561 Sherbourne Street (Sherbourne & Bloor) - `property-561-sherbourne.html`, added 2026-10-28, renamed from "561 Sherbourne" the same day. Backend property `ci-561-sherbourne` (SHB; backend name is still "561 Sherbourne"). Room data and photos come from the building's Harrington listings; Circle weekly price = Harrington `weeklyRent`. 6-month minimum stay. Rooms: 3-bedroom suites are shown as "3 beds / 1 bath".
 
 ## Deployment
