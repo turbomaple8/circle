@@ -1,0 +1,314 @@
+{
+  "_about": "Rentser partner listing feed. Run `node tools/generate-partner-feed.js` after any change to room cards, prices or photos; it rewrites feeds/rentser.json and fails if a room card on a property page has no entry here. Never change an id: Rentser treats a new id as a new listing.",
+  "output": "feeds/rentser.json",
+  "site": "https://circlestay.ca",
+  "photo_base": "https://api.harringtonhousing.com/image/large/",
+  "city": "Toronto",
+  "currency": "CAD",
+  "buildings": {
+    "property-561-sherbourne.html": {
+      "key": "sherbourne",
+      "name": "The Sherbourne",
+      "street": "561 Sherbourne St",
+      "postcode": "M4X 0A1",
+      "neighborhood": "St. James Town",
+      "min_stay_months": 6,
+      "common_area_cleaning": false,
+      "about": "The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace."
+    },
+    "property-maddox.html": {
+      "key": "maddox",
+      "name": "The Maddox",
+      "street": "201 Sherbourne St",
+      "postcode": null,
+      "neighborhood": "Garden District",
+      "min_stay_months": 4,
+      "common_area_cleaning": true,
+      "about": "The Maddox is a modern rental residence in the Garden District, with the 505 Dundas streetcar close to the door and easy access to CF Eaton Centre, Toronto Metropolitan University and George Brown College. Residents share a 24/7 concierge, fitness centre, co-working space and games room."
+    },
+    "property-queen.html": {
+      "key": "queen",
+      "name": "The Queen",
+      "street": "215 Queen St W",
+      "postcode": null,
+      "neighborhood": "Queen West",
+      "min_stay_months": 4,
+      "common_area_cleaning": true,
+      "about": "The Queen is near University Avenue and Queen Street West, with Queen West's galleries, independent boutiques and restaurants outside the door and the Entertainment District moments away."
+    },
+    "property-yonge.html": {
+      "key": "yonge",
+      "name": "The Yonge",
+      "street": "197 Yonge St",
+      "postcode": null,
+      "neighborhood": "Downtown Yonge",
+      "min_stay_months": 4,
+      "common_area_cleaning": true,
+      "about": "The Yonge is in Massey Tower at 197 Yonge Street, near Yonge and Queen in the Downtown Core, across the street from the Eaton Centre and a short walk from Toronto Metropolitan University."
+    },
+    "property-york.html": {
+      "key": "york",
+      "name": "The York",
+      "street": "12 & 14 York St",
+      "postcode": null,
+      "neighborhood": "Financial District",
+      "min_stay_months": 4,
+      "common_area_cleaning": true,
+      "about": "The York sits steps from Toronto's waterfront and the Financial District, with direct PATH access and floor-to-ceiling views. Residents share a 24/7 concierge, indoor pool, fitness centre, sauna and steam rooms, and theatre and games rooms."
+    }
+  },
+  "listings": [
+    {
+      "id": "circle-sherbourne-flex-basic",
+      "page": "property-561-sherbourne.html",
+      "card": "Flex Basic",
+      "room_type": "private_room",
+      "photos": [
+        "flex-basic-561-sherbourne-1.jpg",
+        "flex-basic-561-sherbourne-2.jpeg",
+        "flex-basic-561-sherbourne-3.jpeg",
+        "flex-basic-561-sherbourne-4.jpeg",
+        "flex-basic-561-sherbourne-5.jpg",
+        "flex-basic-561-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-sherbourne-private-basic",
+      "page": "property-561-sherbourne.html",
+      "card": "Private Basic",
+      "room_type": "private_room",
+      "photos": [
+        "private-basic-561-sherbourne-1.jpeg",
+        "private-basic-561-sherbourne-6.jpg",
+        "private-basic-561-sherbourne-5.jpeg",
+        "private-basic-561-sherbourne-2.jpg",
+        "private-basic-561-sherbourne-3.jpg",
+        "private-basic-561-sherbourne-8.jpg"
+      ]
+    },
+    {
+      "id": "circle-sherbourne-flex-plus",
+      "page": "property-561-sherbourne.html",
+      "card": "Flex Plus",
+      "room_type": "private_room",
+      "photos": [
+        "flex-plus-561-sherbourne-1.jpg",
+        "flex-plus-561-sherbourne-2.jpg",
+        "flex-plus-561-sherbourne-3.jpg",
+        "flex-plus-561-sherbourne-4.jpeg",
+        "flex-plus-561-sherbourne-5.jpg",
+        "flex-plus-561-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-sherbourne-deluxe-room",
+      "page": "property-561-sherbourne.html",
+      "card": "Deluxe Room",
+      "room_type": "private_room",
+      "photos": [
+        "deluxe-room-561-sherbourne-1.jpg",
+        "deluxe-room-561-sherbourne-2.jpg",
+        "deluxe-room-561-sherbourne-3.jpg",
+        "deluxe-room-561-sherbourne-4.jpeg",
+        "deluxe-room-561-sherbourne-5.jpg",
+        "deluxe-room-561-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-sherbourne-master-ensuite",
+      "page": "property-561-sherbourne.html",
+      "card": "Master Room & Ensuite Bath",
+      "room_type": "ensuite_room",
+      "photos": [
+        "master-room-and-ensuite-bath-561-sherbourne-1.jpg",
+        "master-room-and-ensuite-bath-561-sherbourne-2.jpeg",
+        "master-room-and-ensuite-bath-561-sherbourne-3.jpg",
+        "master-room-and-ensuite-bath-561-sherbourne-4.jpg",
+        "master-room-and-ensuite-bath-561-sherbourne-5.jpg",
+        "master-room-and-ensuite-bath-561-sherbourne-7.jpg"
+      ]
+    },
+    {
+      "id": "circle-sherbourne-one-bedroom-apartment",
+      "page": "property-561-sherbourne.html",
+      "card": "One Bedroom Apartment",
+      "room_type": "entire_place",
+      "photos": [
+        "one-bedroom-apartment-561-sherbourne-1.JPG",
+        "one-bedroom-apartment-561-sherbourne-2.JPG",
+        "one-bedroom-apartment-561-sherbourne-3.JPG",
+        "one-bedroom-apartment-561-sherbourne-4.jpg",
+        "one-bedroom-apartment-561-sherbourne-5.jpg",
+        "one-bedroom-apartment-561-sherbourne-9.jpg"
+      ],
+      "summary": "Entire furnished one-bedroom apartment with its own fully stocked kitchen and bathroom, for up to 3 residents"
+    },
+    {
+      "id": "circle-maddox-flex-plus",
+      "page": "property-maddox.html",
+      "card": "Flex Plus",
+      "room_type": "private_room",
+      "photos": [
+        "flex-plus-201-sherbourne-1.jpg",
+        "flex-plus-201-sherbourne-2.jpg",
+        "flex-plus-201-sherbourne-3.jpg",
+        "flex-plus-201-sherbourne-4.jpg",
+        "flex-plus-201-sherbourne-5.jpg",
+        "flex-plus-201-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-maddox-deluxe-room",
+      "page": "property-maddox.html",
+      "card": "Deluxe Room",
+      "room_type": "private_room",
+      "photos": [
+        "deluxe-room-201-sherbourne-1.jpg",
+        "deluxe-room-201-sherbourne-2.jpg",
+        "deluxe-room-201-sherbourne-3.jpg",
+        "deluxe-room-201-sherbourne-4.jpg",
+        "deluxe-room-201-sherbourne-5.jpg",
+        "deluxe-room-201-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "page": "property-maddox.html",
+      "card": "Deluxe Walk-in Closet",
+      "exclude": "No photos of this room yet. Rentser needs photos of the actual room or an identical one in the same building; add this entry once real photos exist."
+    },
+    {
+      "id": "circle-maddox-deluxe-balcony",
+      "page": "property-maddox.html",
+      "card": "Deluxe Balcony",
+      "room_type": "private_room",
+      "photos": [
+        "flex-premium-with-balcony-201-sherbourne-1.JPG",
+        "flex-premium-with-balcony-201-sherbourne-2.JPG",
+        "flex-premium-with-balcony-201-sherbourne-3.jpg",
+        "flex-premium-with-balcony-201-sherbourne-4.jpg",
+        "flex-premium-with-balcony-201-sherbourne-5.jpg",
+        "flex-premium-with-balcony-201-sherbourne-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-queen-deluxe-room",
+      "page": "property-queen.html",
+      "card": "Deluxe Room",
+      "room_type": "private_room",
+      "photos": [
+        "deluxe-room-queen-west-1.jpeg",
+        "deluxe-room-queen-west-2.jpeg",
+        "deluxe-room-queen-west-3.jpeg",
+        "deluxe-room-queen-west-5.jpeg",
+        "deluxe-room-queen-west-6.jpeg",
+        "deluxe-room-queen-west-7.jpeg"
+      ]
+    },
+    {
+      "id": "circle-queen-master-ensuite",
+      "page": "property-queen.html",
+      "card": "Master Room & Ensuite Bath",
+      "room_type": "ensuite_room",
+      "photos": [
+        "master-room-and-ensuite-bath-queen-west-1.jpeg",
+        "master-room-and-ensuite-bath-queen-west-2.jpeg",
+        "master-room-and-ensuite-bath-queen-west-3.jpeg",
+        "master-room-and-ensuite-bath-queen-west-5.jpeg",
+        "master-room-and-ensuite-bath-queen-west-6.jpeg",
+        "master-room-and-ensuite-bath-queen-west-7.jpeg"
+      ]
+    },
+    {
+      "id": "circle-yonge-private-basic",
+      "page": "property-yonge.html",
+      "card": "Private Basic",
+      "room_type": "private_room",
+      "photos": [
+        "private-basic-197-yonge-st-male-only-1.jpeg",
+        "private-basic-197-yonge-st-male-only-2.jpeg",
+        "private-basic-197-yonge-st-male-only-6.jpeg"
+      ]
+    },
+    {
+      "id": "circle-yonge-deluxe-room",
+      "page": "property-yonge.html",
+      "card": "Deluxe Room (Male Only)",
+      "room_type": "private_room",
+      "photos": [
+        "deluxe-room-197-yonge-st-male-only-1.jpeg",
+        "deluxe-room-197-yonge-st-male-only-2.jpeg",
+        "deluxe-room-197-yonge-st-male-only-3.jpeg",
+        "deluxe-room-197-yonge-st-male-only-7.jpeg"
+      ]
+    },
+    {
+      "id": "circle-yonge-master-ensuite",
+      "page": "property-yonge.html",
+      "card": "Master Room & Ensuite Bath (Male Only)",
+      "room_type": "ensuite_room",
+      "photos": [
+        "master-room-and-ensuite-bath-197-yonge-st-male-only-1.jpeg",
+        "master-room-and-ensuite-bath-197-yonge-st-male-only-2.jpeg",
+        "master-room-and-ensuite-bath-197-yonge-st-male-only-3.jpeg",
+        "master-room-and-ensuite-bath-197-yonge-st-male-only-4.jpeg",
+        "master-room-and-ensuite-bath-197-yonge-st-male-only-8.jpeg"
+      ]
+    },
+    {
+      "id": "circle-york-private-basic",
+      "page": "property-york.html",
+      "card": "Private Basic",
+      "room_type": "private_room",
+      "photos": [
+        "private-basic-waterfront-toronto-1.jpg",
+        "private-basic-waterfront-toronto-2.jpg",
+        "private-basic-waterfront-toronto-5.jpg",
+        "private-basic-waterfront-toronto-3.jpg",
+        "private-basic-waterfront-toronto-7.jpg",
+        "private-basic-waterfront-toronto-12.jpg"
+      ]
+    },
+    {
+      "id": "circle-york-flex-premium",
+      "page": "property-york.html",
+      "card": "Flex Premium",
+      "room_type": "private_room",
+      "photos": [
+        "flex-premium-waterfront-toronto-1.jpg",
+        "flex-premium-waterfront-toronto-2.jpg",
+        "flex-premium-waterfront-toronto-3.jpg",
+        "flex-premium-waterfront-toronto-4.jpg",
+        "flex-premium-waterfront-toronto-5.jpg",
+        "flex-premium-waterfront-toronto-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-york-deluxe-room",
+      "page": "property-york.html",
+      "card": "Deluxe Room",
+      "room_type": "private_room",
+      "photos": [
+        "deluxe-room-waterfront-toronto-1.jpg",
+        "deluxe-room-waterfront-toronto-2.jpg",
+        "deluxe-room-waterfront-toronto-3.jpg",
+        "deluxe-room-waterfront-toronto-4.jpg",
+        "deluxe-room-waterfront-toronto-5.jpg",
+        "deluxe-room-waterfront-toronto-6.jpg"
+      ]
+    },
+    {
+      "id": "circle-york-master-ensuite",
+      "page": "property-york.html",
+      "card": "Master Room & Ensuite Bath",
+      "room_type": "ensuite_room",
+      "photos": [
+        "master-room-and-ensuite-bath-waterfront-toronto-1.jpg",
+        "master-room-and-ensuite-bath-waterfront-toronto-2.jpg",
+        "master-room-and-ensuite-bath-waterfront-toronto-3.jpg",
+        "master-room-and-ensuite-bath-waterfront-toronto-4.jpg",
+        "master-room-and-ensuite-bath-waterfront-toronto-5.jpg",
+        "master-room-and-ensuite-bath-waterfront-toronto-6.jpg"
+      ]
+    }
+  ]
+}

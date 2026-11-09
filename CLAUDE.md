@@ -120,6 +120,14 @@ This site forwards application + tour-request submissions to the shared multi-te
 - Forwarded endpoints: `POST /v1/public/applications`, `POST /v1/public/tour-requests`, `POST /v1/public/reservations`.
 - See `/Users/turbomaple/Desktop/Claude/backend-integration/CLAUDE.md` for the full integration spec and field mappings.
 
+## Partner Listing Feed (Rentser)
+- **URL:** `https://circlestay.ca/feeds/rentser.json`, a static file in the Rentser partner feed format (`{"data": [...]}`, one listing per room type, weekly CAD prices). Rentser fetches it once a day and mirrors it.
+- **Built by** `node tools/generate-partner-feed.js` from the room cards on the property pages plus `tools/data/partner-feed.json` (ids, room types, photos, building copy). **Run it after any change to room cards, prices or photos, and commit `feeds/rentser.json`**; otherwise Rentser keeps showing old prices.
+- The generator fails when a room card has no entry in the config, or an entry has no card, so a new room cannot silently stay off Rentser. A room without its own photos goes in the config with `"exclude"` (Deluxe Walk-in Closet today).
+- **Never change a listing `id`**: Rentser treats a new id as a new listing and takes the old one down.
+- Photos are Harrington Housing image URLs, room photos first. Rentser asks for at least 1200 px wide; The Queen's photos (all portrait, max 901 px) and a few room shots at The Sherbourne, The Yonge and The York are narrower.
+- `available_from` is the date the generator ran (rooms show as available now), matching how the site presents them.
+
 ## Blog Layout Standard (LOCKED 2026-05-02)
 
 All blog pages MUST use the canonical `.blog-post` BEM pattern documented in [BLOG_LAYOUT_STANDARD.md](BLOG_LAYOUT_STANDARD.md).

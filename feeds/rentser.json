@@ -1,0 +1,562 @@
+{
+  "data": [
+    {
+      "id": "circle-sherbourne-flex-basic",
+      "title": "Flex Basic – The Sherbourne, 561 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Sherbourne, 561 Sherbourne St, Toronto. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 250,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-3.jpeg",
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-4.jpeg",
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-basic-561-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-sherbourne-private-basic",
+      "title": "Private Basic – The Sherbourne, 561 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Sherbourne, 561 Sherbourne St, Toronto. Highlights: interior facing window. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 290,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-6.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-5.jpeg",
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-2.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-561-sherbourne-8.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-sherbourne-flex-plus",
+      "title": "Flex Plus – The Sherbourne, 561 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Sherbourne, 561 Sherbourne St, Toronto. Highlights: full-size bed, city view. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 295,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-2.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-4.jpeg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-561-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-sherbourne-deluxe-room",
+      "title": "Deluxe Room – The Sherbourne, 561 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Sherbourne, 561 Sherbourne St, Toronto. Highlights: full-size bed, large windows. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 320,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-2.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-4.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-561-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-sherbourne-master-ensuite",
+      "title": "Master Room & Ensuite Bath – The Sherbourne, 561 Sherbourne St",
+      "description": "Furnished private room with its own ensuite bathroom, in a shared 3-bedroom suite, at The Sherbourne, 561 Sherbourne St, Toronto. Highlights: full-size bed, most spacious. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 435,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "ensuite_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-4.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-561-sherbourne-7.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-sherbourne-one-bedroom-apartment",
+      "title": "One Bedroom Apartment – The Sherbourne, 561 Sherbourne St",
+      "description": "Entire furnished one-bedroom apartment with its own fully stocked kitchen and bathroom, for up to 3 residents, at The Sherbourne, 561 Sherbourne St, Toronto. The Sherbourne is a modern high-rise rental close to Sherbourne and Bloor, about a five-minute walk from Sherbourne Station on Line 2, with Toronto Metropolitan University and the University of Toronto within walking distance. Residents share a concierge, fitness centre, yoga area, theatre room, games room, party room, lounge and library, and an outdoor terrace. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat). Minimum stay is 6 months.",
+      "price": 705,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "561 Sherbourne St",
+        "city": "Toronto",
+        "postcode": "M4X 0A1",
+        "neighborhood": "St. James Town"
+      },
+      "latitude": 43.6696,
+      "longitude": -79.3751,
+      "room_type": "entire_place",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 6,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-1.JPG",
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-2.JPG",
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-3.JPG",
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-4.jpg",
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/one-bedroom-apartment-561-sherbourne-9.jpg"
+      ],
+      "url": "https://circlestay.ca/property-561-sherbourne"
+    },
+    {
+      "id": "circle-maddox-flex-plus",
+      "title": "Flex Plus – The Maddox, 201 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Maddox, 201 Sherbourne St, Toronto. Highlights: more space. The Maddox is a modern rental residence in the Garden District, with the 505 Dundas streetcar close to the door and easy access to CF Eaton Centre, Toronto Metropolitan University and George Brown College. Residents share a 24/7 concierge, fitness centre, co-working space and games room. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 290,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "201 Sherbourne St",
+        "city": "Toronto",
+        "neighborhood": "Garden District"
+      },
+      "latitude": 43.6568,
+      "longitude": -79.3718,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-2.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-4.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-plus-201-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-maddox"
+    },
+    {
+      "id": "circle-maddox-deluxe-room",
+      "title": "Deluxe Room – The Maddox, 201 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Maddox, 201 Sherbourne St, Toronto. Highlights: full-size bed. The Maddox is a modern rental residence in the Garden District, with the 505 Dundas streetcar close to the door and easy access to CF Eaton Centre, Toronto Metropolitan University and George Brown College. Residents share a 24/7 concierge, fitness centre, co-working space and games room. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 300,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "201 Sherbourne St",
+        "city": "Toronto",
+        "neighborhood": "Garden District"
+      },
+      "latitude": 43.6568,
+      "longitude": -79.3718,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-1.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-2.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-4.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-201-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-maddox"
+    },
+    {
+      "id": "circle-maddox-deluxe-balcony",
+      "title": "Deluxe Balcony – The Maddox, 201 Sherbourne St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 1 bathroom, at The Maddox, 201 Sherbourne St, Toronto. Highlights: balcony. The Maddox is a modern rental residence in the Garden District, with the 505 Dundas streetcar close to the door and easy access to CF Eaton Centre, Toronto Metropolitan University and George Brown College. Residents share a 24/7 concierge, fitness centre, co-working space and games room. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 350,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "201 Sherbourne St",
+        "city": "Toronto",
+        "neighborhood": "Garden District"
+      },
+      "latitude": 43.6568,
+      "longitude": -79.3718,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-1.JPG",
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-2.JPG",
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-3.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-4.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-5.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-with-balcony-201-sherbourne-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-maddox"
+    },
+    {
+      "id": "circle-queen-deluxe-room",
+      "title": "Deluxe Room – The Queen, 215 Queen St W",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The Queen, 215 Queen St W, Toronto. Highlights: more space. The Queen is near University Avenue and Queen Street West, with Queen West's galleries, independent boutiques and restaurants outside the door and the Entertainment District moments away. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 385,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "215 Queen St W",
+        "city": "Toronto",
+        "neighborhood": "Queen West"
+      },
+      "latitude": 43.6505,
+      "longitude": -79.3893,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-3.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-5.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-6.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-queen-west-7.jpeg"
+      ],
+      "url": "https://circlestay.ca/property-queen"
+    },
+    {
+      "id": "circle-queen-master-ensuite",
+      "title": "Master Room & Ensuite Bath – The Queen, 215 Queen St W",
+      "description": "Furnished private room with its own ensuite bathroom, in a shared 3-bedroom suite, at The Queen, 215 Queen St W, Toronto. Highlights: largest room. The Queen is near University Avenue and Queen Street West, with Queen West's galleries, independent boutiques and restaurants outside the door and the Entertainment District moments away. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 455,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "215 Queen St W",
+        "city": "Toronto",
+        "neighborhood": "Queen West"
+      },
+      "latitude": 43.6505,
+      "longitude": -79.3893,
+      "room_type": "ensuite_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-3.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-5.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-6.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-queen-west-7.jpeg"
+      ],
+      "url": "https://circlestay.ca/property-queen"
+    },
+    {
+      "id": "circle-yonge-private-basic",
+      "title": "Private Basic – The Yonge, 197 Yonge St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The Yonge, 197 Yonge St, Toronto. The Yonge is in Massey Tower at 197 Yonge Street, near Yonge and Queen in the Downtown Core, across the street from the Eaton Centre and a short walk from Toronto Metropolitan University. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 305,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "197 Yonge St",
+        "city": "Toronto",
+        "neighborhood": "Downtown Yonge"
+      },
+      "latitude": 43.6544,
+      "longitude": -79.3807,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/private-basic-197-yonge-st-male-only-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/private-basic-197-yonge-st-male-only-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/private-basic-197-yonge-st-male-only-6.jpeg"
+      ],
+      "url": "https://circlestay.ca/property-yonge"
+    },
+    {
+      "id": "circle-yonge-deluxe-room",
+      "title": "Deluxe Room (Male Only) – The Yonge, 197 Yonge St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The Yonge, 197 Yonge St, Toronto. Highlights: more space. This room is for male residents only. The Yonge is in Massey Tower at 197 Yonge Street, near Yonge and Queen in the Downtown Core, across the street from the Eaton Centre and a short walk from Toronto Metropolitan University. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 385,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "197 Yonge St",
+        "city": "Toronto",
+        "neighborhood": "Downtown Yonge"
+      },
+      "latitude": 43.6544,
+      "longitude": -79.3807,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/deluxe-room-197-yonge-st-male-only-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-197-yonge-st-male-only-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-197-yonge-st-male-only-3.jpeg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-197-yonge-st-male-only-7.jpeg"
+      ],
+      "url": "https://circlestay.ca/property-yonge"
+    },
+    {
+      "id": "circle-yonge-master-ensuite",
+      "title": "Master Room & Ensuite Bath (Male Only) – The Yonge, 197 Yonge St",
+      "description": "Furnished private room with its own ensuite bathroom, in a shared 3-bedroom suite, at The Yonge, 197 Yonge St, Toronto. Highlights: largest room. This room is for male residents only. The Yonge is in Massey Tower at 197 Yonge Street, near Yonge and Queen in the Downtown Core, across the street from the Eaton Centre and a short walk from Toronto Metropolitan University. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 455,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "197 Yonge St",
+        "city": "Toronto",
+        "neighborhood": "Downtown Yonge"
+      },
+      "latitude": 43.6544,
+      "longitude": -79.3807,
+      "room_type": "ensuite_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-197-yonge-st-male-only-1.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-197-yonge-st-male-only-2.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-197-yonge-st-male-only-3.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-197-yonge-st-male-only-4.jpeg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-197-yonge-st-male-only-8.jpeg"
+      ],
+      "url": "https://circlestay.ca/property-yonge"
+    },
+    {
+      "id": "circle-york-private-basic",
+      "title": "Private Basic – The York, 12 & 14 York St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The York, 12 & 14 York St, Toronto. The York sits steps from Toronto's waterfront and the Financial District, with direct PATH access and floor-to-ceiling views. Residents share a 24/7 concierge, indoor pool, fitness centre, sauna and steam rooms, and theatre and games rooms. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 330,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "12 & 14 York St",
+        "city": "Toronto",
+        "neighborhood": "Financial District"
+      },
+      "latitude": 43.6426,
+      "longitude": -79.3805,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-1.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-2.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-5.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-3.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-7.jpg",
+        "https://api.harringtonhousing.com/image/large/private-basic-waterfront-toronto-12.jpg"
+      ],
+      "url": "https://circlestay.ca/property-york"
+    },
+    {
+      "id": "circle-york-flex-premium",
+      "title": "Flex Premium – The York, 12 & 14 York St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The York, 12 & 14 York St, Toronto. Highlights: premium finish. The York sits steps from Toronto's waterfront and the Financial District, with direct PATH access and floor-to-ceiling views. Residents share a 24/7 concierge, indoor pool, fitness centre, sauna and steam rooms, and theatre and games rooms. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 335,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "12 & 14 York St",
+        "city": "Toronto",
+        "neighborhood": "Financial District"
+      },
+      "latitude": 43.6426,
+      "longitude": -79.3805,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-1.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-2.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-3.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-4.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-5.jpg",
+        "https://api.harringtonhousing.com/image/large/flex-premium-waterfront-toronto-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-york"
+    },
+    {
+      "id": "circle-york-deluxe-room",
+      "title": "Deluxe Room – The York, 12 & 14 York St",
+      "description": "Furnished private room in a shared 3-bedroom suite with 2 bathrooms, at The York, 12 & 14 York St, Toronto. Highlights: more space. The York sits steps from Toronto's waterfront and the Financial District, with direct PATH access and floor-to-ceiling views. Residents share a 24/7 concierge, indoor pool, fitness centre, sauna and steam rooms, and theatre and games rooms. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 370,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "12 & 14 York St",
+        "city": "Toronto",
+        "neighborhood": "Financial District"
+      },
+      "latitude": 43.6426,
+      "longitude": -79.3805,
+      "room_type": "private_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-1.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-2.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-3.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-4.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-5.jpg",
+        "https://api.harringtonhousing.com/image/large/deluxe-room-waterfront-toronto-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-york"
+    },
+    {
+      "id": "circle-york-master-ensuite",
+      "title": "Master Room & Ensuite Bath – The York, 12 & 14 York St",
+      "description": "Furnished private room with its own ensuite bathroom, in a shared 3-bedroom suite, at The York, 12 & 14 York St, Toronto. Highlights: largest room. The York sits steps from Toronto's waterfront and the Financial District, with direct PATH access and floor-to-ceiling views. Residents share a 24/7 concierge, indoor pool, fitness centre, sauna and steam rooms, and theatre and games rooms. The all-inclusive price covers furniture, high-speed WiFi and all utilities (hydro, water, heat), plus bi-weekly common-area cleaning. Minimum stay is 4 months.",
+      "price": 465,
+      "price_period": "week",
+      "currency": "CAD",
+      "address": {
+        "street": "12 & 14 York St",
+        "city": "Toronto",
+        "neighborhood": "Financial District"
+      },
+      "latitude": 43.6426,
+      "longitude": -79.3805,
+      "room_type": "ensuite_room",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "available_from": "2026-11-09",
+      "min_stay_months": 4,
+      "bills_included": true,
+      "furnished": true,
+      "photos": [
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-1.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-2.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-3.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-4.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-5.jpg",
+        "https://api.harringtonhousing.com/image/large/master-room-and-ensuite-bath-waterfront-toronto-6.jpg"
+      ],
+      "url": "https://circlestay.ca/property-york"
+    }
+  ]
+}
