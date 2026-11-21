@@ -258,6 +258,7 @@ function footerHTML(lang) {
             <a href="/#faq">FAQ</a>
             <a href="/terms">S&eacute;curit&eacute;</a>
             <a href="/cancellation-policy">Politique d&#39;annulation</a>
+            <a href="/deposit-policy">Politique de d&eacute;p&ocirc;t</a>
             <a href="/privacy">Confidentialit&eacute;</a>
           </div>
         </div>
@@ -312,6 +313,7 @@ function footerHTML(lang) {
             <a href="/#faq">FAQ</a>
             <a href="/terms">Safety &amp; Support</a>
             <a href="/cancellation-policy">Cancellation Policy</a>
+            <a href="/deposit-policy">Deposit Policy</a>
             <a href="/privacy">Privacy</a>
           </div>
         </div>
