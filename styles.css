@@ -1753,6 +1753,12 @@ h5 { font-size: 1.05rem; }
   margin-bottom: 0.875rem;
 }
 
+.legal-page h3 {
+  font-size: 1.15rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
 .legal-page p, .legal-page li {
   font-size: 0.92rem;
   color: var(--text-light);
